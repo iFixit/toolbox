@@ -1,0 +1,15 @@
+{
+  "name": "toolbox",
+  "version": "0.0.0",
+  "scripts": {
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "devDependencies": {
+    "loaders": "^1.1.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-styleguidist": "^5.5.7",
+    "webpack": "^3.3.0"
+  }
+}
