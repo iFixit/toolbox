@@ -2,7 +2,7 @@
   "name": "toolbox",
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --ext .jsx,.js .",
     "precommit": "npm run lint",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
