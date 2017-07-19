@@ -2,7 +2,13 @@ const loaders = require('loaders');
 
 module.exports = {
   components: 'src/components/**/[A-Z]*.js',
-  defaultExample: true,
+  highlightTheme: 'duotone-light',
+  theme: {
+    color: {
+      link: '#0071CE',
+      linkHover: '#0071CE',
+    },
+  },
   webpackConfig: {
     module: {
       loaders: loaders.all,
