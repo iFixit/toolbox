@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "rules": {
-    "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false, "arrow": false}]
+    "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false, "arrow": false}],
+    "max-len": "off"
   }
 }
