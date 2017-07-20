@@ -17,8 +17,8 @@ const Label = glamorous.label({
 
 const Span = glamorous.span({
   display: 'inline-block',
-  marginBottom: spacing[2],
-  lineHeight: lineHeight.copy,
+  marginBottom: spacing[3],
+  lineHeight: lineHeight.solid,
 });
 
 const Input = glamorous.input(
