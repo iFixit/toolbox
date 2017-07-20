@@ -9,9 +9,11 @@
     "styleguide:build": "styleguidist build"
   },
   "dependencies": {
+    "glamor": "^2.20.26",
+    "glamorous": "^3.23.5",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "prop-types": "^15.5.10"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { H1 } from 'glamorous';
 
 /**
  * Hello Toolbox!
  */
 const Hello = props =>
-  <h1>
+  <H1 color="blue">
     Hello {props.message}
-  </h1>;
+  </H1>;
 
 Hello.propTypes = {
   /** Description of prop "message". */
