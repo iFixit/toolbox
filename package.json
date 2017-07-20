@@ -2,8 +2,8 @@
   "name": "toolbox",
   "version": "0.0.0",
   "scripts": {
-    "lint": "eslint --ext .jsx,.js .",
-    "format": "prettier-eslint --write '**/*.{jsx,js,json}'",
+    "lint": "eslint --ext .js,.jsx .",
+    "format": "prettier-eslint --write '**/*.{js,jsx,json}'",
     "precommit": "npm run lint",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
