@@ -56,6 +56,8 @@ const TextField = props =>
       type={props.type}
       disabled={props.disabled}
       required={props.required}
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
     />
   </Label>;
 
@@ -64,6 +66,8 @@ TextField.propTypes = {
   disabled: PropTypes.bool,
   id: PropTypes.string,
   label: PropTypes.string,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.oneOf([
@@ -88,6 +92,8 @@ TextField.defaultProps = {
   disabled: false,
   id: '',
   label: '',
+  onBlur: () => {},
+  onFocus: () => {},
   placeholder: '',
   required: false,
   type: 'text',
