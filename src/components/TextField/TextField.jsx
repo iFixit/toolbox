@@ -15,7 +15,7 @@ const Label = glamorous.label({
   color: color.grayAlpha[9],
 });
 
-const Span = glamorous.span({
+const LabelText = glamorous.span({
   display: 'inline-block',
   marginBottom: spacing[3],
   lineHeight: lineHeight.solid,
@@ -46,9 +46,9 @@ const Input = glamorous.input(
 
 const TextField = props =>
   <Label className={props.className} htmlFor={props.id}>
-    <Span>
+    <LabelText>
       {props.label}
-    </Span>
+    </LabelText>
     <Input
       id={props.id}
       value={props.value}
