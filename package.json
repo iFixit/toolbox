@@ -9,6 +9,7 @@
     "styleguide:build": "styleguidist build"
   },
   "dependencies": {
+    "feather-icons": "^3.1.0",
     "glamor": "^2.20.26",
     "glamorous": "^3.23.5",
     "prop-types": "^15.5.10",
