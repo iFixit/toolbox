@@ -3,6 +3,8 @@ const loaders = require('loaders');
 
 module.exports = {
   components: 'src/components/**/*.jsx',
+  showCode: true,
+  showUsage: true,
   highlightTheme: 'duotone-light',
   theme: {
     color: {
