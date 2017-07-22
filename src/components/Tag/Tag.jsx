@@ -37,7 +37,7 @@ const TagIcon = glamorous(Icon)({
 });
 
 const Tag = props =>
-  <TagContainer onClick={props.onRemove}>
+  <TagContainer className={props.className} onClick={props.onRemove}>
     <TagText>
       {props.children}
     </TagText>
@@ -46,10 +46,12 @@ const Tag = props =>
 
 Tag.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   onRemove: PropTypes.func,
 };
 
 Tag.defaultProps = {
+  className: '',
   onRemove: () => {},
 };
 
