@@ -12,6 +12,7 @@ import {
 
 const Label = glamorous.label({
   display: 'inline-block',
+  boxSizing: 'border-box',
   color: color.grayAlpha[9],
 });
 
