@@ -1,8 +1,5 @@
+### Basic Usage
+
 ```
-<TextField
-  label="Name"
-  placeholder="Doc Brown"
-  onFocus={() => console.log('onFocus')}
-  onBlur={() => console.log('onBlur')}
-/>
+<TextField label="Name" placeholder="Doc Brown" />
 ```
