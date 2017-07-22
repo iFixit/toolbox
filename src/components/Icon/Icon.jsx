@@ -17,6 +17,7 @@ const SvgContainer = glamorous.span(
 
 const Icon = props =>
   <SvgContainer
+    className={props.className}
     size={props.size}
     color={props.color}
     strokeWidth={props.strokeWidth}
@@ -30,11 +31,13 @@ const Icon = props =>
   />;
 
 Icon.propTypes = {
-  /** Icon name */
-  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
 
   /** Any legal CSS color value for the stroke color */
   color: PropTypes.string,
+
+  /** Icon name */
+  name: PropTypes.string.isRequired,
 
   /** Width and height of the icon in pixels */
   size: PropTypes.number,
@@ -44,6 +47,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
+  className: '',
   color: 'currentColor',
   size: 24,
   strokeWidth: 2,
