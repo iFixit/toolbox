@@ -17,6 +17,7 @@ module.exports = {
       linkHover: '#0071CE',
     },
   },
+  require: [path.join(__dirname, './global.css')],
   webpackConfig: {
     module: {
       loaders: loaders.all,
