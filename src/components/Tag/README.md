@@ -3,5 +3,5 @@
 ```
 
 ```
-<Tag onRemove={() => console.log('onRemove')}>Repair</Tag>
+<Tag onRemove={() => console.log('onRemove')}>iPhone</Tag>
 ```
