@@ -8,6 +8,7 @@ import {
   fontSize,
   lineHeight,
   borderRadius,
+  transition,
 } from '../../constants';
 
 const Container = glamorous.button(
@@ -20,6 +21,7 @@ const Container = glamorous.button(
     borderRadius,
     outline: 'none',
     cursor: 'pointer',
+    transition: `all ${transition.duration} ${transition.easing}`,
   },
   ({ theme, transparent }) => {
     switch (theme) {

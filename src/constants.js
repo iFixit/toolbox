@@ -98,3 +98,8 @@ export const lineHeight = {
 };
 
 export const borderRadius = 4;
+
+export const transition = {
+  duration: '150ms',
+  easing: 'linear',
+};
