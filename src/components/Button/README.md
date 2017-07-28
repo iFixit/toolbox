@@ -55,6 +55,3 @@
 ```
 <Button link href="https://ifixit.com" target="_blank">Go to iFixit.com</Button>
 ```
-
-
-
