@@ -1,6 +1,7 @@
 {
   "name": "toolbox",
   "version": "0.0.0",
+  "main": "src/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
     "format": "prettier-eslint --write '**/*.{js,jsx,json}'",
