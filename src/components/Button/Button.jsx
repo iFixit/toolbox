@@ -25,8 +25,8 @@ const ButtonContainer = glamorous.button(
     cursor: 'pointer',
     transition: `all ${transition.duration} ${transition.easing}`,
   },
-  ({ skin, transparent }) => {
-    switch (skin) {
+  ({ design, transparent }) => {
+    switch (design) {
       case 'primary':
         return {
           color: color.white,
@@ -128,8 +128,8 @@ Button.propTypes = {
   /** If `true`, component will render an `<a>` tag instead of `<button>` tag. Remember to specify an `href` attribute for all links */
   link: PropTypes.bool,
   onClick: PropTypes.func,
-  skin: PropTypes.oneOf(['default', 'primary', 'outline']),
-  /** Sets `background-color` to `transparent`. Does not apply to the `"primary"` skin */
+  design: PropTypes.oneOf(['default', 'primary', 'outline']),
+  /** Sets `background-color` to `transparent`. Does not apply to the `"primary"` design */
   transparent: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
@@ -138,7 +138,7 @@ Button.defaultProps = {
   fullWidth: false,
   link: false,
   onClick: () => {},
-  skin: 'default',
+  design: 'default',
   transparent: false,
   size: 'medium',
   disabled: false,

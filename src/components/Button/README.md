@@ -4,18 +4,18 @@
 <Button>Button</Button>
 ```
 
-### Button Skins
+### Button Designs
 
 ```
 <Button>Default</Button>
 ```
 
 ```
-<Button skin="primary">Primary</Button>
+<Button design="primary">Primary</Button>
 ```
 
 ```
-<Button skin="outline">Outline</Button>
+<Button design="outline">Outline</Button>
 ```
 
 ### Button Sizes
