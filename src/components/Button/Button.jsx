@@ -11,20 +11,22 @@ import {
   transition,
 } from '../../constants';
 
-const Container = glamorous.button(
+const ButtonContainer = glamorous.button(
   {
+    display: 'inline-block',
     fontFamily: 'inherit',
     fontSize: fontSize[1],
     lineHeight: lineHeight.copy,
     textAlign: 'center',
+    textDecoration: 'none',
     border: 'none',
     borderRadius,
     outline: 'none',
     cursor: 'pointer',
     transition: `all ${transition.duration} ${transition.easing}`,
   },
-  ({ theme, transparent }) => {
-    switch (theme) {
+  ({ skin, transparent }) => {
+    switch (skin) {
       case 'primary':
         return {
           color: color.white,
@@ -87,26 +89,59 @@ const Container = glamorous.button(
     }
   },
   ({ fullWidth }) => ({ width: fullWidth ? '100%' : 'auto' }),
+  ({ disabled }) => {
+    if (disabled) {
+      return {
+        color: color.grayAlpha[5],
+        backgroundColor: color.grayAlpha[1],
+        boxShadow: `inset 0 0 0 1px ${color.grayAlpha[3]}`,
+        pointerEvents: 'none',
+      };
+    }
+    return {};
+  },
 );
 
-const Button = ({ children, ...props }) =>
-  <Container {...props}>
-    {children}
-  </Container>;
+const LinkContainer = ButtonContainer.withComponent('a');
+
+const Button = ({ children, link, ...props }) => {
+  if (link) {
+    return (
+      <LinkContainer {...props}>
+        {children}
+      </LinkContainer>
+    );
+  }
+  return (
+    <ButtonContainer {...props}>
+      {children}
+    </ButtonContainer>
+  );
+};
 
 Button.propTypes = {
+  /** Content to display in the button */
   children: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  /** Sets width of the button to 100% */
   fullWidth: PropTypes.bool,
-  theme: PropTypes.oneOf(['default', 'primary', 'outline']),
+  /** If `true`, component will render an `<a>` tag instead of `<button>` tag. Remember to specify an `href` attribute for all links */
+  link: PropTypes.bool,
+  onClick: PropTypes.func,
+  skin: PropTypes.oneOf(['default', 'primary', 'outline']),
+  /** Sets `background-color` to `transparent`. Does not apply to the `"primary"` skin */
   transparent: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 Button.defaultProps = {
   fullWidth: false,
-  theme: 'default',
+  link: false,
+  onClick: () => {},
+  skin: 'default',
   transparent: false,
   size: 'medium',
+  disabled: false,
 };
 
 export default Button;
