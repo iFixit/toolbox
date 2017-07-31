@@ -7,6 +7,7 @@ Toolbox is a library of reusable React components.
 1. Clone the repo.
 ```
 git clone https://github.com/iFixit/toolbox.git
+cd toolbox
 ```
 
 2. Install the dependencies.
