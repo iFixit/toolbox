@@ -105,17 +105,12 @@ const ButtonContainer = glamorous.button(
 const LinkContainer = ButtonContainer.withComponent('a');
 
 const Button = ({ children, link, ...props }) => {
-  if (link) {
-    return (
-      <LinkContainer {...props}>
-        {children}
-      </LinkContainer>
-    );
-  }
+  const Container = link ? LinkContainer : ButtonContainer;
+
   return (
-    <ButtonContainer {...props}>
+    <Container {...props}>
       {children}
-    </ButtonContainer>
+    </Container>
   );
 };
 
