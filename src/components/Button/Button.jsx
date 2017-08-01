@@ -19,7 +19,7 @@ const ButtonContainer = glamorous.button(
     lineHeight: lineHeight.copy,
     textAlign: 'center',
     textDecoration: 'none',
-    border: 'none',
+    border: '1px solid',
     borderRadius,
     outline: 'none',
     cursor: 'pointer',
@@ -31,8 +31,10 @@ const ButtonContainer = glamorous.button(
         return {
           color: color.white,
           backgroundColor: color.blue[4],
+          borderColor: color.blue[4],
           ':hover': {
             backgroundColor: color.blue[5],
+            borderColor: color.blue[5],
           },
           ':focus': {
             boxShadow: `0 0 0 3px ${color.blue[2]}`,
@@ -43,11 +45,11 @@ const ButtonContainer = glamorous.button(
         return {
           color: color.blue[4],
           backgroundColor: transparent ? 'transparent' : color.white,
-          boxShadow: `inset 0 0 0 1px ${color.blue[2]}`,
+          borderColor: color.blue[2],
           ':hover': {
             color: color.white,
             backgroundColor: color.blue[4],
-            boxShadow: 'none',
+            borderColor: color.blue[4],
           },
           ':focus': {
             boxShadow: ` 0 0 0 3px ${color.blue[2]}`,
@@ -58,9 +60,10 @@ const ButtonContainer = glamorous.button(
         return {
           color: color.grayAlpha[9],
           backgroundColor: transparent ? 'transparent' : color.white,
-          boxShadow: `inset 0 0 0 1px ${color.grayAlpha[3]}`,
+          borderColor: color.grayAlpha[3],
           ':hover': {
             backgroundColor: transparent ? color.grayAlpha[0] : color.gray[0],
+            borderColor: color.grayAlpha[4],
           },
           ':focus': {
             boxShadow: `0 0 0 3px ${color.grayAlpha[3]}`,
@@ -94,7 +97,7 @@ const ButtonContainer = glamorous.button(
       return {
         color: color.grayAlpha[5],
         backgroundColor: color.grayAlpha[1],
-        boxShadow: `inset 0 0 0 1px ${color.grayAlpha[3]}`,
+        borderColor: color.grayAlpha[3],
         pointerEvents: 'none',
       };
     }
@@ -117,26 +120,36 @@ const Button = ({ children, link, ...props }) => {
 Button.propTypes = {
   /** Content to display in the button */
   children: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  /** Sets width of the button to 100% */
-  fullWidth: PropTypes.bool,
-  /** If `true`, component will render an `<a>` tag instead of `<button>` tag. Remember to specify an `href` attribute for all links */
-  link: PropTypes.bool,
-  onClick: PropTypes.func,
+
   design: PropTypes.oneOf(['default', 'primary', 'outline']),
-  /** Sets `background-color` to `transparent`. Does not apply to the `"primary"` design */
+
+  /** Display disabled state */
+  disabled: PropTypes.bool,
+
+  /** Set width of the button to 100% */
+  fullWidth: PropTypes.bool,
+
+  /** Use an `<a>` tag instead of `<button>` tag. Remember to specify an `href` attribute for all links */
+  link: PropTypes.bool,
+
+  /** Callback when clicked */
+  onClick: PropTypes.func,
+
+  /** Set `background-color` to `transparent`. Does not apply to the `"primary"` design */
   transparent: PropTypes.bool,
+
+  /** Size of button */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 Button.defaultProps = {
+  design: 'default',
+  disabled: false,
   fullWidth: false,
   link: false,
   onClick: () => {},
-  design: 'default',
   transparent: false,
   size: 'medium',
-  disabled: false,
 };
 
 export default Button;
