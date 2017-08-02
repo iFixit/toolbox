@@ -3,14 +3,13 @@ const loaders = require('loaders');
 const path = require('path');
 
 module.exports = {
+  title: 'Toolbox',
   components: 'src/components/**/*.jsx',
-  showCode: true,
-  showUsage: true,
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.jsx');
-    return `import { ${name} } from 'toolbox';`;
+    return `import { ${name} } from 'toolbox'`;
   },
-  highlightTheme: 'duotone-light',
+  highlightTheme: 'elegant',
   theme: {
     color: {
       link: '#0071CE',
