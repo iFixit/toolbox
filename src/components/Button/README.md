@@ -1,10 +1,12 @@
-### Simple Button
+### Examples
+
+#### Standard Button
 
 ```
 <Button>Button</Button>
 ```
 
-### Button Designs
+#### Button designs
 
 ```
 <Button>Default</Button>
@@ -18,7 +20,7 @@
 <Button design="outline">Outline</Button>
 ```
 
-### Button Sizes
+#### Button sizes
 
 ```
 <Button size="small">Small</Button>
@@ -32,26 +34,26 @@
 <Button size="large">Large</Button>
 ```
 
-### Full-Width Button
+#### Full-width Button
 
 ```
 <Button fullWidth>Full-width</Button>
 ```
 
-### Disabled Button
+#### Disabled Button
 
 ```
 <Button disabled>Disabled</Button>
 ```
 
-### onClick Callback
+#### onClick callback
 
 ```
 <Button onClick={() => console.log('clicked')}>Click me</Button>
 ```
 
-### Link
+#### Link
 
 ```
-<Button link href="https://ifixit.com" target="_blank">Go to iFixit.com</Button>
+<Button href="https://ifixit.com" target="_blank">Go to iFixit.com</Button>
 ```

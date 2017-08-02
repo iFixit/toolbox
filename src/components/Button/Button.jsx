@@ -107,8 +107,8 @@ const ButtonContainer = glamorous.button(
 
 const LinkContainer = ButtonContainer.withComponent('a');
 
-const Button = ({ children, link, ...props }) => {
-  const Container = link ? LinkContainer : ButtonContainer;
+const Button = ({ children, ...props }) => {
+  const Container = props.href === '' ? ButtonContainer : LinkContainer;
 
   return (
     <Container {...props}>
@@ -118,19 +118,19 @@ const Button = ({ children, link, ...props }) => {
 };
 
 Button.propTypes = {
-  /** Content to display in the button */
+  /** Text to display in the button */
   children: PropTypes.string.isRequired,
 
   design: PropTypes.oneOf(['default', 'primary', 'outline']),
 
-  /** Display disabled state */
+  /** Disable button */
   disabled: PropTypes.bool,
 
   /** Set width of the button to 100% */
   fullWidth: PropTypes.bool,
 
-  /** Use an `<a>` tag instead of `<button>` tag. Remember to specify an `href` attribute for all links */
-  link: PropTypes.bool,
+  /** If an `href` is provided, the underlying element will be an `<a>` instead of a `<button>` */
+  href: PropTypes.string,
 
   /** Callback when clicked */
   onClick: PropTypes.func,
@@ -146,7 +146,7 @@ Button.defaultProps = {
   design: 'default',
   disabled: false,
   fullWidth: false,
-  link: false,
+  href: '',
   onClick: () => {},
   transparent: false,
   size: 'medium',
