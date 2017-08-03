@@ -12,11 +12,15 @@ import {
   transition,
 } from '../../constants';
 
-const Label = glamorous.label({
-  display: 'inline-flex',
-  alignItems: 'center',
-  color: color.grayAlpha[9],
-});
+const Label = glamorous.label(
+  {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
+  ({ disabled }) => ({
+    color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
+  }),
+);
 
 // hide native checkbox element
 const Input = glamorous.input({
@@ -46,32 +50,43 @@ const CheckIcon = glamorous(Icon, {
     borderRadius,
     transition: `all ${transition.duration} ${transition.easing}`,
   },
-  ({ checked }) => ({
-    color: checked ? color.white : 'transparent',
-    backgroundColor: checked ? color.blue[4] : color.white,
-    border: `1px solid ${checked ? color.blue[4] : color.grayAlpha[4]}`,
-  }),
+  ({ checked, disabled }) => {
+    if (checked) {
+      return {
+        color: color.white,
+        backgroundColor: disabled ? color.gray[4] : color.blue[4],
+        border: `1px solid ${disabled ? color.gray[4] : color.blue[4]}`,
+      };
+    }
+    return {
+      color: 'transparent',
+      backgroundColor: color.white,
+      border: `1px solid ${color.grayAlpha[4]}`,
+    };
+  },
 );
 
 const Checkbox = ({ className, label, ...props }) =>
-  <Label className={className}>
+  <Label className={className} disabled={props.disabled}>
     <Input {...props} type="checkbox" />
-    <CheckIcon checked={props.checked} />
+    <CheckIcon checked={props.checked} disabled={props.disabled} />
     <LabelText>
       {label}
     </LabelText>
   </Label>;
 
 Checkbox.propTypes = {
-  className: PropTypes.string,
-  label: PropTypes.string,
   checked: PropTypes.bool,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
-  className: '',
-  label: '',
   checked: false,
+  className: '',
+  disabled: false,
+  label: '',
 };
 
 export default Checkbox;
