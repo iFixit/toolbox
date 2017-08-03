@@ -65,7 +65,7 @@ const TextField = props =>
       type={props.type}
       disabled={props.disabled}
       required={props.required}
-      onChange={ev => props.onChange(ev.target.value)}
+      onChange={ev => props.onChange({ value: ev.target.value })}
       onFocus={props.onFocus}
       onBlur={props.onBlur}
     />

@@ -1,5 +1,3 @@
-**Note:** `TextField` is a controlled component. [What's a controlled component?](https://facebook.github.io/react/docs/forms.html#controlled-components)
-
 ### Examples
 
 #### Standard TextField
@@ -36,7 +34,7 @@
 
 ```
 <TextField
-  onChange={value => console.log(value)}
+  onChange={({ value }) => console.log(value)}
   onFocus={() => console.log('focused')}
   onBlur={() => console.log('blurred')}
 />
