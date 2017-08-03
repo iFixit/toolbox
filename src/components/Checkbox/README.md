@@ -3,29 +3,29 @@
 #### Checked Checkbox
 
 ```
-<Checkbox label="Cole" checked />
+<Checkbox label="Checkbox label" checked />
 ```
 
 #### Unchecked Checkbox
 
 ```
-<Checkbox label="Cole" />
+<Checkbox label="Checkbox label" />
 ```
 
 #### Disabled checked Checkbox
 
 ```
-<Checkbox label="Cole" checked disabled />
+<Checkbox label="Checkbox disabled" checked disabled />
 ```
 
 #### Disabled unchecked Checkbox
 
 ```
-<Checkbox label="Cole" disabled />
+<Checkbox label="Checkbox disabled" disabled />
 ```
 
 #### onChange callback
 
 ```
-<Checkbox label="Cole" onChange={({ checked }) => console.log(checked)} />
+<Checkbox label="Checkbox label" onChange={({ checked }) => console.log(checked)} />
 ```
