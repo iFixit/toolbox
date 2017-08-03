@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
    entry: './src/index.js',
    output: {
@@ -11,6 +13,7 @@ module.exports = {
             loader: 'babel-loader',
             query: {
                presets: ['env', 'react-app'],
+               compact: true,
             },
          },
       ],
@@ -22,4 +25,7 @@ module.exports = {
    resolve: {
       extensions: ['.js', '.jsx'],
    },
+   plugins: [
+      new webpack.optimize.UglifyJsPlugin(),
+   ],
 };
