@@ -9,6 +9,7 @@
       "styleguide": "styleguidist server",
       "styleguide:build": "styleguidist build",
       "build": "NODE_ENV=production webpack",
+      "prepush": "npm run build",
       "prepare": "npm run build"
    },
    "peerDependencies": {
