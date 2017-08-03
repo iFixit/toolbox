@@ -26,6 +26,10 @@ const Input = glamorous.input({
   overflow: 'hidden',
   position: 'absolute',
   whiteSpace: 'nowrap',
+  '&:focus + span': {
+    borderColor: color.blue[4],
+    boxShadow: `0 0 0 3px ${color.blue[2]}`,
+  },
 });
 
 const LabelText = glamorous.span({
@@ -49,8 +53,8 @@ const CheckIcon = glamorous(Icon, {
   }),
 );
 
-const Checkbox = ({ label, ...props }) =>
-  <Label>
+const Checkbox = ({ className, label, ...props }) =>
+  <Label className={className}>
     <Input {...props} type="checkbox" />
     <CheckIcon checked={props.checked} />
     <LabelText>
@@ -59,11 +63,13 @@ const Checkbox = ({ label, ...props }) =>
   </Label>;
 
 Checkbox.propTypes = {
+  className: PropTypes.string,
   label: PropTypes.string,
   checked: PropTypes.bool,
 };
 
 Checkbox.defaultProps = {
+  className: '',
   label: '',
   checked: false,
 };
