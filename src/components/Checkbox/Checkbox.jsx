@@ -66,9 +66,13 @@ const CheckIcon = glamorous(Icon, {
   },
 );
 
-const Checkbox = ({ className, label, ...props }) =>
+const Checkbox = ({ className, label, onChange, ...props }) =>
   <Label className={className} disabled={props.disabled}>
-    <Input {...props} type="checkbox" />
+    <Input
+      {...props}
+      type="checkbox"
+      onChange={ev => onChange({ checked: ev.target.checked })}
+    />
     <CheckIcon checked={props.checked} disabled={props.disabled} />
     <LabelText>
       {label}
@@ -80,6 +84,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 Checkbox.defaultProps = {
@@ -87,6 +92,7 @@ Checkbox.defaultProps = {
   className: '',
   disabled: false,
   label: '',
+  onChange: () => {},
 };
 
 export default Checkbox;
