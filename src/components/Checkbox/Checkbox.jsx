@@ -30,10 +30,6 @@ const Input = glamorous.input({
   overflow: 'hidden',
   position: 'absolute',
   whiteSpace: 'nowrap',
-  '&:focus + span': {
-    borderColor: color.blue[4],
-    boxShadow: `0 0 0 3px ${color.blue[2]}`,
-  },
 });
 
 const LabelText = glamorous.span({
@@ -49,6 +45,10 @@ const CheckIcon = glamorous(Icon, {
     marginRight: spacing[2],
     borderRadius,
     transition: `all ${transition.duration} ${transition.easing}`,
+    '[type=checkbox]:focus + &': {
+      borderColor: color.blue[4],
+      boxShadow: `0 0 0 3px ${color.blue[2]}`,
+    },
   },
   ({ checked, disabled }) => {
     if (checked) {
