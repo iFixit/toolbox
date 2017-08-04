@@ -1,4 +1,12 @@
-export { default as Button } from './components/Button/Button';
-export { default as Icon } from './components/Icon/Icon';
-export { default as Tag } from './components/Tag/Tag';
-export { default as TextField } from './components/TextField/TextField';
+import Button from './components/Button/Button';
+import Icon from './components/Icon/Icon';
+import Tag from './components/Tag/Tag';
+import TextField from './components/TextField/TextField';
+
+const toolbox = {};
+toolbox.Button = Button;
+toolbox.Icon = Icon;
+toolbox.Tag = Tag;
+toolbox.TextField = TextField;
+
+export default toolbox;
