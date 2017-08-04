@@ -27,6 +27,7 @@ const Input = glamorous.input({
 
 const LabelText = glamorous.span({
    lineHeight: lineHeight.title,
+   userSelect: 'none',
 });
 
 const RadioIcon = glamorous(Icon, {
@@ -89,7 +90,7 @@ Radio.defaultProps = {
    disabled: false,
    label: '',
    onChange: () => {},
-   value: '',
+   value: 'on',
 };
 
 export default Radio;

@@ -34,6 +34,7 @@ const Input = glamorous.input({
 
 const LabelText = glamorous.span({
    lineHeight: lineHeight.title,
+   userSelect: 'none',
 });
 
 const CheckIcon = glamorous(Icon, {
@@ -94,7 +95,7 @@ Checkbox.defaultProps = {
    disabled: false,
    label: '',
    onChange: () => {},
-   value: '',
+   value: 'on',
 };
 
 export default Checkbox;
