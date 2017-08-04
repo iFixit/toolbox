@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["Toolbox"] = factory(require("react"));
+		exports["toolbox"] = factory(require("react"));
 	else
-		root["Toolbox"] = factory(root["React"]);
+		root["toolbox"] = factory(root["React"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
