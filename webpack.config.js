@@ -1,7 +1,12 @@
+const path = require('path');
+
 module.exports = {
    entry: './src/index.js',
    output: {
-      filename: 'dist/toolbox.js',
+      library: 'Toolbox',
+      libraryTarget: 'umd',
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'toolbox.js',
    },
    module: {
       loaders: [
@@ -25,11 +30,13 @@ module.exports = {
          root: 'React',
          commonjs2: 'react',
          commonjs: 'react',
+         amd: 'react',
       },
       'react-dom': {
          root: 'ReactDOM',
          commonjs2: 'react-dom',
          commonjs: 'react-dom',
+         amd: 'react-dom',
       },
    },
    resolve: {
