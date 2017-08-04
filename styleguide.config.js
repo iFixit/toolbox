@@ -1,5 +1,4 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-const loaders = require('loaders');
 const path = require('path');
 
 module.exports = {
@@ -17,9 +16,4 @@ module.exports = {
       },
    },
    require: [path.join(__dirname, './global.css')],
-   webpackConfig: {
-      module: {
-         loaders: loaders.all,
-      },
-   },
 };
