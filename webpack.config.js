@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
    entry: { toolbox: './src/index.js' },
@@ -38,4 +39,7 @@ module.exports = {
    resolve: {
       extensions: ['.js', '.jsx'],
    },
+   plugins: [
+      new webpack.optimize.UglifyJsPlugin(),
+   ],
 };
