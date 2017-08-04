@@ -1,7 +1,12 @@
+const path = require('path');
+
 module.exports = {
-   entry: './src/index.js',
+   entry: { toolbox: './src/index.js' },
    output: {
-      filename: 'dist/toolbox.js',
+      library: 'toolbox',
+      libraryTarget: 'umd',
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js',
    },
    module: {
       loaders: [
