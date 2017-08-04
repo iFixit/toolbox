@@ -19,10 +19,6 @@ module.exports = {
                compact: true,
             },
          },
-         {
-            test: /\.css$/,
-            loader: 'css-loader',
-         },
       ],
    },
    externals: {
