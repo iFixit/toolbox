@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import { color, spacing, lineHeight, transition } from '../../constants';
+import Icon from '../Icon/Icon';
 
 const Label = glamorous.label(
    {
@@ -28,7 +29,9 @@ const LabelText = glamorous.span({
    lineHeight: lineHeight.title,
 });
 
-const CheckIcon = glamorous.span(
+const RadioIcon = glamorous(Icon, {
+   withProps: { name: 'circle' },
+})(
    {
       width: 16,
       height: 16,
@@ -37,13 +40,6 @@ const CheckIcon = glamorous.span(
       marginRight: spacing[2],
       borderRadius: '50%',
       transition: `all ${transition.duration} ${transition.easing}`,
-      // '&::before': {
-      //   content: "''",
-      //   display: 'block',
-      //   width: 8,
-      //   height: 8,
-      //   background: color.white,
-      // },
       '[type=radio]:focus + &': {
          borderColor: color.blue[4],
          boxShadow: `0 0 0 3px ${color.blue[2]}`,
@@ -72,7 +68,7 @@ const Radio = ({ className, label, onChange, ...props }) =>
       type="radio"
       onChange={ev => onChange({ checked: ev.target.checked })}
     />
-    <CheckIcon checked={props.checked} disabled={props.disabled} />
+    <RadioIcon checked={props.checked} disabled={props.disabled} />
     <LabelText>
       {label}
     </LabelText>
