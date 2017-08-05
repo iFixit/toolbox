@@ -10,6 +10,7 @@ module.exports = {
          linkHover: '#0071CE',
       },
    },
+   skipComponentsWithoutExample: true,
    require: [path.join(__dirname, './global.css')],
    webpackConfig: {
       module: {
