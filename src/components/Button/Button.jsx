@@ -36,9 +36,6 @@ const ButtonContainer = glamorous.button(
                backgroundColor: color.blue[5],
                borderColor: color.blue[5],
             },
-            ':focus': {
-               boxShadow: `0 0 0 3px ${color.blue[2]}`,
-            },
          };
 
       case 'outline':
@@ -50,9 +47,6 @@ const ButtonContainer = glamorous.button(
                color: color.white,
                backgroundColor: color.blue[4],
                borderColor: color.blue[4],
-            },
-            ':focus': {
-               boxShadow: ` 0 0 0 3px ${color.blue[2]}`,
             },
          };
 
@@ -66,9 +60,6 @@ const ButtonContainer = glamorous.button(
                      ? color.grayAlpha[0]
                      : color.gray[0],
                borderColor: color.grayAlpha[4],
-            },
-            ':focus': {
-               boxShadow: `0 0 0 3px ${color.grayAlpha[3]}`,
             },
          };
       }
@@ -104,6 +95,12 @@ const ButtonContainer = glamorous.button(
          };
       }
       return {};
+   },
+   {
+      ':focus': {
+         borderColor: color.blue[4],
+         boxShadow: `0 0 0 3px ${color.blue[2]}`,
+      },
    },
 );
 
