@@ -49,17 +49,12 @@ const Input = glamorous.input(
 );
 
 const TextField = props =>
-  <Label
-    className={props.className}
-    htmlFor={props.id}
-    fullWidth={props.fullWidth}
-  >
+  <Label className={props.className} fullWidth={props.fullWidth}>
     {props.label !== '' &&
     <LabelText>
       {props.label}
     </LabelText>}
     <Input
-      id={props.id}
       value={props.value}
       placeholder={props.placeholder}
       type={props.type}
@@ -79,9 +74,6 @@ TextField.propTypes = {
 
    /** Set `width` to `100%` */
    fullWidth: PropTypes.bool,
-
-   /** Id of input. Used to connect `<label>` and `<input>` */
-   id: PropTypes.string,
 
    /** Label for input */
    label: PropTypes.string,
@@ -124,7 +116,6 @@ TextField.defaultProps = {
    className: '',
    disabled: false,
    fullWidth: false,
-   id: '',
    label: '',
    onBlur: () => {},
    onChange: () => {},
