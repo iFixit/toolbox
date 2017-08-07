@@ -4,6 +4,7 @@ import CheckboxRadio from './components/CheckboxRadio/CheckboxRadio';
 import Icon from './components/Icon/Icon';
 import Radio from './components/Radio/Radio';
 import Tag from './components/Tag/Tag';
+import Textarea from './components/Textarea/Textarea';
 import TextField from './components/TextField/TextField';
 
 const toolbox = {
@@ -13,6 +14,7 @@ const toolbox = {
    Icon,
    Radio,
    Tag,
+   Textarea,
    TextField,
 };
 
