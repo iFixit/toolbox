@@ -48,8 +48,8 @@ const TextareaContainer = glamorous.textarea(
    }),
 );
 
-const Textarea = ({ label, onChange, ...props }) =>
-  <Label>
+const Textarea = ({ className, label, onChange, ...props }) =>
+  <Label className={className}>
     {label !== '' &&
     <LabelText>
       {label}
@@ -61,6 +61,8 @@ const Textarea = ({ label, onChange, ...props }) =>
   </Label>;
 
 Textarea.propTypes = {
+   /** Set class name of containing element. */
+   className: PropTypes.string,
    /** This Boolean prop indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
    /** Represents a caption for the form control. */
@@ -84,6 +86,7 @@ Textarea.propTypes = {
 };
 
 Textarea.defaultProps = {
+   className: '',
    disabled: false,
    label: '',
    placeholder: '',
