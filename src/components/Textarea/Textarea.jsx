@@ -26,12 +26,12 @@ const TextareaContainer = glamorous.textarea(
    {
       boxSizing: 'border-box',
       width: '100%',
+      margin: 0,
+      padding: `${spacing[2]} ${spacing[3]}`,
       fontFamily: 'inherit',
       fontSize: fontSize[2],
-      border: `1px solid ${color.grayAlpha[3]}`,
-      padding: `${spacing[2]} ${spacing[3]}`,
       lineHeight: lineHeight.copy,
-      margin: 0,
+      border: `1px solid ${color.grayAlpha[3]}`,
       borderRadius,
       outline: 'none',
       ':focus': {
@@ -48,36 +48,52 @@ const TextareaContainer = glamorous.textarea(
    }),
 );
 
-const Textarea = ({ label, children, ...props }) =>
+const Textarea = ({ label, onChange, ...props }) =>
   <Label>
     {label !== '' &&
     <LabelText>
       {label}
     </LabelText>}
-    <TextareaContainer {...props}>
-      {children}
-    </TextareaContainer>
+    <TextareaContainer
+      {...props}
+      onChange={ev => onChange({ value: ev.target.value })}
+    />
   </Label>;
 
 Textarea.propTypes = {
-   children: PropTypes.string,
+   /** This Boolean prop indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
+   /** Represents a caption for the form control. */
    label: PropTypes.string,
+   /** A hint to the user of what can be entered in the control. */
    placeholder: PropTypes.string,
-   /** The number of visible text lines */
+   /** This prop specifies that the user must fill in a value before submitting a form. */
    required: PropTypes.bool,
+   /** Sets whether an element is resizable, and if so, in which direction(s). */
    resize: PropTypes.oneOf(['none', 'both', 'horizontal', 'vertical']),
+   /** The number of visible text lines for the control. */
    rows: PropTypes.number,
+   /** The value of the control. */
+   value: PropTypes.string,
+   /** Callback when focus is removed. */
+   onBlur: PropTypes.func,
+   /** Callback when value is changed. */
+   onChange: PropTypes.func,
+   /** Callback when control is focused. */
+   onFocus: PropTypes.func,
 };
 
 Textarea.defaultProps = {
-   children: '',
    disabled: false,
    label: '',
    placeholder: '',
-   rows: 3,
    required: false,
    resize: 'vertical',
+   rows: 3,
+   value: '',
+   onBlur: () => {},
+   onChange: () => {},
+   onFocus: () => {},
 };
 
 export default Textarea;
