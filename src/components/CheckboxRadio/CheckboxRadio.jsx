@@ -16,6 +16,7 @@ const Label = glamorous.label(
    {
       display: 'inline-flex',
       alignItems: 'center',
+      width: '100%',
    },
    ({ disabled }) => ({
       color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
