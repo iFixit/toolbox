@@ -5,10 +5,10 @@ import glamorous from 'glamorous';
 import Icon from '../Icon/Icon';
 
 import {
-   color,
-   spacing,
    borderRadius,
+   color,
    lineHeight,
+   spacing,
    transition,
 } from '../../constants';
 
@@ -86,13 +86,13 @@ const CheckboxRadio = ({ className, label, onChange, ...props }) =>
   </Label>;
 
 CheckboxRadio.propTypes = {
+   type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
    checked: PropTypes.bool,
    className: PropTypes.string,
    disabled: PropTypes.bool,
    label: PropTypes.string,
-   onChange: PropTypes.func,
-   type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
    value: PropTypes.string,
+   onChange: PropTypes.func,
 };
 
 CheckboxRadio.defaultProps = {
@@ -100,8 +100,8 @@ CheckboxRadio.defaultProps = {
    className: '',
    disabled: false,
    label: '',
-   onChange: () => {},
    value: 'on',
+   onChange: () => {},
 };
 
 export default CheckboxRadio;

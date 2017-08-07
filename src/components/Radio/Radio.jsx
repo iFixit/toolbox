@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import { color, spacing, lineHeight, transition } from '../../constants';
+import { color, lineHeight, spacing, transition } from '../../constants';
 import Icon from '../Icon/Icon';
 
 const Label = glamorous.label(
@@ -80,8 +80,8 @@ Radio.propTypes = {
    className: PropTypes.string,
    disabled: PropTypes.bool,
    label: PropTypes.string,
-   onChange: PropTypes.func,
    value: PropTypes.string,
+   onChange: PropTypes.func,
 };
 
 Radio.defaultProps = {
@@ -89,8 +89,8 @@ Radio.defaultProps = {
    className: '',
    disabled: false,
    label: '',
-   onChange: () => {},
    value: 'on',
+   onChange: () => {},
 };
 
 export default Radio;

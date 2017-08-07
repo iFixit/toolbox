@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import {
+   borderRadius,
    color,
-   spacing,
    fontSize,
    lineHeight,
-   borderRadius,
+   spacing,
 } from '../../constants';
 
 const Label = glamorous.label(
@@ -68,31 +68,16 @@ const TextField = props =>
 
 TextField.propTypes = {
    className: PropTypes.string,
-
    /** Disable input */
    disabled: PropTypes.bool,
-
    /** Set `width` to `100%` */
    fullWidth: PropTypes.bool,
-
    /** Label for input */
    label: PropTypes.string,
-
-   /** Callback when focus is removed */
-   onBlur: PropTypes.func,
-
-   /** Callback when value is changed */
-   onChange: PropTypes.func,
-
-   /** Callback when input is focused */
-   onFocus: PropTypes.func,
-
    /** Placeholder text for input */
    placeholder: PropTypes.string,
-
    /** Make input required */
    required: PropTypes.bool,
-
    type: PropTypes.oneOf([
       'text',
       'email',
@@ -107,9 +92,14 @@ TextField.propTypes = {
       'week',
       'time',
    ]),
-
    /** Value of input */
    value: PropTypes.string,
+   /** Callback when focus is removed */
+   onBlur: PropTypes.func,
+   /** Callback when value is changed */
+   onChange: PropTypes.func,
+   /** Callback when input is focused */
+   onFocus: PropTypes.func,
 };
 
 TextField.defaultProps = {
@@ -117,13 +107,13 @@ TextField.defaultProps = {
    disabled: false,
    fullWidth: false,
    label: '',
-   onBlur: () => {},
-   onChange: () => {},
-   onFocus: () => {},
    placeholder: '',
    required: false,
    type: 'text',
    value: '',
+   onBlur: () => {},
+   onChange: () => {},
+   onFocus: () => {},
 };
 
 export default TextField;

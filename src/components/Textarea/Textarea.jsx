@@ -65,9 +65,9 @@ Textarea.propTypes = {
    label: PropTypes.string,
    placeholder: PropTypes.string,
    /** The number of visible text lines */
-   rows: PropTypes.number,
    required: PropTypes.bool,
    resize: PropTypes.oneOf(['none', 'both', 'horizontal', 'vertical']),
+   rows: PropTypes.number,
 };
 
 Textarea.defaultProps = {

@@ -31,17 +31,13 @@ const Icon = props =>
   />;
 
 Icon.propTypes = {
-   className: PropTypes.string,
-
-   /** Any legal CSS color value for the stroke color */
-   color: PropTypes.string,
-
    /** Icon name. See the complete list of icons at https://feathericons.com */
    name: PropTypes.string.isRequired,
-
+   className: PropTypes.string,
+   /** Any legal CSS color value for the stroke color */
+   color: PropTypes.string,
    /** Width and height of the icon in pixels */
    size: PropTypes.number,
-
    /** Stroke width of the icon in pixels */
    strokeWidth: PropTypes.number,
 };

@@ -58,9 +58,7 @@ const Tag = props =>
 Tag.propTypes = {
    /** Content to display in the tag */
    children: PropTypes.string.isRequired,
-
    className: PropTypes.string,
-
    /** Callback when tag is removed */
    onRemove: PropTypes.func,
 };

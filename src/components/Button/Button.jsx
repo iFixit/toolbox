@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import {
+   borderRadius,
    color,
-   spacing,
    fontSize,
    lineHeight,
-   borderRadius,
+   spacing,
    transition,
 } from '../../constants';
 
@@ -119,26 +119,19 @@ const Button = ({ children, ...props }) => {
 Button.propTypes = {
    /** Text to display in the button */
    children: PropTypes.string.isRequired,
-
    design: PropTypes.oneOf(['default', 'primary', 'outline']),
-
    /** Disable button */
    disabled: PropTypes.bool,
-
    /** Set width of the button to 100% */
    fullWidth: PropTypes.bool,
-
    /** If an `href` is provided, the underlying element will be an `<a>` instead of a `<button>` */
    href: PropTypes.string,
-
-   /** Callback when clicked */
-   onClick: PropTypes.func,
-
-   /** Set `background-color` to `transparent`. Does not apply to the `"primary"` design */
-   transparent: PropTypes.bool,
-
    /** Size of button */
    size: PropTypes.oneOf(['small', 'medium', 'large']),
+   /** Set `background-color` to `transparent`. Does not apply to the `"primary"` design */
+   transparent: PropTypes.bool,
+   /** Callback when clicked */
+   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -146,9 +139,9 @@ Button.defaultProps = {
    disabled: false,
    fullWidth: false,
    href: '',
-   onClick: () => {},
-   transparent: false,
    size: 'medium',
+   transparent: false,
+   onClick: () => {},
 };
 
 export default Button;

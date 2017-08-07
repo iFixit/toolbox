@@ -85,8 +85,8 @@ Checkbox.propTypes = {
    className: PropTypes.string,
    disabled: PropTypes.bool,
    label: PropTypes.string,
-   onChange: PropTypes.func,
    value: PropTypes.string,
+   onChange: PropTypes.func,
 };
 
 Checkbox.defaultProps = {
@@ -94,8 +94,8 @@ Checkbox.defaultProps = {
    className: '',
    disabled: false,
    label: '',
-   onChange: () => {},
    value: 'on',
+   onChange: () => {},
 };
 
 export default Checkbox;

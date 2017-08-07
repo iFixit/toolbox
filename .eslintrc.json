@@ -1,8 +1,19 @@
 {
   "extends": "airbnb",
   "rules": {
-    "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false, "arrow": false}],
+    "react/jsx-wrap-multilines": [
+      "error",
+      { "declaration": false, "assignment": false, "arrow": false }
+    ],
     "max-len": "off",
-    "indent": ["error", 3]
+    "indent": ["error", 3],
+    "react/sort-prop-types": [
+      "error",
+      {
+        "callbacksLast": true,
+        "ignoreCase": true,
+        "requiredFirst": true
+      }
+    ]
   }
 }
