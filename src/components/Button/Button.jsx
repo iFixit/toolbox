@@ -75,12 +75,12 @@ const ButtonContainer = glamorous.button(
          return {
             fontSize: fontSize[2],
             lineHeight: lineHeight.title,
-            padding: `${spacing[2]} ${spacing[3]}`,
+            padding: `${spacing[3]} ${spacing[4]}`,
          };
 
       default:
          return {
-            padding: `${spacing[1]} ${spacing[2]}`,
+            padding: `${spacing[1]} ${spacing[3]}`,
          };
       }
    },

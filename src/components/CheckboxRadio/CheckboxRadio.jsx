@@ -33,7 +33,7 @@ const Input = glamorous.input({
 });
 
 const LabelText = glamorous.span({
-   marginLeft: spacing[2],
+   marginLeft: spacing[3],
    lineHeight: lineHeight.title,
    userSelect: 'none',
 });

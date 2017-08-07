@@ -38,7 +38,7 @@ const RadioIcon = glamorous(Icon, {
       height: 16,
       fill: 'currentColor',
       stroke: 'none',
-      marginRight: spacing[2],
+      marginRight: spacing[3],
       borderRadius: '50%',
       transition: `all ${transition.duration} ${transition.easing}`,
       '[type=radio]:focus + &': {

@@ -43,7 +43,7 @@ const CheckIcon = glamorous(Icon, {
    {
       width: 16,
       height: 16,
-      marginRight: spacing[2],
+      marginRight: spacing[3],
       borderRadius,
       transition: `all ${transition.duration} ${transition.easing}`,
       '[type=checkbox]:focus + &': {

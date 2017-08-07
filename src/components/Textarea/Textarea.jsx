@@ -18,7 +18,7 @@ const Label = glamorous.label({
 
 const LabelText = glamorous.span({
    display: 'inline-block',
-   marginBottom: spacing[2],
+   marginBottom: spacing[3],
    lineHeight: lineHeight.solid,
 });
 
@@ -29,7 +29,7 @@ const TextareaContainer = glamorous.textarea(
       fontFamily: 'inherit',
       fontSize: fontSize[2],
       border: `1px solid ${color.grayAlpha[3]}`,
-      padding: `0.75rem ${spacing[2]}`,
+      padding: `${spacing[2]} ${spacing[3]}`,
       lineHeight: lineHeight.copy,
       margin: 0,
       borderRadius,
