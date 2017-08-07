@@ -10,14 +10,12 @@ import {
    spacing,
 } from '../../constants';
 
-const Label = glamorous.label(
-   {
-      display: 'inline-block',
-      boxSizing: 'border-box',
-      color: color.grayAlpha[9],
-   },
-   ({ fullWidth }) => ({ width: fullWidth ? '100%' : 'auto' }),
-);
+const Label = glamorous.label({
+   display: 'inline-block',
+   boxSizing: 'border-box',
+   width: '100%',
+   color: color.grayAlpha[9],
+});
 
 const LabelText = glamorous.span({
    display: 'inline-block',
@@ -48,35 +46,25 @@ const Input = glamorous.input(
    }),
 );
 
-const TextField = props =>
-  <Label className={props.className} fullWidth={props.fullWidth}>
-    {props.label !== '' &&
+const TextField = ({ className, label, onChange, ...props }) =>
+  <Label className={className}>
+    {label !== '' &&
     <LabelText>
-      {props.label}
+      {label}
     </LabelText>}
-    <Input
-      value={props.value}
-      placeholder={props.placeholder}
-      type={props.type}
-      disabled={props.disabled}
-      required={props.required}
-      onChange={ev => props.onChange({ value: ev.target.value })}
-      onFocus={props.onFocus}
-      onBlur={props.onBlur}
-    />
+    <Input {...props} onChange={ev => onChange({ value: ev.target.value })} />
   </Label>;
 
 TextField.propTypes = {
+   /** Set class name of containing element. */
    className: PropTypes.string,
-   /** Disable input */
+   /** This Boolean prop indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
-   /** Set `width` to `100%` */
-   fullWidth: PropTypes.bool,
-   /** Label for input */
+   /** Represents a caption for the form control. */
    label: PropTypes.string,
-   /** Placeholder text for input */
+   /** A hint to the user of what can be entered in the control. */
    placeholder: PropTypes.string,
-   /** Make input required */
+   /** This prop specifies that the user must fill in a value before submitting a form. */
    required: PropTypes.bool,
    type: PropTypes.oneOf([
       'text',
@@ -92,20 +80,19 @@ TextField.propTypes = {
       'week',
       'time',
    ]),
-   /** Value of input */
+   /** The value of the control. */
    value: PropTypes.string,
-   /** Callback when focus is removed */
+   /** Callback when focus is removed. */
    onBlur: PropTypes.func,
-   /** Callback when value is changed */
+   /** Callback when value is changed. */
    onChange: PropTypes.func,
-   /** Callback when input is focused */
+   /** Callback when input is focused. */
    onFocus: PropTypes.func,
 };
 
 TextField.defaultProps = {
    className: '',
    disabled: false,
-   fullWidth: false,
    label: '',
    placeholder: '',
    required: false,

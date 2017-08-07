@@ -21,13 +21,7 @@
 #### Disabled TextField
 
 ```
-<TextField value="Bill Nye" disabled />
-```
-
-#### Full-width TextField
-
-```
-<TextField value="Jimi Hendrix" fullWidth />
+<TextField label="Name" value="Bill Nye" disabled />
 ```
 
 #### Event callbacks
