@@ -1,24 +1,24 @@
 ### Examples
 
-#### Checked Radio
+#### Checked
 
 ```
 <Radio label="Radio label" checked />
 ```
 
-#### Unchecked Radio
+#### Unchecked
 
 ```
 <Radio label="Radio label" />
 ```
 
-#### Disabled checked Radio
+#### Disabled checked
 
 ```
 <Radio label="Radio disabled" checked disabled />
 ```
 
-#### Disabled unchecked Radio
+#### Disabled unchecked
 
 ```
 <Radio label="Radio disabled" disabled />

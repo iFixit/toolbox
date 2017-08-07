@@ -1,91 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
 
-import Icon from '../Icon/Icon';
+import CheckboxRadio from '../CheckboxRadio/CheckboxRadio';
 
-import {
-   color,
-   spacing,
-   borderRadius,
-   lineHeight,
-   transition,
-} from '../../constants';
-
-const Label = glamorous.label(
-   {
-      display: 'inline-flex',
-      alignItems: 'center',
-   },
-   ({ disabled }) => ({
-      color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
-   }),
-);
-
-// hide native checkbox element
-const Input = glamorous.input({
-   clip: 'rect(1px, 1px, 1px, 1px)',
-   height: 1,
-   width: 1,
-   overflow: 'hidden',
-   position: 'absolute',
-   whiteSpace: 'nowrap',
-});
-
-const LabelText = glamorous.span({
-   lineHeight: lineHeight.title,
-   userSelect: 'none',
-});
-
-const CheckIcon = glamorous(Icon, {
-   withProps: { name: 'check' },
-})(
-   {
-      width: 16,
-      height: 16,
-      marginRight: spacing[3],
-      borderRadius,
-      transition: `all ${transition.duration} ${transition.easing}`,
-      '[type=checkbox]:focus + &': {
-         borderColor: color.blue[4],
-         boxShadow: `0 0 0 3px ${color.blue[2]}`,
-      },
-   },
-   ({ checked, disabled }) => {
-      if (checked) {
-         return {
-            color: color.white,
-            backgroundColor: disabled ? color.gray[4] : color.blue[4],
-            border: `1px solid ${disabled ? color.gray[4] : color.blue[4]}`,
-         };
-      }
-      return {
-         color: 'transparent',
-         backgroundColor: color.white,
-         border: `1px solid ${color.grayAlpha[4]}`,
-      };
-   },
-);
-
-const Checkbox = ({ className, label, onChange, ...props }) =>
-  <Label className={className} disabled={props.disabled}>
-    <Input
-      {...props}
-      type="checkbox"
-      onChange={ev => onChange({ checked: ev.target.checked })}
-    />
-    <CheckIcon checked={props.checked} disabled={props.disabled} />
-    <LabelText>
-      {label}
-    </LabelText>
-  </Label>;
+const Checkbox = props => <CheckboxRadio type="checkbox" {...props} />;
 
 Checkbox.propTypes = {
+   /** Checkbox is selected. */
    checked: PropTypes.bool,
+   /** Set class name of containing element. */
    className: PropTypes.string,
+   /** Indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
+   /** Represents a caption for the form control. */
    label: PropTypes.string,
+   /** The value of the control. */
    value: PropTypes.string,
+   /** Callback when the control is toggled. */
    onChange: PropTypes.func,
 };
 

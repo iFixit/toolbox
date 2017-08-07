@@ -1,24 +1,24 @@
 ### Examples
 
-#### Checked Checkbox
+#### Checked
 
 ```
 <Checkbox label="Checkbox label" checked />
 ```
 
-#### Unchecked Checkbox
+#### Unchecked
 
 ```
 <Checkbox label="Checkbox label" />
 ```
 
-#### Disabled checked Checkbox
+#### Disabled checked
 
 ```
 <Checkbox label="Checkbox disabled" checked disabled />
 ```
 
-#### Disabled unchecked Checkbox
+#### Disabled unchecked
 
 ```
 <Checkbox label="Checkbox disabled" disabled />
