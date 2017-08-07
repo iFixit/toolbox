@@ -58,7 +58,7 @@ const TextField = ({ className, label, onChange, ...props }) =>
 TextField.propTypes = {
    /** Set class name of containing element. */
    className: PropTypes.string,
-   /** This Boolean prop indicates that the form control is not available for interaction. */
+   /** Indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
    /** Represents a caption for the form control. */
    label: PropTypes.string,

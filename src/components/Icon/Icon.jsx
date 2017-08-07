@@ -33,6 +33,7 @@ const Icon = props =>
 Icon.propTypes = {
    /** Icon name. See the complete list of icons at https://feathericons.com */
    name: PropTypes.string.isRequired,
+   /** Set class name of containing element. */
    className: PropTypes.string,
    /** Any legal CSS color value for the stroke color */
    color: PropTypes.string,
