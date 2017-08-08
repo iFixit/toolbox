@@ -27,5 +27,8 @@
 #### onChange callback
 
 ```
-<Checkbox label="Checkbox label" onChange={({ checked }) => console.log(checked)} />
+<Checkbox
+  label="Checkbox label"
+  onChange={({ checked, value }) => console.log(checked, value)}
+/>
 ```

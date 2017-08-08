@@ -72,7 +72,8 @@ const CheckboxRadio = ({ className, label, onChange, ...props }) =>
   <Label className={className} disabled={props.disabled}>
     <Input
       {...props}
-      onChange={ev => onChange({ checked: ev.target.checked })}
+      onChange={ev =>
+            onChange({ checked: ev.target.checked, value: ev.target.value })}
     />
     <InputIcon
       name={props.type === 'checkbox' ? 'check' : 'circle'}

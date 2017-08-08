@@ -27,5 +27,8 @@
 #### onChange callback
 
 ```
-<Radio label="Radio label" onChange={({ checked }) => console.log(checked)} />
+<Radio
+  label="Radio label"
+  onChange={({ checked, value }) => console.log(checked, value)}
+/>
 ```
