@@ -2,6 +2,8 @@
 
 Toolbox is a library of reusable React components.
 
+**[toolbox.netlify.com](https://toolbox.netlify.com)**
+
 ## Project setup
 
 1. Clone the repo.
