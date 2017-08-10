@@ -3,32 +3,32 @@
 #### Checked
 
 ```
-<Checkbox label="Checkbox label" checked />
+<Radio label="Radio label" checked />
 ```
 
 #### Unchecked
 
 ```
-<Checkbox label="Checkbox label" />
+<Radio label="Radio label" />
 ```
 
 #### Disabled checked
 
 ```
-<Checkbox label="Checkbox disabled" checked disabled />
+<Radio label="Radio disabled" checked disabled />
 ```
 
 #### Disabled unchecked
 
 ```
-<Checkbox label="Checkbox disabled" disabled />
+<Radio label="Radio disabled" disabled />
 ```
 
 #### onChange callback
 
 ```
-<Checkbox
-  label="Checkbox label"
+<Radio
+  label="Radio label"
   onChange={({ checked, value }) => console.log(checked, value)}
 />
 ```

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import CheckboxRadio from '../CheckboxRadio/CheckboxRadio';
 
-const Checkbox = props => <CheckboxRadio type="checkbox" {...props} />;
+const Radio = props => <CheckboxRadio type="radio" {...props} />;
 
-Checkbox.propTypes = {
-   /** Checkbox is selected. */
+Radio.propTypes = {
+   /** Radio is selected. */
    checked: PropTypes.bool,
    /** Set class name of containing element. */
    className: PropTypes.string,
@@ -20,7 +20,7 @@ Checkbox.propTypes = {
    onChange: PropTypes.func,
 };
 
-Checkbox.defaultProps = {
+Radio.defaultProps = {
    checked: false,
    className: '',
    disabled: false,
@@ -29,4 +29,4 @@ Checkbox.defaultProps = {
    onChange: () => {},
 };
 
-export default Checkbox;
+export default Radio;
