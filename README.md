@@ -22,7 +22,7 @@ npm run styleguide
 
 ## Code Style
 
-Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality is enforced by [ESLint](http://eslint.org/). You can automatically format your code with [Prettier](https://github.com/prettier/prettier) and [ESLint](http://eslint.org/) by running the `format` script:
+Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality are enforced by [ESLint](http://eslint.org/). You can automatically format your code with [Prettier](https://github.com/prettier/prettier) and [ESLint](http://eslint.org/) by running the `format` script:
 ```
 npm run format
 ```
