@@ -7,6 +7,7 @@ import Icon from '../Icon/Icon';
 import {
    borderRadius,
    color,
+   fontSize,
    lineHeight,
    spacing,
    transition,
@@ -17,6 +18,7 @@ const Label = glamorous.label(
       display: 'inline-flex',
       alignItems: 'center',
       width: '100%',
+      fontSize: fontSize[2],
    },
    ({ disabled }) => ({
       color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
@@ -41,8 +43,10 @@ const LabelText = glamorous.span({
 
 const InputIcon = glamorous(Icon)(
    {
+      boxSizing: 'content-box',
       width: 16,
       height: 16,
+      lineHeight: 0,
       transition: `all ${transition.duration} ${transition.easing}`,
       'input:focus + &': {
          borderColor: color.blue[4],

@@ -14,6 +14,7 @@ const Label = glamorous.label({
    display: 'inline-block',
    boxSizing: 'border-box',
    width: '100%',
+   fontSize: fontSize[2],
    color: color.grayAlpha[9],
 });
 

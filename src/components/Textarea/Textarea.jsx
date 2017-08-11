@@ -13,6 +13,7 @@ import {
 const Label = glamorous.label({
    display: 'inline-block',
    width: '100%',
+   fontSize: fontSize[2],
    color: color.grayAlpha[9],
 });
 
@@ -33,6 +34,7 @@ const TextareaContainer = glamorous.textarea(
       lineHeight: lineHeight.copy,
       border: `1px solid ${color.grayAlpha[3]}`,
       borderRadius,
+      boxShadow: 'none',
       outline: 'none',
       ':focus': {
          borderColor: color.blue[4],
