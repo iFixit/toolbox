@@ -11,6 +11,7 @@ module.exports = {
       },
    },
    skipComponentsWithoutExample: true,
+   showUsage: true,
    getComponentPathLine(componentPath) {
       const name = path.basename(componentPath, '.jsx');
       return `import { ${name} } from 'toolbox';`;
