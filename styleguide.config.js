@@ -11,6 +11,10 @@ module.exports = {
       },
    },
    skipComponentsWithoutExample: true,
+   getComponentPathLine(componentPath) {
+      const name = path.basename(componentPath, '.jsx');
+      return `import { ${name} } from 'toolbox';`;
+   },
    require: [path.join(__dirname, './global.css')],
    webpackConfig: {
       module: {
