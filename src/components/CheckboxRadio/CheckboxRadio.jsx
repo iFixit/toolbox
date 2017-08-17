@@ -72,8 +72,20 @@ const InputIcon = glamorous(Icon)(
    },
 );
 
-const CheckboxRadio = ({ className, label, onChange, ...props }) =>
-  <Label className={className} disabled={props.disabled}>
+const CheckboxRadio = ({
+   className,
+   label,
+   onMouseEnter,
+   onMouseLeave,
+   onChange,
+   ...props
+}) =>
+  <Label
+    className={className}
+    disabled={props.disabled}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     <Input
       {...props}
       onChange={ev =>
@@ -99,6 +111,8 @@ CheckboxRadio.propTypes = {
    label: PropTypes.string,
    value: PropTypes.string,
    onChange: PropTypes.func,
+   onMouseEnter: PropTypes.func,
+   onMouseLeave: PropTypes.func,
 };
 
 CheckboxRadio.defaultProps = {
@@ -108,6 +122,8 @@ CheckboxRadio.defaultProps = {
    label: '',
    value: 'on',
    onChange: () => {},
+   onMouseEnter: () => {},
+   onMouseLeave: () => {},
 };
 
 export default CheckboxRadio;

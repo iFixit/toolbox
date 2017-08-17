@@ -24,11 +24,13 @@
 <Radio label="Radio disabled" disabled />
 ```
 
-#### onChange callback
+#### Event callbacks
 
 ```
 <Radio
   label="Radio label"
   onChange={({ checked, value }) => console.log(checked, value)}
+  onMouseEnter={() => console.log('mouse entered')}
+  onMouseLeave={() => console.log('mouse left')}
 />
 ```

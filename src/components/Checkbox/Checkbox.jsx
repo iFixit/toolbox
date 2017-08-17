@@ -18,6 +18,10 @@ Checkbox.propTypes = {
    value: PropTypes.string,
    /** Callback when the control is toggled. */
    onChange: PropTypes.func,
+   /** Callback when mouse enters component. */
+   onMouseEnter: PropTypes.func,
+   /** Callback when mouse leaves component. */
+   onMouseLeave: PropTypes.func,
 };
 
 Checkbox.defaultProps = {
@@ -27,6 +31,8 @@ Checkbox.defaultProps = {
    label: '',
    value: 'on',
    onChange: () => {},
+   onMouseEnter: () => {},
+   onMouseLeave: () => {},
 };
 
 export default Checkbox;

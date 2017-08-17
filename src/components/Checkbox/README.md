@@ -24,11 +24,13 @@
 <Checkbox label="Checkbox disabled" disabled />
 ```
 
-#### onChange callback
+#### Event callbacks
 
 ```
 <Checkbox
   label="Checkbox label"
   onChange={({ checked, value }) => console.log(checked, value)}
+  onMouseEnter={() => console.log('mouse entered')}
+  onMouseLeave={() => console.log('mouse left')}
 />
 ```
