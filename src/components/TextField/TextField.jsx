@@ -47,8 +47,19 @@ const Input = glamorous.input(
    }),
 );
 
-const TextField = ({ className, label, onMouseOver, onChange, ...props }) =>
-  <Label className={className} onMouseOver={onMouseOver}>
+const TextField = ({
+   className,
+   label,
+   onMouseEnter,
+   onMouseLeave,
+   onChange,
+   ...props
+}) =>
+  <Label
+    className={className}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     {label !== '' &&
     <LabelText>
       {label}
@@ -89,8 +100,10 @@ TextField.propTypes = {
    onChange: PropTypes.func,
    /** Callback when input is focused. */
    onFocus: PropTypes.func,
-   /** Callback when input is moused over. */
-   onMouseOver: PropTypes.func,
+   /** Callback when mouse enters component. */
+   onMouseEnter: PropTypes.func,
+   /** Callback when mouse leaves component. */
+   onMouseLeave: PropTypes.func,
 };
 
 TextField.defaultProps = {
@@ -104,7 +117,8 @@ TextField.defaultProps = {
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
-   onMouseOver: () => {},
+   onMouseEnter: () => {},
+   onMouseLeave: () => {},
 };
 
 export default TextField;
