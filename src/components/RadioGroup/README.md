@@ -70,3 +70,20 @@
   onChange={({ value }) => console.log(value)}
 />
 ```
+
+#### Event callbacks
+
+```
+<RadioGroup
+  label="What's your favorite food?"
+  disabled
+  radios={[
+    { label: 'Burrito', value: 'burrito', disabled: true },
+    { label: 'Pizza', value: 'pizza' },
+    { label: 'Pasta', value: 'pasta' }
+  ]}
+  onChange={({ value }) => console.log(value)}
+  onMouseEnter={() => console.log('mouse entered')}
+  onMouseLeave={() => console.log('mouse left')}
+/>
+```

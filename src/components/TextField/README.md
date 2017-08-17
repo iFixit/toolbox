@@ -29,6 +29,8 @@
 ```
 <TextField
   onChange={({ value }) => console.log(value)}
+  onMouseEnter={() => console.log('mouse entered')}
+  onMouseLeave={() => console.log('mouse left')}
   onFocus={() => console.log('focused')}
   onBlur={() => console.log('blurred')}
 />

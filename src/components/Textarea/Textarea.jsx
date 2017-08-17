@@ -50,8 +50,19 @@ const TextareaContainer = glamorous.textarea(
    }),
 );
 
-const Textarea = ({ className, label, onChange, ...props }) =>
-  <Label className={className}>
+const Textarea = ({
+   className,
+   label,
+   onMouseEnter,
+   onMouseLeave,
+   onChange,
+   ...props
+}) =>
+  <Label
+    className={className}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     {label !== '' &&
     <LabelText>
       {label}
@@ -85,6 +96,10 @@ Textarea.propTypes = {
    onChange: PropTypes.func,
    /** Callback when control is focused. */
    onFocus: PropTypes.func,
+   /** Callback when mouse enters component. */
+   onMouseEnter: PropTypes.func,
+   /** Callback when mouse leaves component. */
+   onMouseLeave: PropTypes.func,
 };
 
 Textarea.defaultProps = {
@@ -99,6 +114,8 @@ Textarea.defaultProps = {
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
+   onMouseEnter: () => {},
+   onMouseLeave: () => {},
 };
 
 export default Textarea;

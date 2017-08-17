@@ -25,8 +25,21 @@ const RadioContainer = glamorous(Radio)({
    },
 });
 
-const RadioGroup = ({ className, label, value, disabled, onChange, radios }) =>
-  <FieldSet className={className}>
+const RadioGroup = ({
+   className,
+   label,
+   value,
+   disabled,
+   onMouseEnter,
+   onMouseLeave,
+   onChange,
+   radios,
+}) =>
+  <FieldSet
+    className={className}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
     {label !== '' &&
     <Legend>
       {label}
@@ -61,6 +74,10 @@ RadioGroup.propTypes = {
    value: PropTypes.string,
    /** Callback when any radio is toggled. */
    onChange: PropTypes.func,
+   /** Callback when mouse enters component. */
+   onMouseEnter: PropTypes.func,
+   /** Callback when mouse leaves component. */
+   onMouseLeave: PropTypes.func,
 };
 
 RadioGroup.defaultProps = {
@@ -69,6 +86,8 @@ RadioGroup.defaultProps = {
    label: '',
    value: '',
    onChange: () => {},
+   onMouseEnter: () => {},
+   onMouseLeave: () => {},
 };
 
 export default RadioGroup;
