@@ -17,6 +17,10 @@
       </FormGroup>
 
       <FormGroup>
+        <FormField span={2}>
+          <TextField label="Name" placeholder="Doc Brown" />
+        </FormField>
+
         <FormField>
           <TextField label="Name" placeholder="Doc Brown" />
         </FormField>
@@ -27,7 +31,7 @@
       </FormGroup>
 
       <FormField>
-        <Radio label="Name" placeholder="Doc Brown" />
+        <Checkbox label="Name" />
       </FormField>
     </FormContainer>
   }
