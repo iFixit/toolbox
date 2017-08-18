@@ -61,14 +61,29 @@ const gridCellFactory = ({ gutter }) =>
       }),
    );
 
-const Grid = ({ className, children, gutter }) =>
-  <div className={className}>
-    {children({
-       GridContainer: gridContainerFactory({ gutter }),
-       GridRow: gridRowFactory({ gutter }),
-       GridCell: gridCellFactory({ gutter }),
-    })}
-  </div>;
+class Grid extends React.Component {
+   constructor(props) {
+      super(props);
+
+      this.GridContainer = gridContainerFactory({ gutter: props.gutter });
+      this.GridRow = gridRowFactory({ gutter: props.gutter });
+      this.GridCell = gridCellFactory({ gutter: props.gutter });
+   }
+
+   render() {
+      const { className, children } = this.props;
+
+      return (
+        <div className={className}>
+          {children({
+             GridContainer: this.GridContainer,
+             GridRow: this.GridRow,
+             GridCell: this.GridCell,
+          })}
+        </div>
+      );
+   }
+}
 
 Grid.propTypes = {
    /** A function that returns the contents of the grid */
