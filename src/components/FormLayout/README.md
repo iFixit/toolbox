@@ -1,27 +1,3 @@
-### Child Callback Function
-
-`FormLayout` accepts a function as a child prop to render the contents of the form. `FormLayout` passes an object with three components as an argument to child function: `{ FormContainer, FormGroup, FormField }`.
-
-#### **FormContainer**
-
-`FormContainer` must wrap all of the form components in the child callback function.
-
-#### **FormGroup**
-
-Use `FormGroup` to show multiple fields horizontally when it’s appropriate such as when displaying city, region, and postal/zip code fields.
-
-#### **FormField**
-
-`FormField` must wrap every field in the form.
-
-**Props**
-
-| Prop Name | Type | Default | Description |
-| --- | --- | ---| --- |
-| `span` | `number` | `1` | `Span` represents the proportion of horizontal space the field will fill relative the rest of the fields in the `FormGroup`. For example, let's say there are two `FormField`s in a `FormGroup`. The first `FormField` has a `span` of `1` and the second has a `span` of `2`. The first `FormField` will fill `1/3` of the available horizontal space. The second `FormField` will fill `2/3` of the available horizontal space. |
-
-
-
 ### Examples
 
 #### Log in form
@@ -79,3 +55,25 @@ Use `FormGroup` to show multiple fields horizontally when it’s appropriate suc
   }
 </FormLayout>
 ```
+
+### Child Callback Function
+
+`FormLayout` accepts a function as a child prop to render the contents of the form. `FormLayout` passes an object with three components as an argument to child function: `{ FormContainer, FormGroup, FormField }`.
+
+#### **FormContainer**
+
+`FormContainer` must wrap all of the form components in the child callback function.
+
+#### **FormGroup**
+
+Use `FormGroup` to show multiple fields horizontally when it’s appropriate such as when displaying city, region, and postal/zip code fields.
+
+#### **FormField**
+
+`FormField` must wrap every field in the form.
+
+**Props**
+
+| Prop Name | Type | Default | Description |
+| --- | --- | ---| --- |
+| `span` | `number` | `1` | `Span` represents the proportion of horizontal space the field will fill relative the rest of the fields in the `FormGroup`. For example, let's say there are two `FormField`s in a `FormGroup`. The first `FormField` has a `span` of `1` and the second has a `span` of `2`. The first `FormField` will fill `1/3` of the available horizontal space. The second `FormField` will fill `2/3` of the available horizontal space. |
