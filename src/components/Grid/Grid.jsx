@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 
 import { breakpoint } from '../../constants';
 
-const formContainerFactory = ({ gutter }) =>
+const gridContainerFactory = ({ gutter }) =>
    glamorous.div(
       {
          display: 'flex',
@@ -22,7 +22,7 @@ const formContainerFactory = ({ gutter }) =>
       },
    );
 
-const formGroupFactory = ({ gutter }) =>
+const gridRowFactory = ({ gutter }) =>
    glamorous.div(
       {
          display: 'flex',
@@ -46,7 +46,7 @@ const formGroupFactory = ({ gutter }) =>
       },
    );
 
-const formFieldFactory = ({ gutter }) =>
+const gridCellFactory = ({ gutter }) =>
    glamorous.div(
       {
          margin: `${gutter / 2}px 0`,
@@ -61,25 +61,25 @@ const formFieldFactory = ({ gutter }) =>
       }),
    );
 
-const FormLayout = ({ children, gutter }) =>
+const Grid = ({ children, gutter }) =>
   <div>
     {children({
-       FormContainer: formContainerFactory({ gutter }),
-       FormGroup: formGroupFactory({ gutter }),
-       FormField: formFieldFactory({ gutter }),
+       GridContainer: gridContainerFactory({ gutter }),
+       GridRow: gridRowFactory({ gutter }),
+       GridCell: gridCellFactory({ gutter }),
     })}
   </div>;
 
-FormLayout.propTypes = {
-   /** A function that returns the contents of the form */
+Grid.propTypes = {
+   /** A function that returns the contents of the grid */
    children: PropTypes.func,
-   /** Space between form fields */
+   /** Space between grid cells */
    gutter: PropTypes.number,
 };
 
-FormLayout.defaultProps = {
+Grid.defaultProps = {
    children: () => {},
    gutter: 32,
 };
 
-export default FormLayout;
+export default Grid;
