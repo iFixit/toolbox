@@ -71,7 +71,9 @@ const FormLayout = ({ children, gutter }) =>
   </div>;
 
 FormLayout.propTypes = {
+   /** A function that returns the contents of the form */
    children: PropTypes.func,
+   /** Space between form fields */
    gutter: PropTypes.number,
 };
 
