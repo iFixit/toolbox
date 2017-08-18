@@ -86,11 +86,11 @@ class Grid extends React.Component {
 }
 
 Grid.propTypes = {
-   /** A function that returns the contents of the grid */
+   /** A function that returns the contents of the grid. */
    children: PropTypes.func,
    /** Set class name of containing element. */
    className: PropTypes.string,
-   /** Space between grid cells */
+   /** Space between grid cells. */
    gutter: PropTypes.number,
 };
 
