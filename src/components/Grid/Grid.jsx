@@ -61,8 +61,8 @@ const gridCellFactory = ({ gutter }) =>
       }),
    );
 
-const Grid = ({ children, gutter }) =>
-  <div>
+const Grid = ({ className, children, gutter }) =>
+  <div className={className}>
     {children({
        GridContainer: gridContainerFactory({ gutter }),
        GridRow: gridRowFactory({ gutter }),
@@ -73,12 +73,15 @@ const Grid = ({ children, gutter }) =>
 Grid.propTypes = {
    /** A function that returns the contents of the grid */
    children: PropTypes.func,
+   /** Set class name of containing element. */
+   className: PropTypes.string,
    /** Space between grid cells */
    gutter: PropTypes.number,
 };
 
 Grid.defaultProps = {
    children: () => {},
+   className: '',
    gutter: 32,
 };
 
