@@ -12,8 +12,12 @@ import {
 } from '../../constants';
 
 const propTypes = {
-   /** Text to display inside the button. */
-   children: PropTypes.string.isRequired,
+   /** Contents of the button. */
+   children: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node),
+   ]).isRequired,
    /** Choose a button design. */
    design: PropTypes.oneOf(['default', 'primary', 'outline', 'plain']),
    /** Disable button. */
@@ -108,7 +112,9 @@ const sizes = {
 
 const ButtonContainer = glamorous.button(
    {
-      display: 'inline-block',
+      display: 'inline-flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       boxSizing: 'border-box',
       fontFamily: 'inherit',
       textAlign: 'center',
@@ -120,12 +126,17 @@ const ButtonContainer = glamorous.button(
       cursor: 'pointer',
       userSelect: 'none',
       transition: `all ${transition.duration} ${transition.easing}`,
+
+      // add space between button children
+      '& > * + *': {
+         marginLeft: spacing[1],
+      },
    },
    ({ design }) => designs[design],
    ({ size }) => sizes[size],
    ({ fullWidth }) => {
       if (fullWidth) {
-         return { display: 'block', width: '100%' };
+         return { display: 'flex', width: '100%' };
       }
       return null;
    },

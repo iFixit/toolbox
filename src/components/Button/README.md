@@ -24,6 +24,28 @@
 <Button design="plain">Plain</Button>
 ```
 
+#### Icon Buttons
+
+```
+<Button design="primary">
+  <Icon name="check" />
+  <span>Button</span>
+</Button>
+```
+
+```
+<Button>
+  <span>Button</span>
+  <Icon name="arrow-right" />
+</Button>
+```
+
+```
+<Button design="outline">
+  <Icon name="search" />
+</Button>
+```
+
 #### Button sizes
 
 ```
