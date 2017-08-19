@@ -1,23 +1,29 @@
 
 ```
 <PageNavBar>
-  <Button design="plain">
-    View Page
-  </Button>
+  <PageNavBar.Left>
+    <Button design="plain">
+      View Page
+    </Button>
+  </PageNavBar.Left>
 
-  <Button design="primary">
-    Save Changes
-  </Button>
+  <PageNavBar.Right>
+    <Button design="primary">
+      Save Changes
+    </Button>
+  </PageNavBar.Right>
 </PageNavBar>
 ```
 
 ```
 <PageNavBar>
-  <Button design="plain">
-    Mac Repair
-  </Button>
+  <PageNavBar.Left>
+    <Button design="plain">
+      Mac Repair
+    </Button>
+  </PageNavBar.Left>
 
-  <div>
+  <PageNavBar.Right>
     <Button design="plain">
       Edit
     </Button>
@@ -25,6 +31,6 @@
     <Button design="plain">
       Options
     </Button>
-  </div>
+  </PageNavBar.Right>
 </PageNavBar>
 ```
