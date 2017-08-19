@@ -1,19 +1,21 @@
 {
-  "extends": "airbnb",
-  "rules": {
-    "react/jsx-wrap-multilines": [
-      "error",
-      { "declaration": false, "assignment": false, "arrow": false }
-    ],
-    "max-len": "off",
-    "indent": ["error", 3],
-    "react/sort-prop-types": [
-      "error",
-      {
-        "callbacksLast": true,
-        "ignoreCase": true,
-        "requiredFirst": true
-      }
-    ]
-  }
+   "extends": "airbnb",
+   "rules": {
+      "arrow-parens": ["error", "as-needed"],
+      "max-len": "off",
+      "indent": ["error", 3],
+      "react/jsx-wrap-multilines": [
+         "error",
+         { "declaration": false, "assignment": false, "arrow": false }
+      ],
+      "react/no-unused-prop-types": "warn",
+      "react/sort-prop-types": [
+         "error",
+         {
+            "callbacksLast": true,
+            "ignoreCase": true,
+            "requiredFirst": true
+         }
+      ]
+   }
 }

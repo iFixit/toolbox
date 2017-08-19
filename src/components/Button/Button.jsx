@@ -11,137 +11,141 @@ import {
    transition,
 } from '../../constants';
 
-const ButtonContainer = glamorous.button(
-   {
-      display: 'inline-block',
-      fontFamily: 'inherit',
-      fontSize: fontSize[1],
-      lineHeight: lineHeight.copy,
-      textAlign: 'center',
-      textDecoration: 'none',
-      border: '1px solid',
-      borderRadius,
-      outline: 'none',
-      cursor: 'pointer',
-      transition: `all ${transition.duration} ${transition.easing}`,
-   },
-   ({ design, transparent }) => {
-      switch (design) {
-      case 'primary':
-         return {
-            color: color.white,
-            backgroundColor: color.blue[4],
-            borderColor: color.blue[4],
-            ':hover': {
-               backgroundColor: color.blue[5],
-               borderColor: color.blue[5],
-            },
-         };
-
-      case 'outline':
-         return {
-            color: color.blue[4],
-            backgroundColor: transparent ? 'transparent' : color.white,
-            borderColor: color.blue[2],
-            ':hover': {
-               color: color.white,
-               backgroundColor: color.blue[4],
-               borderColor: color.blue[4],
-            },
-         };
-
-      default:
-         return {
-            color: color.grayAlpha[9],
-            backgroundColor: transparent ? 'transparent' : color.white,
-            borderColor: color.grayAlpha[3],
-            ':hover': {
-               backgroundColor: transparent
-                     ? color.grayAlpha[0]
-                     : color.gray[0],
-               borderColor: color.grayAlpha[4],
-            },
-         };
-      }
-   },
-   ({ size }) => {
-      switch (size) {
-      case 'small':
-         return {
-            padding: `${spacing[0]} ${spacing[1]}`,
-         };
-
-      case 'large':
-         return {
-            fontSize: fontSize[2],
-            lineHeight: lineHeight.title,
-            padding: `${spacing[3]} ${spacing[4]}`,
-         };
-
-      default:
-         return {
-            padding: `${spacing[1]} ${spacing[3]}`,
-         };
-      }
-   },
-   ({ fullWidth }) => ({ width: fullWidth ? '100%' : 'auto' }),
-   ({ disabled }) => {
-      if (disabled) {
-         return {
-            color: color.grayAlpha[5],
-            backgroundColor: color.grayAlpha[1],
-            borderColor: color.grayAlpha[3],
-            pointerEvents: 'none',
-         };
-      }
-      return {};
-   },
-   {
-      ':focus': {
-         borderColor: color.blue[4],
-         boxShadow: `0 0 0 3px ${color.blue[2]}`,
-      },
-   },
-);
-
-const LinkContainer = ButtonContainer.withComponent('a');
-
-const Button = ({ children, ...props }) => {
-   const Container = props.href === '' ? ButtonContainer : LinkContainer;
-
-   return (
-     <Container {...props}>
-       {children}
-     </Container>
-   );
-};
-
-Button.propTypes = {
-   /** Text to display in the button */
+const propTypes = {
+   /** Text to display inside the button. */
    children: PropTypes.string.isRequired,
-   design: PropTypes.oneOf(['default', 'primary', 'outline']),
-   /** Disable button */
+   /** Choose a button design. */
+   design: PropTypes.oneOf(['default', 'primary', 'outline', 'plain']),
+   /** Disable button. */
    disabled: PropTypes.bool,
-   /** Set width of the button to 100% */
+   /** Set width of the button to 100%. */
    fullWidth: PropTypes.bool,
-   /** If an `href` is provided, the underlying element will be an `<a>` instead of a `<button>` */
+   /** If an `href` is provided, the underlying element will be an `<a>` instead of a `<button>`. */
    href: PropTypes.string,
-   /** Size of button */
+   /** Size of button. */
    size: PropTypes.oneOf(['small', 'medium', 'large']),
-   /** Set `background-color` to `transparent`. Does not apply to the `"primary"` design */
-   transparent: PropTypes.bool,
-   /** Callback when clicked */
+   /** Callback when clicked. */
    onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+const defaultProps = {
    design: 'default',
    disabled: false,
    fullWidth: false,
    href: '',
    size: 'medium',
-   transparent: false,
    onClick: () => {},
 };
+
+const designs = {
+   default: {
+      color: color.grayAlpha[9],
+      backgroundColor: 'transparent',
+      borderColor: color.grayAlpha[3],
+      ':hover': {
+         backgroundColor: color.grayAlpha[1],
+      },
+      ':focus': {
+         boxShadow: `0 0 0 3px ${color.grayAlpha[3]}`,
+      },
+   },
+   primary: {
+      color: color.white,
+      backgroundColor: color.blue[4],
+      borderColor: color.blue[4],
+      ':hover': {
+         color: color.white,
+         backgroundColor: color.blue[5],
+         borderColor: color.blue[5],
+      },
+      ':focus': {
+         boxShadow: `0 0 0 3px ${color.blueAlpha[2]}`,
+      },
+   },
+   outline: {
+      color: color.blue[4],
+      backgroundColor: 'transparent',
+      borderColor: color.blue[4],
+      ':hover': {
+         color: color.white,
+         backgroundColor: color.blue[4],
+         borderColor: color.blue[4],
+      },
+      ':focus': {
+         boxShadow: `0 0 0 3px ${color.blueAlpha[2]}`,
+      },
+   },
+   plain: {
+      color: color.grayAlpha[9],
+      backgroundColor: 'transparent',
+      borderColor: 'transparent',
+      ':hover': {
+         color: color.blue[4],
+      },
+      ':focus': {
+         backgroundColor: color.grayAlpha[1],
+      },
+   },
+};
+
+const sizes = {
+   small: {
+      padding: `${spacing[0]} ${spacing[2]}`,
+      fontSize: fontSize[1],
+      lineHeight: lineHeight.copy,
+   },
+   medium: {
+      padding: `${spacing[1]} ${spacing[3]}`,
+      fontSize: fontSize[1],
+      lineHeight: lineHeight.copy,
+   },
+   large: {
+      padding: `${spacing[3]} ${spacing[4]}`,
+      fontSize: fontSize[2],
+      lineHeight: lineHeight.title,
+   },
+};
+
+const ButtonContainer = glamorous.button(
+   {
+      display: 'inline-block',
+      boxSizing: 'border-box',
+      fontFamily: 'inherit',
+      textAlign: 'center',
+      textDecoration: 'none',
+      border: '1px solid transparent',
+      borderRadius,
+      outline: 0,
+      whiteSpace: 'nowrap',
+      cursor: 'pointer',
+      userSelect: 'none',
+      transition: `all ${transition.duration} ${transition.easing}`,
+   },
+   ({ design }) => designs[design],
+   ({ size }) => sizes[size],
+   ({ fullWidth }) => {
+      if (fullWidth) {
+         return { display: 'block', width: '100%' };
+      }
+      return null;
+   },
+   ({ disabled }) => {
+      if (disabled) {
+         return { opacity: 0.5, pointerEvents: 'none' };
+      }
+      return null;
+   },
+);
+
+const LinkContainer = ButtonContainer.withComponent('a');
+
+const Button = props => {
+   const Container = props.href === '' ? ButtonContainer : LinkContainer;
+
+   return <Container {...props} tabIndex={props.disabled ? -1 : 0} />;
+};
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;
