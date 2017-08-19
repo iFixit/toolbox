@@ -112,9 +112,7 @@ const sizes = {
 
 const ButtonContainer = glamorous.button(
    {
-      display: 'inline-flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+      display: 'inline-block',
       boxSizing: 'border-box',
       fontFamily: 'inherit',
       textAlign: 'center',
@@ -126,17 +124,12 @@ const ButtonContainer = glamorous.button(
       cursor: 'pointer',
       userSelect: 'none',
       transition: `all ${transition.duration} ${transition.easing}`,
-
-      // add space between button children
-      '& > * + *': {
-         marginLeft: spacing[1],
-      },
    },
    ({ design }) => designs[design],
    ({ size }) => sizes[size],
    ({ fullWidth }) => {
       if (fullWidth) {
-         return { display: 'flex', width: '100%' };
+         return { display: 'block', width: '100%' };
       }
       return null;
    },
