@@ -24,6 +24,22 @@
 <Button design="plain">Plain</Button>
 ```
 
+### Icon buttons
+
+```
+<Button>
+  <Icon name="heart" size={16} />
+  <span>Icon left</span>
+</Button>
+```
+
+```
+<Button>
+  <span>Icon right</span>
+  <Icon name="search" size={16} />
+</Button>
+```
+
 #### Button sizes
 
 ```
