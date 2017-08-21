@@ -8,6 +8,12 @@ export const color = {
       '#005091',
       '#00325C',
    ],
+   blueAlpha: [
+      'rgba(0, 113, 206, 0.8)',
+      'rgba(0, 113, 206, 0.16)',
+      'rgba(0, 113, 206, 0.32)',
+      'rgba(0, 113, 206, 0.64)',
+   ],
    green: [
       '#F2F9ED',
       '#E4F3DC',
@@ -102,7 +108,7 @@ export const borderRadius = 4;
 
 export const transition = {
    duration: '150ms',
-   easing: 'linear',
+   easing: 'ease-in-out',
 };
 
 export const breakpoint = {

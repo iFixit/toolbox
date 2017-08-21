@@ -20,6 +20,10 @@
 <Button design="outline">Outline</Button>
 ```
 
+```
+<Button design="plain">Plain</Button>
+```
+
 #### Button sizes
 
 ```
