@@ -13,25 +13,17 @@ const propTypes = {
 };
 
 const Container = glamorous.div({
-   display: 'block',
+   display: 'flex',
    padding: spacing[1],
    backgroundColor: color.grayAlpha[1],
    borderBottomLeftRadius: borderRadius,
    borderBottomRightRadius: borderRadius,
-
-   // clearfix (IE 8 and up)
-   // source: https://css-tricks.com/snippets/css/clear-fix/
-   '&:after': {
-      content: '""',
-      display: 'table',
-      clear: 'both',
-   },
 });
 
 const PageNavBar = props => <Container {...props} />;
 
-PageNavBar.Left = glamorous.div({ float: 'left' });
-PageNavBar.Right = glamorous.div({ float: 'right' });
+PageNavBar.Left = glamorous.div({ marginRight: 'auto' });
+PageNavBar.Right = glamorous.div({ marginLeft: 'auto' });
 
 PageNavBar.propTypes = propTypes;
 

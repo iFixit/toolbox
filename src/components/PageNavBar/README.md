@@ -29,6 +29,24 @@
     </Button>
 
     <Button design="plain">
+      Full Screen
+    </Button>
+
+    <Button design="plain">
+      Options
+    </Button>
+  </PageNavBar.Right>
+</PageNavBar>
+```
+
+```
+<PageNavBar>
+  <PageNavBar.Right>
+    <Button design="plain">
+      Edit
+    </Button>
+
+    <Button design="plain">
       Options
     </Button>
   </PageNavBar.Right>
