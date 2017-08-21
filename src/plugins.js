@@ -5,7 +5,7 @@ function specificityPlugin({ selector, style }) {
       .split(',')
       .map(sel => `[data-reactroot] ${sel.trim()}`)
       .join(', ');
-   return { prefixedSelector, style };
+   return { selector: prefixedSelector, style };
 }
 
 plugins.add(specificityPlugin);
