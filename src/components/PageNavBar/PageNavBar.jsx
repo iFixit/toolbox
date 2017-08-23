@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import { borderRadius, color, spacing } from '../../constants';
+import constants from '../../constants';
+
+const { borderRadius, color, spacing } = constants;
 
 const propTypes = {
    /** Contents of the page navigation bar. */

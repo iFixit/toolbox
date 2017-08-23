@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import { breakpoint } from '../../constants';
+import constants from '../../constants';
+
+const { breakpoint } = constants;
 
 const gridContainerFactory = ({ gutter }) =>
    glamorous.div(

@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import {
+import constants from '../../constants';
+
+const {
    borderRadius,
    color,
    fontSize,
    lineHeight,
    spacing,
    transition,
-} from '../../constants';
+} = constants;
 
 const propTypes = {
    /** Contents of the button. */

@@ -2,14 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import {
-   color,
-   spacing,
-   fontSize,
-   borderRadius,
-   lineHeight,
-} from '../../constants';
 import Icon from '../Icon/Icon';
+import constants from '../../constants';
+
+const { color, spacing, fontSize, borderRadius, lineHeight } = constants;
 
 const TagContainer = glamorous.span({
    display: 'inline-flex',

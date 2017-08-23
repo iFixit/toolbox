@@ -9,3 +9,5 @@ export { default as Radio } from './components/Radio/Radio';
 export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
 export { default as Textarea } from './components/Textarea/Textarea';
 export { default as TextField } from './components/TextField/TextField';
+
+export { default as constants } from './constants';

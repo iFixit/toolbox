@@ -2,13 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import {
-   borderRadius,
-   color,
-   fontSize,
-   lineHeight,
-   spacing,
-} from '../../constants';
+import constants from '../../constants';
+
+const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
 const Label = glamorous.label({
    display: 'inline-block',
