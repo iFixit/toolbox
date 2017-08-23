@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import Icon from '../Icon/Icon';
+import constants from '../../constants';
 
-import {
+const {
    borderRadius,
    color,
    fontSize,
    lineHeight,
    spacing,
    transition,
-} from '../../constants';
+} = constants;
 
 const Label = glamorous.label(
    {

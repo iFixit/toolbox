@@ -1,4 +1,4 @@
-export const color = {
+export default {
    blue: [
       '#EBF4FB',
       '#D6E8F7',
@@ -9,7 +9,7 @@ export const color = {
       '#00325C',
    ],
    blueAlpha: [
-      'rgba(0, 113, 206, 0.8)',
+      'rgba(0, 113, 206, 0.08)',
       'rgba(0, 113, 206, 0.16)',
       'rgba(0, 113, 206, 0.32)',
       'rgba(0, 113, 206, 0.64)',
@@ -23,6 +23,12 @@ export const color = {
       '#35820F',
       '#195103',
    ],
+   greenAlpha: [
+      'rgba(87, 181, 36, 0.08)',
+      'rgba(87, 181, 36, 0.16)',
+      'rgba(87, 181, 36, 0.32)',
+      'rgba(87, 181, 36, 0.64)',
+   ],
    red: [
       '#FDEEEC',
       '#FBDED9',
@@ -32,6 +38,12 @@ export const color = {
       '#A11601',
       '#610B00',
    ],
+   redAlpha: [
+      'rgba(232, 48, 20, 0.08)',
+      'rgba(232, 48, 20, 0.16)',
+      'rgba(232, 48, 20, 0.32)',
+      'rgba(232, 48, 20, 0.64)',
+   ],
    yellow: [
       '#FFFAEC',
       '#FEF5D9',
@@ -40,6 +52,12 @@ export const color = {
       '#F9C310',
       '#C27E00',
       '#914400',
+   ],
+   yellowAlpha: [
+      'rgba(249, 195, 16, 0.08)',
+      'rgba(249, 195, 16, 0.16)',
+      'rgba(249, 195, 16, 0.32)',
+      'rgba(249, 195, 16, 0.64)',
    ],
    gray: [
       '#FAFAFA',
@@ -73,47 +91,4 @@ export const color = {
    ],
    white: '#FFFFFF',
    black: '#000000',
-};
-
-export const spacing = [
-   '0.25rem',
-   '0.5rem',
-   '0.75rem',
-   '1rem',
-   '2rem',
-   '4rem',
-   '8rem',
-   '16rem',
-];
-
-export const fontSize = [
-   '0.75rem',
-   '0.875rem',
-   '1rem',
-   '1.25rem',
-   '1.5rem',
-   '2.25rem',
-   '3rem',
-   '5rem',
-   '6rem',
-];
-
-export const lineHeight = {
-   solid: 1,
-   title: 1.25,
-   copy: 1.5,
-};
-
-export const borderRadius = 4;
-
-export const transition = {
-   duration: '150ms',
-   easing: 'ease-in-out',
-};
-
-export const breakpoint = {
-   sm: '@media (min-width: 576px)',
-   md: '@media (min-width: 768px)',
-   lg: '@media (min-width: 992px)',
-   xl: '@media (min-width: 1200px)',
 };

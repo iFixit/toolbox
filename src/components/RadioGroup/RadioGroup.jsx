@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import Radio from '../Radio/Radio';
+import constants from '../../constants';
 
-import { color, fontSize, spacing } from '../../constants';
+const { color, fontSize, spacing } = constants;
 
 const FieldSet = glamorous.fieldset({
    margin: 0,
