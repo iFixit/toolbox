@@ -16,7 +16,7 @@
       "react-dom": "^15.6.1"
    },
    "dependencies": {
-      "feather-icons": "iFixit/feather",
+      "feather-icons": "github:iFixit/feather",
       "glamor": "^2.20.39",
       "glamorous": "^4.1.0",
       "prop-types": "^15.5.10"
