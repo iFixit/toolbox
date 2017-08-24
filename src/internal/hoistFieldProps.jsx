@@ -27,9 +27,9 @@ const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
 
       return (
          <Field
-            {...this.props}
-            {...getValidity(this.ref)}
             setRef={this.setRef}
+            {...getValidity(this.ref)}
+            {...this.props}
          />
       );
    }
