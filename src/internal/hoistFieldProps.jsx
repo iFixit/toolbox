@@ -24,8 +24,15 @@ const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
          });
       });
 
-      ref.addEventListener('change', () => {
-         console.log('change');
+      ref.addEventListener('input', () => {
+         console.log('input');
+         this.setState({
+            showInvalid: false,
+         });
+      });
+
+      ref.addEventListener('click', () => {
+         console.log('click');
          this.setState({
             showInvalid: false,
          });
