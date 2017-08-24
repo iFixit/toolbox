@@ -40,7 +40,7 @@ const Input = glamorous.input(
          boxShadow: `0 0 0 1px ${color.blue[4]}`,
       },
    },
-   ({ valid }) => !valid && {
+   ({ hoistedProps: { showInvalid } }) => showInvalid && {
       color: color.red[4],
       backgroundColor: color.red[1],
    },
@@ -56,7 +56,6 @@ const TextField = hoistFieldProps(({
    onMouseEnter,
    onMouseLeave,
    onChange,
-   validationMessage,
    setRef,
    ...props
 }) => (
@@ -65,11 +64,15 @@ const TextField = hoistFieldProps(({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
    >
-      {label !== '' && <LabelText> {label} </LabelText>}
-      {!props.valid && <LabelText> {validationMessage} </LabelText>}
+      {label !== '' &&
+         <LabelText> {label} </LabelText>
+      }
+      {props.hoistedProps.showInvalid &&
+         <LabelText> {props.hoistedProps.validationMessage} </LabelText>
+      }
       <Input
          {...props}
-         onChange={ev => onChange({ value: ev.target.value })}
+         onChange={({ target: { value } }) => onChange({ value })}
          innerRef={setRef}
       />
    </Label>
