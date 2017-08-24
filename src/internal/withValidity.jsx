@@ -21,6 +21,8 @@ const withValidity = Component => class WithValidity extends React.Component {
    }
 
    render() {
+      console.log(getValidity(this.ref));
+
       return (
          <Component
             {...this.props}
