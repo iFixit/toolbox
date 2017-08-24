@@ -32,32 +32,20 @@ const Input = glamorous.input(
       border: `1px solid ${color.grayAlpha[3]}`,
       borderRadius,
       outline: 'none',
+      color: color.grayAlpha[9],
+      backgroundColor: color.white,
       ':focus': {
          borderColor: color.blue[4],
          boxShadow: `0 0 0 1px ${color.blue[4]}`,
       },
    },
-   ({ disabled, valid }) => {
-      const defaultStyle = {
-         color: color.grayAlpha[9],
-         backgroundColor: color.white,
-      };
-
-      const invalidStyle = !valid ? {
-         color: color.red[4],
-         backgroundColor: color.red[1],
-      } : null;
-
-      const disabledStyle = disabled ? {
-         color: color.grayAlpha[5],
-         backgroundColor: color.grayAlpha[1],
-      } : null;
-
-      return {
-         ...defaultStyle,
-         ...invalidStyle,
-         ...disabledStyle,
-      };
+   ({ valid }) => !valid && {
+      color: color.red[4],
+      backgroundColor: color.red[1],
+   },
+   ({ disabled }) => disabled && {
+      color: color.grayAlpha[5],
+      backgroundColor: color.grayAlpha[1],
    },
 );
 
