@@ -2,7 +2,7 @@ import React from 'react';
 
 const getValidity = ({
    validationMessage = '',
-   validity: valid = true,
+   validity: { valid } = true,
 } = {}) => ({
    valid,
    validationMessage,
