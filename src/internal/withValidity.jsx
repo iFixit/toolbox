@@ -8,7 +8,7 @@ const getValidity = ({
    validationMessage,
 });
 
-const withValidity = Component => class extends React.Component {
+const withValidity = Component => class WithValidity extends React.Component {
    setRef = ref => {
       this.ref = ref;
    }
