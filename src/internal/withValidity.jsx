@@ -1,6 +1,9 @@
 import React from 'react';
 
-const getValidity = ({ validationMessage = '', validity: valid = true } = {}) => ({
+const getValidity = ({
+   validationMessage = '',
+   validity: valid = true,
+} = {}) => ({
    valid,
    validationMessage,
 });
