@@ -24,6 +24,10 @@
 <Button design="plain">Plain</Button>
 ```
 
+```
+<Button disabled>Disabled</Button>
+```
+
 ### Icon buttons
 
 ```
