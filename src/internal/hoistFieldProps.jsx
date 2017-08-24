@@ -1,13 +1,5 @@
 import React from 'react';
 
-const getValidity = ({
-   validationMessage = '',
-   validity: { valid = true } = {},
-} = {}) => ({
-   valid,
-   validationMessage,
-});
-
 const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
    constructor(props) {
       super(props);
@@ -15,6 +7,10 @@ const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
       this.state = {
          showInvalid: false,
          focus: false,
+      };
+      this.ref = {
+         validationMessage: '',
+         validity: { valid: true },
       };
    }
 
@@ -53,13 +49,14 @@ const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
    }
 
    render() {
-      console.log(this.state);
-      console.log(getValidity(this.ref));
+      const { validationMessage, validity: { valid } } = this.ref;
+
+      console.log({ ...this.state, validationMessage, valid });
 
       return (
          <Field
             setRef={this.setRef}
-            hoistedProps={{ ...this.state, ...getValidity(this.ref) }}
+            hoistedProps={{ ...this.state, validationMessage, valid }}
             {...this.props}
          />
       );
