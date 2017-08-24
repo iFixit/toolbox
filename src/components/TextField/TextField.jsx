@@ -37,10 +37,28 @@ const Input = glamorous.input(
          boxShadow: `0 0 0 1px ${color.blue[4]}`,
       },
    },
-   ({ disabled }) => ({
-      color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
-      backgroundColor: disabled ? color.grayAlpha[1] : color.white,
-   }),
+   ({ disabled, valid }) => {
+      const defaultStyle = {
+         color: color.grayAlpha[9],
+         backgroundColor: color.white,
+      };
+
+      const invalidStyle = !valid ? {
+         color: color.red[4],
+         backgroundColor: color.red[1],
+      } : null;
+
+      const disabledStyle = disabled ? {
+         color: color.grayAlpha[5],
+         backgroundColor: color.grayAlpha[1],
+      } : null;
+
+      return {
+         ...defaultStyle,
+         ...invalidStyle,
+         ...disabledStyle,
+      };
+   },
 );
 
 const TextField = ({
@@ -49,19 +67,18 @@ const TextField = ({
    onMouseEnter,
    onMouseLeave,
    onChange,
+   validityMessage,
    ...props
 }) =>
-  <Label
-    className={className}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-  >
-    {label !== '' &&
-    <LabelText>
-      {label}
-    </LabelText>}
-    <Input {...props} onChange={ev => onChange({ value: ev.target.value })} />
-  </Label>;
+   <Label
+      className={className}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+   >
+      {label !== '' && <LabelText> {label} </LabelText>}
+      {!props.valid && <LabelText> {validityMessage} </LabelText>}
+      <Input {...props} onChange={ev => onChange({ value: ev.target.value })} />
+   </Label>;
 
 TextField.propTypes = {
    /** Set class name of containing element. */
@@ -74,6 +91,7 @@ TextField.propTypes = {
    placeholder: PropTypes.string,
    /** This prop specifies that the user must fill in a value before submitting a form. */
    required: PropTypes.bool,
+   /** The supported input types */
    type: PropTypes.oneOf([
       'text',
       'email',
@@ -88,6 +106,10 @@ TextField.propTypes = {
       'week',
       'time',
    ]),
+   /** The validity of the control */
+   valid: PropTypes.bool,
+   /** The validityMessage of the control */
+   validityMessage: PropTypes.string,
    /** The value of the control. */
    value: PropTypes.string,
    /** Callback when focus is removed. */
@@ -115,6 +137,8 @@ TextField.defaultProps = {
    onFocus: () => {},
    onMouseEnter: () => {},
    onMouseLeave: () => {},
+   valid: true,
+   validityMessage: 'Test Hi Lol',
 };
 
 export default TextField;

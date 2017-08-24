@@ -54,20 +54,20 @@ const Textarea = ({
    onChange,
    ...props
 }) =>
-  <Label
-    className={className}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-  >
-    {label !== '' &&
-    <LabelText>
-      {label}
-    </LabelText>}
-    <TextareaContainer
-      {...props}
-      onChange={ev => onChange({ value: ev.target.value })}
-    />
-  </Label>;
+   <Label
+      className={className}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+   >
+      {label !== '' &&
+         <LabelText>
+            {label}
+         </LabelText>}
+      <TextareaContainer
+         {...props}
+         onChange={ev => onChange({ value: ev.target.value })}
+      />
+   </Label>;
 
 Textarea.propTypes = {
    /** Set class name of containing element. */

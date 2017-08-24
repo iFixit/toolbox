@@ -16,19 +16,19 @@ const SvgContainer = glamorous.span(
 );
 
 const Icon = props =>
-  <SvgContainer
-    className={props.className}
-    size={props.size}
-    color={props.color}
-    strokeWidth={props.strokeWidth}
-    dangerouslySetInnerHTML={{
-       __html: toSvg(props.name, {
-          width: '100%',
-          height: '100%',
-          'stroke-width': 'inherit',
-       }),
-    }}
-  />;
+   <SvgContainer
+      className={props.className}
+      size={props.size}
+      color={props.color}
+      strokeWidth={props.strokeWidth}
+      dangerouslySetInnerHTML={{
+         __html: toSvg(props.name, {
+            width: '100%',
+            height: '100%',
+            'stroke-width': 'inherit',
+         }),
+      }}
+   />;
 
 Icon.propTypes = {
    /** Icon name. See the complete list of icons at https://feathericons.com */

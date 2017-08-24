@@ -42,14 +42,14 @@ const TagRemove = glamorous.button({
 });
 
 const Tag = props =>
-  <TagContainer className={props.className}>
-    <TagText>
-      {props.children}
-    </TagText>
-    <TagRemove onClick={props.onRemove}>
-      <Icon name="x" size={16} />
-    </TagRemove>
-  </TagContainer>;
+   <TagContainer className={props.className}>
+      <TagText>
+         {props.children}
+      </TagText>
+      <TagRemove onClick={props.onRemove}>
+         <Icon name="x" size={16} />
+      </TagRemove>
+   </TagContainer>;
 
 Tag.propTypes = {
    /** Content to display in the tag */
