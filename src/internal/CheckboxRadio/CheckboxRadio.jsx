@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
-import Icon from '../Icon/Icon';
+import Icon from '../../components/Icon/Icon';
 import constants from '../../constants';
 
 const {
