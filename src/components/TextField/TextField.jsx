@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import constants from '../../constants';
+import withValidity from '../../internal/withValidity';
 
 const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
@@ -49,15 +50,16 @@ const Input = glamorous.input(
    },
 );
 
-const TextField = ({
+const TextField = withValidity(({
    className,
    label,
    onMouseEnter,
    onMouseLeave,
    onChange,
    validityMessage,
+   setRef,
    ...props
-}) =>
+}) => (
    <Label
       className={className}
       onMouseEnter={onMouseEnter}
@@ -65,8 +67,13 @@ const TextField = ({
    >
       {label !== '' && <LabelText> {label} </LabelText>}
       {!props.valid && <LabelText> {validityMessage} </LabelText>}
-      <Input {...props} onChange={ev => onChange({ value: ev.target.value })} />
-   </Label>;
+      <Input
+         {...props}
+         onChange={ev => onChange({ value: ev.target.value })}
+         innerRef={setRef}
+      />
+   </Label>
+));
 
 TextField.propTypes = {
    /** Set class name of containing element. */

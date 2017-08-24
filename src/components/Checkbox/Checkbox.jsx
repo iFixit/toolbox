@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CheckboxRadio from '../../internal/CheckboxRadio/CheckboxRadio';
+import CheckboxRadio from '../../internal/CheckboxRadio';
 
 const Checkbox = props => <CheckboxRadio type="checkbox" {...props} />;
 
