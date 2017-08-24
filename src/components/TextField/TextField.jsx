@@ -101,10 +101,6 @@ TextField.propTypes = {
       'week',
       'time',
    ]),
-   /** The validity of the control */
-   valid: PropTypes.bool,
-   /** The validityMessage of the control */
-   validityMessage: PropTypes.string,
    /** The value of the control. */
    value: PropTypes.string,
    /** Callback when focus is removed. */
@@ -126,8 +122,6 @@ TextField.defaultProps = {
    placeholder: '',
    required: false,
    type: 'text',
-   valid: true,
-   validityMessage: 'Test Hi Lol',
    value: '',
    onBlur: () => {},
    onChange: () => {},
