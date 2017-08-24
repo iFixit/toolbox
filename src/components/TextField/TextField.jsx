@@ -56,7 +56,7 @@ const TextField = withValidity(({
    onMouseEnter,
    onMouseLeave,
    onChange,
-   validityMessage,
+   validationMessage,
    setRef,
    ...props
 }) => (
@@ -66,7 +66,7 @@ const TextField = withValidity(({
       onMouseLeave={onMouseLeave}
    >
       {label !== '' && <LabelText> {label} </LabelText>}
-      {!props.valid && <LabelText> {validityMessage} </LabelText>}
+      {!props.valid && <LabelText> {validationMessage} </LabelText>}
       <Input
          {...props}
          onChange={ev => onChange({ value: ev.target.value })}
