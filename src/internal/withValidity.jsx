@@ -11,12 +11,14 @@ const getValidity = ({
 const withValidity = Component => class WithValidity extends React.Component {
    setRef = ref => {
       console.log('setRef');
+
       this.ref = ref;
    }
 
    // Immediately re render when the validity state object can be accessed
    componentDidMount() {
       console.log('componentDidMount');
+
       this.forceUpdate();
    }
 

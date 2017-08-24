@@ -1,5 +1,11 @@
 ### Examples
 
+#### Required TextField
+
+```
+<TextField required label="Name" placeholder="Doc Brown" />
+```
+
 #### Standard TextField
 
 ```
