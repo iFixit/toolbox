@@ -131,14 +131,14 @@ TextField.defaultProps = {
    placeholder: '',
    required: false,
    type: 'text',
+   valid: true,
+   validityMessage: 'Test Hi Lol',
    value: '',
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
    onMouseEnter: () => {},
    onMouseLeave: () => {},
-   valid: true,
-   validityMessage: 'Test Hi Lol',
 };
 
 export default TextField;
