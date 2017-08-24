@@ -17,22 +17,33 @@ const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
    setRef(ref) {
       console.log('setRef');
 
-      ref.addEventListener('blur', () => this.setState({
-         focus: false,
-         showInvalid: false,
-      }));
+      ref.addEventListener('blur', () => {
+         console.log('blur');
+         this.setState({
+            focus: false, showInvalid: false,
+         });
+      });
 
-      ref.addEventListener('change', () => this.setState({
-         showInvalid: false,
-      }));
+      ref.addEventListener('change', () => {
+         console.log('change');
+         this.setState({
+            showInvalid: false,
+         });
+      });
 
-      ref.addEventListener('focus', () => this.setState({
-         focus: true,
-      }));
+      ref.addEventListener('focus', () => {
+         console.log('focus');
+         this.setState({
+            focus: true,
+         });
+      });
 
-      ref.addEventListener('invalid', () => this.setState({
-         showInvalid: true,
-      }));
+      ref.addEventListener('invalid', () => {
+         console.log('invalid');
+         this.setState({
+            showInvalid: true,
+         });
+      });
 
       this.ref = ref;
    }
