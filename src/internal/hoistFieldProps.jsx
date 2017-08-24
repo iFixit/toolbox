@@ -8,7 +8,7 @@ const getValidity = ({
    validationMessage,
 });
 
-const withValidity = Component => class WithValidity extends React.Component {
+const hoistFieldProps = Field => class HoistFieldProps extends React.Component {
    setRef = ref => {
       console.log('setRef');
 
@@ -26,7 +26,7 @@ const withValidity = Component => class WithValidity extends React.Component {
       console.log(getValidity(this.ref));
 
       return (
-         <Component
+         <Field
             {...this.props}
             {...getValidity(this.ref)}
             setRef={this.setRef}
@@ -35,4 +35,4 @@ const withValidity = Component => class WithValidity extends React.Component {
    }
 };
 
-export default withValidity;
+export default hoistFieldProps;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import constants from '../../constants';
-import withValidity from '../../internal/withValidity';
+import hoistFieldProps from '../../internal/hoistFieldProps';
 
 const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
@@ -50,7 +50,7 @@ const Input = glamorous.input(
    },
 );
 
-const TextField = withValidity(({
+const TextField = hoistFieldProps(({
    className,
    label,
    onMouseEnter,
