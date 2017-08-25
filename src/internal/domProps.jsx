@@ -56,11 +56,12 @@ const domProps = Component => class DomProps extends React.PureComponent {
    />);
 };
 
-domProps.target = (props = { domProps: {} }) => ({
+domProps.target = ({ domProps: dom, ...props }) => ({
    ...props,
-   ...Object.assign({}, ...Object.keys(props.domProps.events).map(eventKey => ({
+   ...{ domProps: dom },
+   ...Object.assign({}, ...Object.keys(dom.events).map(eventKey => ({
       [eventKey]: ev => {
-         props.domProps.events[eventKey](ev);
+         dom.events[eventKey](ev);
          (props[eventKey] || (() => {}))(ev);
       },
    }))),
