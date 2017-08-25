@@ -21,7 +21,7 @@ const LabelText = glamorous.span({
    lineHeight: lineHeight.solid,
 });
 
-const Input = glamorous.input(
+const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    {
       display: 'block',
       width: '100%',
@@ -50,7 +50,7 @@ const Input = glamorous.input(
    },
 );
 
-const TextField = domProps(({
+const TextField = domProps.Field(({
    className,
    label,
    onMouseEnter,
