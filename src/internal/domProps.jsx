@@ -4,23 +4,13 @@ import PropTypes from 'prop-types';
 const eventStates = {
    onBlur: {
       focus: false,
-      showInvalid: false,
-   },
-   onChange: {
-      showInvalid: false,
-   },
-   onMouseDown: {
-      showInvalid: false,
    },
    onFocus: {
       focus: true,
    },
-   onInvalid: {
-      showInvalid: true,
-   },
 };
 
-const domProps = Component => class DomProps extends React.Component {
+const domProps = Component => class extends React.Component {
    state = {
       validationMessage: '',
       valid: true,
