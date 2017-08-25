@@ -33,11 +33,10 @@ const domProps = Component => class DomProps extends React.Component {
    })));
 
    setRef = ref => {
+      console.log('setRef');
       this.ref = ref;
+      this.componentDidUpdate();
    };
-
-   // Immediately re render when the validity state object can be accessed
-   componentDidMount = () => this.componentDidUpdate();
 
    componentDidUpdate = () => {
       const { validationMessage, validity: { valid } } = this.ref;
@@ -49,16 +48,19 @@ const domProps = Component => class DomProps extends React.Component {
          console.log('componentDidUpdate reupdate');
          this.setState({ validationMessage, valid });
       }
-   }
+   };
 
-   render = () => (<Component
-      {...this.props}
-      domProps={{
-         ...this.state,
-         events: this.events,
-         setRef: this.setRef,
-      }}
-   />);
+   render = () => {
+      console.log('render');
+      return (<Component
+         {...this.props}
+         domProps={{
+            ...this.state,
+            events: this.events,
+            setRef: this.setRef,
+         }}
+      />);
+   };
 };
 
 domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
