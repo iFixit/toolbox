@@ -32,10 +32,7 @@ const domProps = Component => class DomProps extends React.Component {
    };
 
    events = Object.assign({}, ...Object.keys(eventStates).map(eventKey => ({
-      [eventKey]: () => {
-         console.log(eventKey);
-         this.setState(eventStates[eventKey]);
-      },
+      [eventKey]: () => this.setState(eventStates[eventKey]),
    })));
 
    // Immediately re render when the validity state object can be accessed
