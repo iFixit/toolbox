@@ -55,7 +55,6 @@ const TextField = domProps(({
    label,
    onMouseEnter,
    onMouseLeave,
-   setRef,
    ...props
 }) => (
    <Label
