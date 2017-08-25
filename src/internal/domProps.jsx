@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const eventStates = {
    onBlur: {
@@ -56,15 +57,17 @@ const domProps = Component => class DomProps extends React.PureComponent {
    />);
 };
 
-domProps.target = ({ domProps: { events, ...props }, ...rest }) => ({
-   ...rest,
-   ...{ domProps: { events, ...props } },
-   ...Object.assign({}, ...Object.keys(events).map(eventKey => ({
+domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
+   {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
-         events[eventKey](ev);
-         (rest[eventKey] || (() => {}))(ev);
+         children.props.domProps.events[eventKey](ev);
+         (children.props[eventKey] || (() => {}))(ev);
       },
-   }))),
-});
+   })),
+));
+
+domProps.Target.propTypes = {
+   children: PropTypes.element.isRequired,
+};
 
 export default domProps;

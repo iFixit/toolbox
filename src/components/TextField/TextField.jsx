@@ -69,13 +69,13 @@ const TextField = domProps(({
       {props.domProps.showInvalid &&
          <LabelText> {props.domProps.validationMessage} </LabelText>
       }
-      <Input
-         {...domProps.target({
-            ...props,
-            onChange: ev => onChange({ value: ev.target.value }),
-         })}
-         innerRef={props.domProps.setRef}
-      />
+      <domProps.Target>
+         <Input
+            {...props}
+            onChange={ev => onChange({ value: ev.target.value })}
+            innerRef={props.domProps.setRef}
+         />
+      </domProps.Target>
    </Label>
 ));
 
