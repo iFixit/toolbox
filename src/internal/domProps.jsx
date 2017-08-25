@@ -81,4 +81,10 @@ const domProps = Field => class HoistFieldProps extends React.Component {
    }
 };
 
+domProps.onChange = fn => ev => {
+   console.log(this);
+   console.log(ev);
+   fn(ev);
+};
+
 export default domProps;
