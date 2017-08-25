@@ -55,6 +55,7 @@ const TextField = domProps(({
    label,
    onMouseEnter,
    onMouseLeave,
+   onChange,
    ...props
 }) => (
    <Label
@@ -69,7 +70,10 @@ const TextField = domProps(({
          <LabelText> {props.domProps.validationMessage} </LabelText>
       }
       <Input
-         {...domProps.target(props)}
+         {...domProps.target({
+            ...props,
+            onChange: ev => onChange({ value: ev.target.value }),
+         })}
          innerRef={props.domProps.setRef}
       />
    </Label>
