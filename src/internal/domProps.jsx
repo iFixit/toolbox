@@ -44,8 +44,6 @@ const domProps = Component => class DomProps extends React.PureComponent {
       this.ref = ref;
    };
 
-   componentWillUpdate = () => { console.log('component will update'); };
-
    render = () => (<Component
       {...this.props}
       domProps={{
