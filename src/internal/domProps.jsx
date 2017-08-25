@@ -57,8 +57,8 @@ const domProps = Component => class DomProps extends React.Component {
 domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
-         children.props.domProps.events[eventKey](ev);
          (children.props[eventKey] || (() => {}))(ev);
+         children.props.domProps.events[eventKey](ev);
       },
    })),
 ));
