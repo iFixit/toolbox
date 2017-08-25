@@ -1,90 +1,71 @@
 import React from 'react';
 
-const domProps = Field => class HoistFieldProps extends React.Component {
-   constructor(props) {
-      super(props);
-      this.setRef = this.setRef.bind(this);
-      this.state = {
-         showInvalid: false,
-         focus: false,
-      };
-      this.ref = {
-         validationMessage: '',
-         validity: { valid: true },
-      };
-      this.events = {
-         onBlur: () => {
-            console.log('blur');
-            this.setState({
-               focus: false,
-               showInvalid: false,
-            });
-         },
-         onChange: () => {
-            console.log('change');
-            this.setState({
-               showInvalid: false,
-            });
-         },
-         onClick: () => {
-            console.log('click');
-            this.setState({
-               showInvalid: false,
-            });
-         },
-         onFocus: () => {
-            console.log('focus');
-            this.setState({
-               focus: true,
-            });
-         },
-         onInvalid: () => {
-            console.log('invalid');
-            this.setState({
-               showInvalid: true,
-            });
-         },
-      };
-   }
+const eventStates = {
+   onBlur: {
+      focus: false,
+      showInvalid: false,
+   },
+   onChange: {
+      showInvalid: false,
+   },
+   onClick: {
+      showInvalid: false,
+   },
+   onFocus: {
+      focus: true,
+   },
+   onInvalid: {
+      showInvalid: true,
+   },
+};
 
-   setRef(ref) {
-      console.log('setRef');
+const domProps = Component => class DomProps extends React.PureComponent {
+   state: {
+      showInvalid: false,
+      focus: false,
+   };
 
-      this.ref = ref;
-   }
+   ref = {
+      validationMessage: '',
+      validity: { valid: true },
+   };
 
-   componentWillUpdate() {
-      console.log('component will update');
-   }
+   events = Object.assign({}, ...Object.keys(eventStates).map(eventKey => ({
+      [eventKey]: () => {
+         console.log(eventKey);
+         this.setState(eventStates[eventKey]);
+      },
+   })));
 
    // Immediately re render when the validity state object can be accessed
-   componentDidMount() {
-      console.log('componentDidMount');
+   componentDidMount = this.forceUpdate;
 
-      this.forceUpdate();
-   }
+   setRef = ref => {
+      this.ref = ref;
+   };
 
-   render() {
-      const {
-         props, state, events, setRef, ref: {
-            validationMessage,
-            validity: { valid },
-         },
-      } = this;
+   componentWillUpdate = () => { console.log('component will update'); };
 
-      return (
-         <Field
-            {...props}
-            domProps={{ ...state, events, setRef, valid, validationMessage }}
-         />
-      );
-   }
+   render = () => (<Component
+      {...this.props}
+      domProps={{
+         ...this.state,
+         events: this.events,
+         setRef: this.setRef,
+         valid: this.ref.validity.valid,
+         validationMessage: this.ref.validationMessage,
+      }}
+   />);
 };
 
-domProps.onChange = fn => ev => {
-   console.log(this);
-   console.log(ev);
-   fn(ev);
-};
+domProps.target = (props = { domProps: {} }) => ({
+   ...props,
+   ...Object.assign({}, ...Object.keys(props.domProps.events).map(eventKey => ({
+      [eventKey]: ev => {
+         props.domProps.events[eventKey](ev);
+         (props[eventKey] || (() => {}))(ev);
+      },
+   }))),
+});
 
 export default domProps;
