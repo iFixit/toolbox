@@ -50,7 +50,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
 );
 
-const TextField = domProps.Field(({
+const TextField = domProps(({
    className,
    label,
    onMouseEnter,

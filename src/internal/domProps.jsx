@@ -20,9 +20,7 @@ const eventStates = {
    },
 };
 
-const domProps = {};
-
-domProps.Field = Component => class DomProps extends React.Component {
+const domProps = Component => class DomProps extends React.Component {
    state: {
       showInvalid: false,
       focus: false,
