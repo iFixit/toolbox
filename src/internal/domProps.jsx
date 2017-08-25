@@ -21,26 +21,35 @@ const eventStates = {
 };
 
 const domProps = Component => class DomProps extends React.Component {
-   state: {
+   state = {
+      validationMessage: '',
+      valid: true,
       showInvalid: false,
       focus: false,
-   };
-
-   ref = {
-      validationMessage: '',
-      validity: { valid: true },
    };
 
    events = Object.assign({}, ...Object.keys(eventStates).map(eventKey => ({
       [eventKey]: () => this.setState(eventStates[eventKey]),
    })));
 
-   // Immediately re render when the validity state object can be accessed
-   componentDidMount = this.forceUpdate;
-
    setRef = ref => {
       this.ref = ref;
    };
+
+   // Immediately re render when the validity state object can be accessed
+   componentDidMount = () => this.componentDidUpdate();
+
+   componentDidUpdate = () => {
+      const { validationMessage, validity: { valid } } = this.ref;
+
+      if (
+         valid !== this.state.valid ||
+         validationMessage !== this.state.validationMessage
+      ) {
+         console.log('componentDidUpdate reupdate');
+         this.setState({ validationMessage, valid });
+      }
+   }
 
    render = () => (<Component
       {...this.props}
@@ -48,8 +57,6 @@ const domProps = Component => class DomProps extends React.Component {
          ...this.state,
          events: this.events,
          setRef: this.setRef,
-         valid: this.ref.validity.valid,
-         validationMessage: this.ref.validationMessage,
       }}
    />);
 };
