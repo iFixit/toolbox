@@ -9,7 +9,7 @@ const eventStates = {
    onChange: {
       showInvalid: false,
    },
-   onClick: {
+   onMouseDown: {
       showInvalid: false,
    },
    onFocus: {
