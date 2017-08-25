@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import constants from '../../constants';
-import hoistFieldProps from '../../internal/hoistFieldProps';
+import domProps from '../../internal/domProps';
 
 const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
@@ -40,7 +40,7 @@ const Input = glamorous.input(
          boxShadow: `0 0 0 1px ${color.blue[4]}`,
       },
    },
-   ({ hoistedProps: { showInvalid } }) => showInvalid && {
+   ({ domProps: { showInvalid } }) => showInvalid && {
       color: color.red[4],
       backgroundColor: color.red[1],
    },
@@ -50,7 +50,7 @@ const Input = glamorous.input(
    },
 );
 
-const TextField = hoistFieldProps(({
+const TextField = domProps(({
    className,
    label,
    onMouseEnter,
@@ -67,13 +67,16 @@ const TextField = hoistFieldProps(({
       {label !== '' &&
          <LabelText> {label} </LabelText>
       }
-      {props.hoistedProps.showInvalid &&
-         <LabelText> {props.hoistedProps.validationMessage} </LabelText>
+      {props.domProps.showInvalid &&
+         <LabelText> {props.domProps.validationMessage} </LabelText>
       }
       <Input
          {...props}
-         onChange={({ target: { value } }) => onChange({ value })}
-         innerRef={setRef}
+         onChange={({ target: { value } }) => {
+            onChange({ value });
+            props.domProps.events.onChange();
+         }}
+         innerRef={props.domProps.setRef}
       />
    </Label>
 ));
