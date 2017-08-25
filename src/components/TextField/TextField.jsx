@@ -72,7 +72,10 @@ const TextField = domProps(({
       <domProps.Target>
          <Input
             {...props}
-            onInvalid={ev => ev.preventDefault()}
+            onInvalid={ev => {
+               ev.preventDefault();
+               ev.target.focus();
+            }}
             onChange={ev => onChange({ value: ev.target.value })}
             innerRef={props.domProps.setRef}
          />
