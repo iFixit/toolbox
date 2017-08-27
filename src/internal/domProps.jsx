@@ -23,7 +23,6 @@ const domProps = Component => class extends React.Component {
    })));
 
    setRef = ref => {
-      console.log('setRef');
       this.ref = ref;
       this.componentDidUpdate();
    };
@@ -35,22 +34,20 @@ const domProps = Component => class extends React.Component {
          valid !== this.state.valid ||
          validationMessage !== this.state.validationMessage
       ) {
-         console.log('componentDidUpdate reupdate');
          this.setState({ validationMessage, valid });
       }
    };
 
-   render = () => {
-      console.log('render');
-      return (<Component
+   render = () => (
+      <Component
          {...this.props}
          domProps={{
             ...this.state,
             events: this.events,
             setRef: this.setRef,
          }}
-      />);
-   };
+      />
+   );
 };
 
 domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(

@@ -40,7 +40,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       borderColor: color.blue[4],
       boxShadow: `0 0 0 1px ${color.blue[4]}`,
    },
-   ({ domProps: { showInvalid } }) => showInvalid && {
+   ({ showInvalid }) => showInvalid && {
       color: color.red[4],
       backgroundColor: color.red[1],
    },
@@ -50,38 +50,52 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
 );
 
-const TextField = domProps(({
-   className,
-   label,
-   onMouseEnter,
-   onMouseLeave,
-   onChange,
-   ...props
-}) => (
-   <Label
-      className={className}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-   >
-      {label !== '' &&
-         <LabelText> {label} </LabelText>
-      }
-      {props.domProps.showInvalid &&
-         <LabelText> {props.domProps.validationMessage} </LabelText>
-      }
-      <domProps.Target>
-         <Input
-            {...props}
-            onInvalid={ev => {
-               ev.preventDefault();
-               ev.target.focus();
-            }}
-            onChange={ev => onChange({ value: ev.target.value })}
-            innerRef={props.domProps.setRef}
-         />
-      </domProps.Target>
-   </Label>
-));
+class TextField extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = { showInvalid: false };
+   }
+
+   render() {
+      const {
+         className,
+         label,
+         onMouseEnter,
+         onMouseLeave,
+         onChange,
+         ...props
+      } = this.props;
+
+      const { showInvalid } = this.state;
+
+      return (
+         <Label
+            className={className}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+         >
+            {label !== '' &&
+               <LabelText> {label} </LabelText>
+            }
+            {showInvalid &&
+               <LabelText> {props.domProps.validationMessage} </LabelText>
+            }
+            <domProps.Target>
+               <Input
+                  {...props}
+                  {...{ showInvalid }}
+                  onInvalid={ev => {
+                     ev.preventDefault();
+                     this.setState({ showInvalid: true });
+                  }}
+                  onChange={ev => onChange({ value: ev.target.value })}
+                  innerRef={props.domProps.setRef}
+               />
+            </domProps.Target>
+         </Label>
+      );
+   }
+}
 
 TextField.propTypes = {
    /** Set class name of containing element. */
@@ -138,4 +152,4 @@ TextField.defaultProps = {
    onMouseLeave: () => {},
 };
 
-export default TextField;
+export default domProps(TextField);
