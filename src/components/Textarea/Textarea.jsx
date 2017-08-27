@@ -20,7 +20,7 @@ const LabelText = glamorous.span({
    lineHeight: lineHeight.solid,
 });
 
-const TextareaContainer = glamorous.textarea(
+const TextareaContainer = glamorous('textarea', { forwardProps: 'onInvalid' })(
    {
       boxSizing: 'border-box',
       width: '100%',
@@ -33,6 +33,8 @@ const TextareaContainer = glamorous.textarea(
       borderRadius,
       boxShadow: 'none',
       outline: 'none',
+      color: color.grayAlpha[9],
+      backgroundColor: color.white,
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
@@ -41,39 +43,62 @@ const TextareaContainer = glamorous.textarea(
    ({ resize }) => ({
       resize,
    }),
-   ({ disabled }) => ({
-      color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
-      backgroundColor: disabled ? color.grayAlpha[1] : color.white,
-   }),
+   ({ showInvalid }) => showInvalid && {
+      color: color.red[4],
+      backgroundColor: color.red[1],
+   },
+   ({ disabled }) => disabled && {
+      color: color.grayAlpha[5],
+      backgroundColor: color.grayAlpha[1],
+   },
 );
 
-const Textarea = ({
-   className,
-   label,
-   onMouseEnter,
-   onMouseLeave,
-   onChange,
-   ...props
-}) => (
-   <Label
-      className={className}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-   >
-      {label !== '' &&
-         <LabelText>
-            {label}
-         </LabelText>
-      }
-      <domProps.Target>
-         <TextareaContainer
-            {...props}
-            onChange={ev => onChange({ value: ev.target.value })}
-            innerRef={props.domProps.setRef}
-         />
-      </domProps.Target>
-   </Label>
-);
+class Textarea extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = { showInvalid: false };
+   }
+
+   render() {
+      const {
+         className,
+         label,
+         onMouseEnter,
+         onMouseLeave,
+         onChange,
+         ...props
+      } = this.props;
+
+      const { showInvalid } = this.state;
+
+      return (
+         <Label
+            className={className}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+         >
+            {label !== '' &&
+               <LabelText> {label} </LabelText>
+            }
+            {showInvalid &&
+               <LabelText> {props.domProps.validationMessage} </LabelText>
+            }
+            <domProps.Target>
+               <TextareaContainer
+                  {...props}
+                  {...{ showInvalid }}
+                  onChange={ev => onChange({ value: ev.target.value })}
+                  onInvalid={ev => {
+                     ev.preventDefault();
+                     this.setState({ showInvalid: true });
+                  }}
+                  innerRef={props.domProps.setRef}
+               />
+            </domProps.Target>
+         </Label>
+      );
+   }
+}
 
 Textarea.propTypes = {
    /** Set class name of containing element. */

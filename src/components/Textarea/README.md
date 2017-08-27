@@ -3,7 +3,7 @@
 #### Standard Textarea
 
 ```
-<Textarea label="Label" placeholder="Placeholder text" />
+<Textarea required label="Label" placeholder="Placeholder text" />
 ```
 
 #### Textarea with value
