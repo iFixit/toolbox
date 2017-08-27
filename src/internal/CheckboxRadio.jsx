@@ -21,10 +21,11 @@ const Label = glamorous.label(
       alignItems: 'center',
       width: '100%',
       fontSize: fontSize[2],
+      color: color.grayAlpha[9],
    },
-   ({ disabled }) => ({
-      color: disabled ? color.grayAlpha[5] : color.grayAlpha[9],
-   }),
+   ({ disabled }) => disabled && {
+      color: color.grayAlpha[5],
+   },
 );
 
 // hide native checkbox element
