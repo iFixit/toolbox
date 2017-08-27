@@ -3,7 +3,7 @@
 #### Standard Textarea
 
 ```
-<Textarea required label="Label" placeholder="Placeholder text" />
+<Textarea label="Label" placeholder="Placeholder text" />
 ```
 
 #### Textarea with value
@@ -22,6 +22,12 @@
 
 ```
 <Textarea label="Label" value="Hello world" disabled />
+```
+
+#### Invalid Textarea
+
+```
+<Textarea label="Label" placeholder="Placeholder text" showInvalid={true} />
 ```
 
 #### Event callbacks

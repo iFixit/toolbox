@@ -66,7 +66,7 @@ class TextField extends React.Component {
          ...props
       } = this.props;
 
-      const { showInvalid } = this.state;
+      const { showInvalid } = props || this.state;
 
       return (
          <Label
