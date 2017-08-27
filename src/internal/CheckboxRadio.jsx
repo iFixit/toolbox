@@ -4,6 +4,7 @@ import glamorous from 'glamorous';
 
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
+import domProps from './domProps';
 
 const {
    borderRadius,
@@ -27,7 +28,7 @@ const Label = glamorous.label(
 );
 
 // hide native checkbox element
-const Input = glamorous.input({
+const Input = glamorous('input', { forwardProps: 'onInvalid' })({
    clip: 'rect(1px, 1px, 1px, 1px)',
    height: 1,
    width: 1,
@@ -49,27 +50,23 @@ const InputIcon = glamorous(Icon)(
       height: 16,
       lineHeight: 0,
       transition: `all ${transition.duration} ${transition.easing}`,
-      'input:focus + &': {
-         borderColor: color.blue[4],
-         boxShadow: `0 0 0 3px ${color.blue[2]}`,
-      },
+      color: 'transparent',
+      backgroundColor: color.white,
+      border: `1px solid ${color.grayAlpha[4]}`,
    },
    ({ type }) => ({
       borderRadius: type === 'checkbox' ? borderRadius : '50%',
    }),
-   ({ checked, disabled }) => {
-      if (checked) {
-         return {
-            color: color.white,
-            backgroundColor: disabled ? color.gray[4] : color.blue[4],
-            border: `1px solid ${disabled ? color.gray[4] : color.blue[4]}`,
-         };
-      }
-      return {
-         color: 'transparent',
-         backgroundColor: color.white,
-         border: `1px solid ${color.grayAlpha[4]}`,
-      };
+   ({ domProps: { focus } }) => focus && {
+      borderColor: color.blue[4],
+      boxShadow: `0 0 0 3px ${color.blue[2]}`,
+   },
+   ({ checked }) => checked && {
+      color: color.white,
+   },
+   ({ disabled, checked }) => disabled && {
+      backgroundColor: checked ? color.gray[4] : color.gray[1],
+      borderColor: color.gray[4],
    },
 );
 
@@ -87,16 +84,21 @@ const CheckboxRadio = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
    >
-      <Input
-         {...props}
-         onChange={ev =>
-            onChange({ checked: ev.target.checked, value: ev.target.value })}
-      />
+      <domProps.Target>
+         <Input
+            {...props}
+            innerRef={props.domProps.setRef}
+            onChange={ev =>
+               onChange({ checked: ev.target.checked, value: ev.target.value })
+            }
+         />
+      </domProps.Target>
       <InputIcon
          name={props.type === 'checkbox' ? 'check' : 'circle'}
          type={props.type}
          checked={props.checked}
          disabled={props.disabled}
+         domProps={props.domProps}
       />
       {label !== '' &&
          <LabelText>
@@ -127,4 +129,4 @@ CheckboxRadio.defaultProps = {
    onMouseLeave: () => {},
 };
 
-export default CheckboxRadio;
+export default domProps(CheckboxRadio);
