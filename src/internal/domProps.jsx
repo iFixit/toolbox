@@ -23,8 +23,10 @@ const domProps = Component => class extends React.Component {
    })));
 
    setRef = ref => {
-      this.ref = ref;
-      this.componentDidUpdate();
+      if (ref) {
+         this.ref = ref;
+         this.componentDidUpdate();
+      }
    };
 
    componentDidUpdate = () => {
