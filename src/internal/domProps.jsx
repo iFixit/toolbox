@@ -14,7 +14,6 @@ const domProps = Component => class extends React.Component {
    state = {
       validationMessage: '',
       valid: true,
-      showInvalid: false,
       focus: false,
    };
 
