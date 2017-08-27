@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import constants from '../../constants';
+import domProps from '../../internal/domProps';
 
 const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
@@ -53,7 +54,7 @@ const Textarea = ({
    onMouseLeave,
    onChange,
    ...props
-}) =>
+}) => (
    <Label
       className={className}
       onMouseEnter={onMouseEnter}
@@ -62,12 +63,17 @@ const Textarea = ({
       {label !== '' &&
          <LabelText>
             {label}
-         </LabelText>}
-      <TextareaContainer
-         {...props}
-         onChange={ev => onChange({ value: ev.target.value })}
-      />
-   </Label>;
+         </LabelText>
+      }
+      <domProps.Target>
+         <TextareaContainer
+            {...props}
+            onChange={ev => onChange({ value: ev.target.value })}
+            innerRef={props.domProps.setRef}
+         />
+      </domProps.Target>
+   </Label>
+);
 
 Textarea.propTypes = {
    /** Set class name of containing element. */
@@ -114,4 +120,4 @@ Textarea.defaultProps = {
    onMouseLeave: () => {},
 };
 
-export default Textarea;
+export default domProps(Textarea);

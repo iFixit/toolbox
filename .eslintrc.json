@@ -21,6 +21,9 @@
          { "declaration": false, "assignment": false, "arrow": false }
       ],
       "react/no-unused-prop-types": "warn",
+      "react/prop-types": ["error",
+         { "ignore": ["domProps"] }
+      ],
       "react/sort-prop-types": [
          "error",
          {
