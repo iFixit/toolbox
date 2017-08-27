@@ -33,10 +33,10 @@ const TextareaContainer = glamorous.textarea(
       borderRadius,
       boxShadow: 'none',
       outline: 'none',
-      ':focus': {
-         borderColor: color.blue[4],
-         boxShadow: `0 0 0 1px ${color.blue[4]}`,
-      },
+   },
+   ({ domProps: { focus } }) => focus && {
+      borderColor: color.blue[4],
+      boxShadow: `0 0 0 1px ${color.blue[4]}`,
    },
    ({ resize }) => ({
       resize,
