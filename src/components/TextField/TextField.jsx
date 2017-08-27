@@ -63,10 +63,9 @@ class TextField extends React.Component {
          onMouseEnter,
          onMouseLeave,
          onChange,
+         showInvalid,
          ...props
-      } = this.props;
-
-      const { showInvalid } = props || this.state;
+      } = this.props || this.state;
 
       return (
          <Label

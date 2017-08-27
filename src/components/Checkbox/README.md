@@ -24,6 +24,12 @@
 <Checkbox label="Checkbox disabled" disabled />
 ```
 
+#### Invalid unchecked
+
+```
+<Checkbox required label="Checkbox invalid" showInvalid={true} />
+```
+
 #### Event callbacks
 
 ```

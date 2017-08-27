@@ -64,47 +64,71 @@ const InputIcon = glamorous(Icon)(
    ({ checked }) => checked && {
       color: color.white,
    },
+   ({ showInvalid }) => showInvalid && {
+      borderColor: color.red[4],
+      backgroundColor: color.red[1],
+   },
    ({ disabled, checked }) => disabled && {
       backgroundColor: checked ? color.gray[4] : color.gray[1],
       borderColor: color.gray[4],
    },
 );
 
-const CheckboxRadio = ({
-   className,
-   label,
-   onMouseEnter,
-   onMouseLeave,
-   onChange,
-   ...props
-}) =>
-   <Label
-      className={className}
-      disabled={props.disabled}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-   >
-      <domProps.Target>
-         <Input
-            {...props}
-            innerRef={props.domProps.setRef}
-            onChange={ev =>
-               onChange({ checked: ev.target.checked, value: ev.target.value })
+class CheckboxRadio extends React.Component {
+   constructor(props) {
+      super(props);
+      this.state = { showInvalid: false };
+   }
+
+   render() {
+      const {
+         className,
+         label,
+         onMouseEnter,
+         onMouseLeave,
+         onChange,
+         showInvalid,
+         ...props
+      } = this.props || this.state;
+
+      return (
+         <Label
+            className={className}
+            disabled={props.disabled}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+         >
+            <domProps.Target>
+               <Input
+                  {...props}
+                  innerRef={props.domProps.setRef}
+                  onInvalid={ev => {
+                     ev.preventDefault();
+                     this.setState({ showInvalid: true });
+                  }}
+                  onChange={ev =>
+                     onChange({ checked: ev.target.checked, value: ev.target.value })
+                  }
+               />
+            </domProps.Target>
+            <InputIcon
+               name={props.type === 'checkbox' ? 'check' : 'circle'}
+               type={props.type}
+               checked={props.checked}
+               disabled={props.disabled}
+               domProps={props.domProps}
+               showInvalid={showInvalid}
+            />
+            {label !== '' &&
+               <LabelText> {label} </LabelText>
             }
-         />
-      </domProps.Target>
-      <InputIcon
-         name={props.type === 'checkbox' ? 'check' : 'circle'}
-         type={props.type}
-         checked={props.checked}
-         disabled={props.disabled}
-         domProps={props.domProps}
-      />
-      {label !== '' &&
-         <LabelText>
-            {label}
-         </LabelText>}
-   </Label>;
+            {showInvalid &&
+               <LabelText> {props.domProps.validationMessage} </LabelText>
+            }
+         </Label>
+      );
+   }
+}
 
 CheckboxRadio.propTypes = {
    type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
