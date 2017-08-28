@@ -65,6 +65,7 @@ const InputIcon = glamorous(Icon)(
    ({ checked }) => checked && {
       color: color.white,
       backgroundColor: color.blue[4],
+      borderColor: color.blue[4],
    },
    ({ showInvalid }) => showInvalid && {
       borderColor: color.red[4],
