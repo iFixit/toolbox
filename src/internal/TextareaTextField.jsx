@@ -98,9 +98,7 @@ class TextareaTextField extends React.Component {
                   }}
                   onChange={ev => {
                      onChange({ value: ev.target.value });
-                  }}
-                  onBlur={() => {
-                     if (props.domProps.valid) {
+                     if (showInvalid && props.domProps.valid) {
                         this.setState({ showInvalid: false });
                      }
                   }}

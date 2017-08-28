@@ -10,8 +10,8 @@ const eventStates = {
    },
 };
 
-// High order component to access an input component's dom node properties
-// from it's parent's react component.
+// Higher order component to access an input component's dom node properties
+// from its parent's react component.
 const domProps = Component => class extends React.Component {
    state = {
       validationMessage: '',
