@@ -27,7 +27,7 @@
 #### Invalid Textarea
 
 ```
-<Textarea label="Label" placeholder="Placeholder text" showInvalid={true} />
+<Textarea required label="Label" placeholder="Placeholder text" showInvalid={true} />
 ```
 
 #### Event callbacks
