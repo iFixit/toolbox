@@ -90,7 +90,7 @@ class CheckboxRadio extends React.Component {
          onChange,
          showInvalid,
          ...props
-      } = this.props || this.state;
+      } = { ...this.state, ...this.props };
 
       return (
          <Label
