@@ -34,9 +34,10 @@ const domProps = Component => class extends React.Component {
       const { validationMessage, validity: { valid } } = this.ref;
 
       console.log('componentDidUpdate');
-      console.log(this.ref.value);
+      console.log("'", this.ref.value, "'");
       console.log(valid);
       console.log(validationMessage);
+      console.log('');
 
       if (
          valid !== this.state.valid ||
