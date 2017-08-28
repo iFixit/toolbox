@@ -69,10 +69,10 @@ class TextareaTextField extends React.Component {
          onMouseEnter,
          onMouseLeave,
          onChange,
-         showInvalid,
          component,
+         showInvalid,
          ...props
-      } = this.props || this.state;
+      } = { ...this.state, ...this.props };
 
       const Component = component === 'TextField' ? Input : TextareaContainer;
 

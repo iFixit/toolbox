@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TextareaTextField from '../../internal/TextareaTextField';
 
 const Textarea = props => (
-   <TextareaTextField component="TextArea" {...props} />
+   <TextareaTextField component="Textarea" {...props} />
 );
 
 Textarea.propTypes = {
