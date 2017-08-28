@@ -24,6 +24,12 @@
 <Radio label="Radio disabled" disabled />
 ```
 
+#### Invalid unchecked
+
+```
+<Radio required label="Radio invalid" showInvalid={true} />
+```
+
 #### Event callbacks
 
 ```

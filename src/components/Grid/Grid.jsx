@@ -76,13 +76,13 @@ class Grid extends React.Component {
       const { className, children } = this.props;
 
       return (
-        <div className={className}>
-          {children({
-             GridContainer: this.GridContainer,
-             GridRow: this.GridRow,
-             GridCell: this.GridCell,
-          })}
-        </div>
+         <div className={className}>
+            {children({
+               GridContainer: this.GridContainer,
+               GridRow: this.GridRow,
+               GridCell: this.GridCell,
+            })}
+         </div>
       );
    }
 }

@@ -135,17 +135,13 @@ const ButtonContainer = glamorous.button(
    },
    ({ design }) => designs[design],
    ({ size }) => sizes[size],
-   ({ fullWidth }) => {
-      if (fullWidth) {
-         return { display: 'flex', width: '100%' };
-      }
-      return null;
+   ({ fullWidth }) => fullWidth && {
+      display: 'flex',
+      width: '100%',
    },
-   ({ disabled }) => {
-      if (disabled) {
-         return { opacity: 0.5, pointerEvents: 'none' };
-      }
-      return null;
+   ({ disabled }) => disabled && {
+      opacity: 0.5,
+      pointerEvents: 'none',
    },
 );
 

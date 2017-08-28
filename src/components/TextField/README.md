@@ -24,6 +24,12 @@
 <TextField label="Name" value="Bill Nye" disabled />
 ```
 
+#### Invalid TextField
+
+```
+<TextField required label="Name" placeholder="Doc Brown" showInvalid={true}/>
+```
+
 #### Event callbacks
 
 ```

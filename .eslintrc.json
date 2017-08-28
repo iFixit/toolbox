@@ -1,14 +1,29 @@
 {
+   "parser": "babel-eslint",
+   "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+           "jsx": true,
+           "modules": true,
+           "experimentalObjectRestSpread": true
+      }
+   },
    "extends": "airbnb",
    "rules": {
       "arrow-parens": ["error", "as-needed"],
       "max-len": "off",
       "indent": ["error", 3],
+      "react/jsx-indent": ["error", 3],
+      "react/jsx-indent-props": ["error", 3],
       "react/jsx-wrap-multilines": [
          "error",
          { "declaration": false, "assignment": false, "arrow": false }
       ],
       "react/no-unused-prop-types": "warn",
+      "react/prop-types": ["error",
+         { "ignore": ["domProps"] }
+      ],
       "react/sort-prop-types": [
          "error",
          {
@@ -16,6 +31,7 @@
             "ignoreCase": true,
             "requiredFirst": true
          }
-      ]
+      ],
+      "react/no-did-update-set-state": "off"
    }
 }
