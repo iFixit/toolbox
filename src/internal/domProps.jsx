@@ -37,14 +37,18 @@ const domProps = Component => class extends React.Component {
       console.log("'", this.ref.value, "'");
       console.log(valid);
       console.log(validationMessage);
-      console.log('');
 
       if (
          valid !== this.state.valid ||
          validationMessage !== this.state.validationMessage
       ) {
+         console.log('setting state');
          this.setState({ validationMessage, valid });
+      } else {
+         console.log('not setting state');
       }
+
+      console.log('');
    };
 
    render = () => (
