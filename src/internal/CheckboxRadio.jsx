@@ -124,7 +124,7 @@ class CheckboxRadio extends React.Component {
             {label !== '' &&
                <LabelText> {label} </LabelText>
             }
-            {showInvalid &&
+            {showInvalid && props.domProps.focus &&
                <LabelText> {props.domProps.validationMessage} </LabelText>
             }
          </Label>
