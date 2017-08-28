@@ -76,10 +76,16 @@ const InputIcon = glamorous(Icon)(
    },
 );
 
-class CheckboxRadio extends React.Component {
+class CheckboxRadio extends React.PureComponent {
    constructor(props) {
       super(props);
       this.state = { showInvalid: false };
+   }
+
+   componentDidUpdate() {
+      if (this.state.showInvalid && this.props.domProps.valid) {
+         this.setState({ showInvalid: false });
+      }
    }
 
    render() {

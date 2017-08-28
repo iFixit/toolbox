@@ -12,7 +12,7 @@ const eventStates = {
 
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-const domProps = Component => class extends React.Component {
+const domProps = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -33,22 +33,12 @@ const domProps = Component => class extends React.Component {
    componentDidUpdate = () => {
       const { validationMessage, validity: { valid } } = this.ref;
 
-      console.log('componentDidUpdate');
-      console.log("'", this.ref.value, "'");
-      console.log(valid);
-      console.log(validationMessage);
-
       if (
          valid !== this.state.valid ||
          validationMessage !== this.state.validationMessage
       ) {
-         console.log('setting state');
          this.setState({ validationMessage, valid });
-      } else {
-         console.log('not setting state');
       }
-
-      console.log('');
    };
 
    render = () => (

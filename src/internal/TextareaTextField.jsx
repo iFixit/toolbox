@@ -56,14 +56,13 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
 
 const TextareaContainer = Input.withComponent('textarea');
 
-class TextareaTextField extends React.Component {
+class TextareaTextField extends React.PureComponent {
    constructor(props) {
       super(props);
       this.state = { showInvalid: false };
    }
 
    componentDidUpdate() {
-      console.log('TextareaTextField componentDidUpdate');
       if (this.state.showInvalid && this.props.domProps.valid) {
          this.setState({ showInvalid: false });
       }
