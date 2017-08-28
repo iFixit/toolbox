@@ -31,6 +31,7 @@
             "ignoreCase": true,
             "requiredFirst": true
          }
-      ]
+      ],
+      "react/no-did-update-set-state": "off"
    }
 }

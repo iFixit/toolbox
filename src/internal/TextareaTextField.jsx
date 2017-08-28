@@ -62,6 +62,13 @@ class TextareaTextField extends React.Component {
       this.state = { showInvalid: false };
    }
 
+   componentDidUpdate() {
+      console.log('TextareaTextField componentDidUpdate');
+      if (this.state.showInvalid && this.props.domProps.valid) {
+         this.setState({ showInvalid: false });
+      }
+   }
+
    render() {
       const {
          className,
@@ -96,12 +103,7 @@ class TextareaTextField extends React.Component {
                      ev.preventDefault();
                      this.setState({ showInvalid: true });
                   }}
-                  onChange={ev => {
-                     onChange({ value: ev.target.value });
-                     if (showInvalid && props.domProps.valid) {
-                        this.setState({ showInvalid: false });
-                     }
-                  }}
+                  onChange={ev => onChange({ value: ev.target.value })}
                   innerRef={props.domProps.setRef}
                />
             </domProps.Target>
