@@ -10,6 +10,8 @@ const eventStates = {
    },
 };
 
+// High order component to access an input component's dom node properties
+// from it's parent's react component.
 const domProps = Component => class extends React.Component {
    state = {
       validationMessage: '',
@@ -51,6 +53,8 @@ const domProps = Component => class extends React.Component {
    );
 };
 
+// Wrapper component for the actual input component.
+// Reconciles any events that are applied to the input component.
 domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
