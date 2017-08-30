@@ -53,9 +53,9 @@ const domProps = Component => class extends React.PureComponent {
    );
 };
 
-/** Wrapper component for the actual input element.
- *  Reconciles any events that are applied to the input component.
- *  ex:
+/* Wrapper component for the actual input element.
+ * Reconciles any events that are applied to the input component.
+ * ex:
  * <domProps.Target>
  *    <input onFocus={() => console.log('This won't get overridden!')}>
  * </domProps.Target>
@@ -63,8 +63,10 @@ const domProps = Component => class extends React.PureComponent {
 domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
-         (children.props[eventKey] || (() => {}))(ev);
-         children.props.domProps.events[eventKey](ev);
+         [
+            children.props[eventKey],
+            children.props.domProps.events[eventKey],
+         ].filter(fn => fn instanceof Function).forEach(fn => fn(ev));
       },
    })),
 ));
