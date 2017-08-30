@@ -76,7 +76,6 @@ class TextareaTextField extends React.PureComponent {
          onMouseLeave,
          onChange,
          component,
-         showInvalid,
          ...props
       } = { ...this.state, ...this.props };
 
@@ -91,18 +90,17 @@ class TextareaTextField extends React.PureComponent {
             {label !== '' &&
                <LabelText> {label} </LabelText>
             }
-            {showInvalid && props.domProps.focus &&
+            {props.showInvalid && props.domProps.focus &&
                <LabelText> {props.domProps.validationMessage} </LabelText>
             }
             <domProps.Target>
                <Component
                   {...props}
-                  {...{ showInvalid }}
                   onInvalid={ev => {
                      ev.preventDefault();
                      this.setState({ showInvalid: true });
                   }}
-                  onChange={ev => onChange({ value: ev.target.value })}
+                  onChange={({ target: { value } }) => onChange({ value })}
                   innerRef={props.domProps.setRef}
                />
             </domProps.Target>

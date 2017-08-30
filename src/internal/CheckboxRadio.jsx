@@ -115,8 +115,8 @@ class CheckboxRadio extends React.PureComponent {
                      ev.preventDefault();
                      this.setState({ showInvalid: true });
                   }}
-                  onChange={ev =>
-                     onChange({ checked: ev.target.checked, value: ev.target.value })
+                  onChange={({ target: { checked, value } }) =>
+                     onChange({ checked, value })
                   }
                />
             </domProps.Target>
