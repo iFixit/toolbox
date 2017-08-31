@@ -12,7 +12,7 @@ const eventStates = {
 
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-const domProps = Component => class extends React.PureComponent {
+const DomProps = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -60,7 +60,7 @@ const domProps = Component => class extends React.PureComponent {
  *    <input onFocus={() => console.log('This won't get overridden!')}>
  * </domProps.Target>
  */
-domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
+DomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
          [
@@ -71,8 +71,8 @@ domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    })),
 ));
 
-domProps.Target.propTypes = {
+DomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
 };
 
-export default domProps;
+export default DomProps;

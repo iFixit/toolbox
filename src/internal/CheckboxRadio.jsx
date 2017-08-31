@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
-import domProps from './domProps';
+import DomProps from './DomProps';
 
 const {
    borderRadius,
@@ -107,7 +107,7 @@ class CheckboxRadio extends React.PureComponent {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
          >
-            <domProps.Target>
+            <DomProps.Target>
                <Input
                   {...props}
                   innerRef={props.domProps.setRef}
@@ -119,7 +119,7 @@ class CheckboxRadio extends React.PureComponent {
                      onChange({ checked, value })
                   }
                />
-            </domProps.Target>
+            </DomProps.Target>
             <InputIcon
                name={props.type === 'checkbox' ? 'check' : 'circle'}
                type={props.type}
@@ -162,4 +162,4 @@ CheckboxRadio.defaultProps = {
    onMouseLeave: () => {},
 };
 
-export default domProps(CheckboxRadio);
+export default DomProps(CheckboxRadio);

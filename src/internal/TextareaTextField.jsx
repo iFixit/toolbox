@@ -2,7 +2,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import constants from '../constants';
-import domProps from './domProps';
+import DomProps from './DomProps';
 import ValidityIcon from './ValidityIcon';
 
 const { borderRadius, color, fontSize, lineHeight, spacing, transition } = constants;
@@ -61,69 +61,73 @@ const TextareaContainer = Input.withComponent('textarea');
 class TextareaTextField extends React.PureComponent {
    state = {};
 
-   ValidityIconOnClick = () => {
-      this.setState(({ showValidationMessage = false }) => ({
-         showValidationMessage: !showValidationMessage,
-         validationMessage: this.props.domProps.validationMessage,
-      }));
-   }
-
-   ComponentOnInvalid = ev => {
-      ev.preventDefault();
-      this.setState({
-         showValidity: true,
-      });
-   }
-
    render() {
       const {
          className,
+         component,
+         domProps,
          label,
+         onChange,
          onMouseEnter,
          onMouseLeave,
-         onChange,
-         component,
-         ...props
+         showValidationMessage,
+         showValidity,
+         validationMessage,
+         ...passedThroughProps
       } = { ...this.state, ...this.props };
 
       const Component = component === 'TextField' ? Input : TextareaContainer;
 
+      const propsLabel = {
+         className,
+         onMouseEnter,
+         onMouseLeave,
+      };
+
+      const propsValidityIcon = {
+         showValidity,
+         valid: domProps.valid,
+         onClick: () => this.setState({
+            showValidationMessage: !showValidationMessage,
+            validationMessage: domProps.validationMessage,
+         }),
+      };
+
+      const propsComponent = {
+         ...passedThroughProps,
+         domProps,
+         innerRef: domProps.setRef,
+         showValidity,
+         onChange: ({ target: { value } }) => {
+            onChange({ value });
+         },
+         onBlur: () => showValidity && domProps.valid && this.setState({
+            showValidity: false,
+            showValidationMessage: false,
+         }),
+         onInvalid: ev => {
+            ev.preventDefault();
+            this.setState({
+               showValidity: true,
+            });
+         },
+      };
+
       return (
-         <Label
-            className={className}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-         >
-            {props.showValidationMessage && !props.domProps.valid ?
-               <LabelText style={{ color: color.red[4] }}> {props.validationMessage} </LabelText> :
+         <Label {...propsLabel}>
+            {showValidationMessage && !domProps.valid ?
+               <LabelText style={{ color: color.red[4] }}> {validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
             }
             <glamorous.Div position="relative">
-               <ValidityIcon
-                  showValidity={props.showValidity}
-                  valid={props.domProps.valid}
-                  onClick={this.ValidityIconOnClick}
-               />
-               <domProps.Target>
-                  <Component
-                     {...props}
-                     onInvalid={this.ComponentOnInvalid}
-                     onChange={({ target: { value } }) => onChange({ value })}
-                     innerRef={props.domProps.setRef}
-                     onBlur={() => {
-                        if (props.showValidity && props.domProps.valid) {
-                           this.setState({
-                              showValidity: false,
-                              showValidationMessage: false,
-                           });
-                        }
-                     }}
-                  />
-               </domProps.Target>
+               <ValidityIcon {...propsValidityIcon} />
+               <DomProps.Target>
+                  <Component {...propsComponent} />
+               </DomProps.Target>
             </glamorous.Div>
          </Label>
       );
    }
 }
 
-export default domProps(TextareaTextField);
+export default DomProps(TextareaTextField);
