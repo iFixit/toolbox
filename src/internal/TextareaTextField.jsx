@@ -103,6 +103,7 @@ class TextareaTextField extends React.PureComponent {
             <glamorous.Div position="relative">
                <ValidityIcon
                   showValidity={props.showValidity}
+                  valid={props.domProps.valid}
                   onClick={this.ValidityIconOnClick}
                />
                <domProps.Target>
