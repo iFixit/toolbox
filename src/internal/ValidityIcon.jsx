@@ -7,12 +7,12 @@ import constants from '../constants';
 
 const { color } = constants;
 
-const InvalidIcon = props => (
+const ValidityIcon = props => (
    <glamorous.Div
       {...{
          position: 'absolute',
          height: '100%',
-         width: InvalidIcon.width,
+         width: ValidityIcon.width,
          display: 'flex',
          justifyContent: 'center',
          alignItems: 'center',
@@ -20,7 +20,7 @@ const InvalidIcon = props => (
          WebkitTapHighlightColor: 'rgba(0,0,0,0)',
          userSelect: 'none',
       }}
-      visibility={props.showInvalid ? 'visible' : 'hidden'}
+      visibility={props.showValidity ? 'visible' : 'hidden'}
       onClick={ev => {
          ev.preventDefault();
          props.onClick(ev);
@@ -30,16 +30,16 @@ const InvalidIcon = props => (
    </glamorous.Div>
 );
 
-InvalidIcon.width = '42px';
+ValidityIcon.width = '42px';
 
-InvalidIcon.defaultProps = {
-   showInvalid: false,
+ValidityIcon.defaultProps = {
+   showValidity: false,
    onClick: () => {},
 };
 
-InvalidIcon.propTypes = {
-   showInvalid: PropTypes.bool,
+ValidityIcon.propTypes = {
+   showValidity: PropTypes.bool,
    onClick: PropTypes.func,
 };
 
-export default InvalidIcon;
+export default ValidityIcon;

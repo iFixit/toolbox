@@ -3,7 +3,7 @@ import glamorous from 'glamorous';
 
 import constants from '../constants';
 import domProps from './domProps';
-import InvalidIcon from './InvalidIcon';
+import ValidityIcon from './ValidityIcon';
 
 const { borderRadius, color, fontSize, lineHeight, spacing, transition } = constants;
 
@@ -40,8 +40,8 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       backgroundColor: color.white,
       transition: `padding ${transition.duration} ${transition.easing}`,
    },
-   ({ showInvalid }) => showInvalid && {
-      paddingLeft: InvalidIcon.width,
+   ({ showValidity }) => showValidity && {
+      paddingLeft: ValidityIcon.width,
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
@@ -62,12 +62,12 @@ class TextareaTextField extends React.PureComponent {
    state = {};
 
    componentDidUpdate = () => {
-      if (this.state.showInvalid && this.props.domProps.valid) {
-         this.setState({ showInvalid: false });
+      if (this.state.showValidity && this.props.domProps.valid) {
+         this.setState({ showValidity: false });
       }
    };
 
-   InvalidIconOnClick = () => {
+   ValidityIconOnClick = () => {
       this.setState(({ showValidationMessage = false }) => ({
          showValidationMessage: !showValidationMessage,
       }));
@@ -75,7 +75,7 @@ class TextareaTextField extends React.PureComponent {
 
    ComponentOnInvalid = ev => {
       ev.preventDefault();
-      this.setState({ showInvalid: true });
+      this.setState({ showValidity: true });
    }
 
    render() {
@@ -104,9 +104,9 @@ class TextareaTextField extends React.PureComponent {
                <LabelText style={{ color: color.red[4] }}> {props.domProps.validationMessage} </LabelText>
             }
             <glamorous.Div position="relative">
-               <InvalidIcon
-                  showInvalid={props.showInvalid}
-                  onClick={this.InvalidIconOnClick}
+               <ValidityIcon
+                  showValidity={props.showValidity}
+                  onClick={this.ValidityIconOnClick}
                />
                <domProps.Target>
                   <Component
