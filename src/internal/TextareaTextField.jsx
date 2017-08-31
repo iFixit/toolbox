@@ -64,6 +64,7 @@ class TextareaTextField extends React.PureComponent {
    ValidityIconOnClick = () => {
       this.setState(({ showValidationMessage = false }) => ({
          showValidationMessage: !showValidationMessage,
+         validationMessage: this.props.domProps.validationMessage,
       }));
    }
 
@@ -71,7 +72,6 @@ class TextareaTextField extends React.PureComponent {
       ev.preventDefault();
       this.setState({
          showValidity: true,
-         validationMessage: this.props.domProps.validationMessage,
       });
    }
 
