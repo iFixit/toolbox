@@ -12,7 +12,7 @@ const InvalidIcon = props => (
       {...{
          position: 'absolute',
          height: '100%',
-         width: '42px',
+         width: InvalidIcon.width,
          display: 'flex',
          justifyContent: 'center',
          alignItems: 'center',
@@ -20,6 +20,7 @@ const InvalidIcon = props => (
          WebkitTapHighlightColor: 'rgba(0,0,0,0)',
          userSelect: 'none',
       }}
+      visibility={props.showInvalid ? 'visible' : 'hidden'}
       onClick={ev => {
          ev.preventDefault();
          props.onClick(ev);
@@ -29,11 +30,15 @@ const InvalidIcon = props => (
    </glamorous.Div>
 );
 
+InvalidIcon.width = '42px';
+
 InvalidIcon.defaultProps = {
+   showInvalid: false,
    onClick: () => {},
 };
 
 InvalidIcon.propTypes = {
+   showInvalid: PropTypes.bool,
    onClick: PropTypes.func,
 };
 

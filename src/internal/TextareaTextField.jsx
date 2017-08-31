@@ -5,7 +5,7 @@ import constants from '../constants';
 import domProps from './domProps';
 import InvalidIcon from './InvalidIcon';
 
-const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
+const { borderRadius, color, fontSize, lineHeight, spacing, transition } = constants;
 
 const Label = glamorous.label({
    display: 'inline-block',
@@ -38,7 +38,10 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       outline: 'none',
       color: color.grayAlpha[9],
       backgroundColor: color.white,
-      paddingLeft: '40px',
+      transition: `padding ${transition.duration} ${transition.easing}`,
+   },
+   ({ showInvalid }) => showInvalid && {
+      paddingLeft: InvalidIcon.width,
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
@@ -101,7 +104,10 @@ class TextareaTextField extends React.PureComponent {
                <LabelText style={{ color: color.red[4] }}> {props.domProps.validationMessage} </LabelText>
             }
             <glamorous.Div position="relative">
-               {true && <InvalidIcon onClick={this.InvalidIconOnClick} />}
+               <InvalidIcon
+                  showInvalid={props.showInvalid}
+                  onClick={this.InvalidIconOnClick}
+               />
                <domProps.Target>
                   <Component
                      {...props}
