@@ -69,7 +69,10 @@ class TextareaTextField extends React.PureComponent {
 
    ComponentOnInvalid = ev => {
       ev.preventDefault();
-      this.setState({ showValidity: true });
+      this.setState({
+         showValidity: true,
+         validationMessage: this.props.domProps.validationMessage,
+      });
    }
 
    render() {
@@ -95,7 +98,7 @@ class TextareaTextField extends React.PureComponent {
                <LabelText> {label} </LabelText>
             }
             {props.showValidationMessage &&
-               <LabelText style={{ color: color.red[4] }}> {props.domProps.validationMessage} </LabelText>
+               <LabelText style={{ color: color.red[4] }}> {props.validationMessage} </LabelText>
             }
             <glamorous.Div position="relative">
                <ValidityIcon
@@ -110,7 +113,10 @@ class TextareaTextField extends React.PureComponent {
                      innerRef={props.domProps.setRef}
                      onBlur={() => {
                         if (props.showValidity && props.domProps.valid) {
-                           this.setState({ showValidity: false });
+                           this.setState({
+                              showValidity: false,
+                              showValidationMessage: false,
+                           });
                         }
                      }}
                   />
