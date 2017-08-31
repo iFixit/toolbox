@@ -61,12 +61,6 @@ const TextareaContainer = Input.withComponent('textarea');
 class TextareaTextField extends React.PureComponent {
    state = {};
 
-   componentDidUpdate = () => {
-      if (this.state.showValidity && this.props.domProps.valid) {
-         this.setState({ showValidity: false });
-      }
-   };
-
    ValidityIconOnClick = () => {
       this.setState(({ showValidationMessage = false }) => ({
          showValidationMessage: !showValidationMessage,
@@ -114,6 +108,11 @@ class TextareaTextField extends React.PureComponent {
                      onInvalid={this.ComponentOnInvalid}
                      onChange={({ target: { value } }) => onChange({ value })}
                      innerRef={props.domProps.setRef}
+                     onBlur={() => {
+                        if (props.showValidity && props.domProps.valid) {
+                           this.setState({ showValidity: false });
+                        }
+                     }}
                   />
                </domProps.Target>
             </glamorous.Div>
