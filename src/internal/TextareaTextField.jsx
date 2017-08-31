@@ -94,11 +94,9 @@ class TextareaTextField extends React.PureComponent {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
          >
-            {label !== '' && !props.showValidationMessage &&
+            {props.showValidationMessage && !props.domProps.valid ?
+               <LabelText style={{ color: color.red[4] }}> {props.validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
-            }
-            {props.showValidationMessage &&
-               <LabelText style={{ color: color.red[4] }}> {props.validationMessage} </LabelText>
             }
             <glamorous.Div position="relative">
                <ValidityIcon
