@@ -3,6 +3,7 @@ import glamorous from 'glamorous';
 
 import constants from '../constants';
 import domProps from './domProps';
+import InvalidIcon from './InvalidIcon';
 
 const { borderRadius, color, fontSize, lineHeight, spacing } = constants;
 
@@ -23,6 +24,7 @@ const LabelText = glamorous.span({
 const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    {
       display: 'block',
+      WebkitAppearance: 'none',
       width: '100%',
       boxSizing: 'border-box',
       padding: `${spacing[1]} ${spacing[3]}`,
@@ -36,14 +38,11 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       outline: 'none',
       color: color.grayAlpha[9],
       backgroundColor: color.white,
+      paddingLeft: '40px',
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
       boxShadow: `0 0 0 1px ${color.blue[4]}`,
-   },
-   ({ showInvalid }) => showInvalid && {
-      color: color.red[4],
-      backgroundColor: color.red[1],
    },
    ({ disabled }) => disabled && {
       color: color.grayAlpha[5],
@@ -57,15 +56,23 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
 const TextareaContainer = Input.withComponent('textarea');
 
 class TextareaTextField extends React.PureComponent {
-   constructor(props) {
-      super(props);
-      this.state = { showInvalid: false };
-   }
+   state = {};
 
-   componentDidUpdate() {
+   componentDidUpdate = () => {
       if (this.state.showInvalid && this.props.domProps.valid) {
          this.setState({ showInvalid: false });
       }
+   };
+
+   InvalidIconOnClick = () => {
+      this.setState(({ showValidationMessage = false }) => ({
+         showValidationMessage: !showValidationMessage,
+      }));
+   }
+
+   ComponentOnInvalid = ev => {
+      ev.preventDefault();
+      this.setState({ showInvalid: true });
    }
 
    render() {
@@ -87,23 +94,23 @@ class TextareaTextField extends React.PureComponent {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
          >
-            {label !== '' &&
+            {label !== '' && !props.showValidationMessage &&
                <LabelText> {label} </LabelText>
             }
-            {props.showInvalid && props.domProps.focus &&
-               <LabelText> {props.domProps.validationMessage} </LabelText>
+            {props.showValidationMessage &&
+               <LabelText style={{ color: color.red[4] }}> {props.domProps.validationMessage} </LabelText>
             }
-            <domProps.Target>
-               <Component
-                  {...props}
-                  onInvalid={ev => {
-                     ev.preventDefault();
-                     this.setState({ showInvalid: true });
-                  }}
-                  onChange={({ target: { value } }) => onChange({ value })}
-                  innerRef={props.domProps.setRef}
-               />
-            </domProps.Target>
+            <glamorous.Div position="relative">
+               {true && <InvalidIcon onClick={this.InvalidIconOnClick} />}
+               <domProps.Target>
+                  <Component
+                     {...props}
+                     onInvalid={this.ComponentOnInvalid}
+                     onChange={({ target: { value } }) => onChange({ value })}
+                     innerRef={props.domProps.setRef}
+                  />
+               </domProps.Target>
+            </glamorous.Div>
          </Label>
       );
    }
