@@ -78,7 +78,7 @@ class TextareaTextField extends React.Component {
 
       const Component = component === 'TextField' ? Input : TextareaContainer;
 
-      console.log('test');
+      console.log('wat');
 
       const propsLabel = {
          className,
