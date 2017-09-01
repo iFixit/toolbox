@@ -58,7 +58,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
 
 const TextareaContainer = Input.withComponent('textarea');
 
-class TextareaTextField extends React.PureComponent {
+class TextareaTextField extends React.Component {
    state = {};
 
    render() {
@@ -77,6 +77,8 @@ class TextareaTextField extends React.PureComponent {
       } = { ...this.state, ...this.props };
 
       const Component = component === 'TextField' ? Input : TextareaContainer;
+
+      console.log('test');
 
       const propsLabel = {
          className,
