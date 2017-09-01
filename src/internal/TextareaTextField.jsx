@@ -100,6 +100,7 @@ class TextareaTextField extends React.PureComponent {
          showValidity,
          onChange: ({ target: { value } }) => {
             onChange({ value });
+            console.log(domProps.valid);
          },
          onBlur: () => showValidity && domProps.valid && this.setState({
             showValidity: false,
