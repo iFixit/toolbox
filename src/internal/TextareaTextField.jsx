@@ -120,7 +120,7 @@ class TextareaTextField extends React.PureComponent {
       return (
          <Label {...propsLabel}>
             {validationMessage ?
-               <LabelText style={{ color: color.red[4] }}> {domProps.validationMessage} </LabelText> :
+               <LabelText style={{ color: color.red[4] }}> {validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
             }
             <glamorous.Div position="relative">
