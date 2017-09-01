@@ -58,7 +58,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
 
 const TextareaContainer = Input.withComponent('textarea');
 
-class TextareaTextField extends React.Component {
+class TextareaTextField extends React.PureComponent {
    state = {};
 
    render() {
@@ -70,13 +70,11 @@ class TextareaTextField extends React.Component {
          onChange,
          onMouseEnter,
          onMouseLeave,
-         showValidationMessage,
+         toggleValidationMessage,
          showValidity,
          validationMessage,
          ...passedThroughProps
       } = { ...this.state, ...this.props };
-
-      console.log(domProps.valid);
 
       const Component = component === 'TextField' ? Input : TextareaContainer;
 
@@ -89,10 +87,6 @@ class TextareaTextField extends React.Component {
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
-         onClick: () => this.setState({
-            showValidationMessage: !showValidationMessage,
-            validationMessage: domProps.validationMessage,
-         }),
       };
 
       const propsComponent = {
@@ -103,9 +97,8 @@ class TextareaTextField extends React.Component {
          onChange: ({ target: { value } }) => {
             onChange({ value });
          },
-         onBlur: () => showValidity && domProps.valid && this.setState({
+         onBlur: () => domProps.valid && this.setState({
             showValidity: false,
-            showValidationMessage: false,
          }),
          onInvalid: ev => {
             ev.preventDefault();
@@ -117,10 +110,11 @@ class TextareaTextField extends React.Component {
 
       return (
          <Label {...propsLabel}>
-            {showValidationMessage && !domProps.valid ?
+            {/* toggleValidationMessage && !domProps.valid ?
                <LabelText style={{ color: color.red[4] }}> {validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
-            }
+            */}
+            <LabelText> {label} </LabelText>
             <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
                <DomProps.Target>
