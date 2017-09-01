@@ -62,8 +62,8 @@ class TextareaTextField extends React.PureComponent {
    state = {};
 
    componentDidUpdate() {
-      if (this.state.toggleValidationMessage && this.props.domProps.valid) {
-         this.setState({ toggleValidationMessage: false });
+      if (this.state.validationMessage && this.props.domProps.valid) {
+         this.setState({ validationMessage: '' });
       }
    }
 
@@ -76,7 +76,7 @@ class TextareaTextField extends React.PureComponent {
          onChange,
          onMouseEnter,
          onMouseLeave,
-         toggleValidationMessage,
+         validationMessage,
          showValidity,
          ...passedThroughProps
       } = { ...this.state, ...this.props };
@@ -92,8 +92,8 @@ class TextareaTextField extends React.PureComponent {
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
-         onClick: () => !domProps.valid && this.setState({
-            toggleValidationMessage: !toggleValidationMessage,
+         onClick: () => this.setState({
+            validationMessage: domProps.validationMessage,
          }),
       };
 
@@ -107,7 +107,7 @@ class TextareaTextField extends React.PureComponent {
          },
          onBlur: () => domProps.valid && this.setState({
             showValidity: false,
-            toggleValidationMessage: false,
+            validationMessage: '',
          }),
          onInvalid: ev => {
             ev.preventDefault();
@@ -119,7 +119,7 @@ class TextareaTextField extends React.PureComponent {
 
       return (
          <Label {...propsLabel}>
-            {toggleValidationMessage ?
+            {validationMessage ?
                <LabelText style={{ color: color.red[4] }}> {domProps.validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
             }
