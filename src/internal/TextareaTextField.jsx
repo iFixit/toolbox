@@ -46,7 +46,6 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       lineHeight: lineHeight.copy,
       border: `1px solid ${color.grayAlpha[3]}`,
       borderRadius,
-      boxShadow: 'none',
       outline: 'none',
       color: color.grayAlpha[9],
       backgroundColor: color.white,
@@ -57,7 +56,6 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
-      boxShadow: `0 0 0 1px ${color.blue[4]}`,
    },
    ({ disabled }) => disabled && {
       color: color.grayAlpha[5],
