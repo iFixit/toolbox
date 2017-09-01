@@ -20,6 +20,7 @@ const ValidityIcon = props => (
          WebkitTapHighlightColor: 'rgba(0,0,0,0)',
          userSelect: 'none',
       }}
+      pointerEvents={props.valid ? 'none' : 'auto'}
       visibility={props.showValidity ? 'visible' : 'hidden'}
       onClick={ev => {
          ev.preventDefault();
