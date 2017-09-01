@@ -15,11 +15,16 @@ const Label = glamorous.label({
    color: color.grayAlpha[9],
 });
 
-const LabelText = glamorous.span({
-   display: 'inline-block',
-   marginBottom: spacing[3],
-   lineHeight: lineHeight.solid,
-});
+const LabelText = glamorous.span(
+   {
+      display: 'inline-block',
+      marginBottom: spacing[3],
+      lineHeight: lineHeight.solid,
+   },
+   ({ toggleValidationMessage }) => toggleValidationMessage && {
+      color: color.red[4],
+   },
+);
 
 const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    {
@@ -90,6 +95,11 @@ class TextareaTextField extends React.PureComponent {
          onMouseLeave,
       };
 
+      const propsLabelText = {
+         toggleValidationMessage,
+         children: toggleValidationMessage ? validationMessage : label,
+      };
+
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
@@ -122,10 +132,7 @@ class TextareaTextField extends React.PureComponent {
 
       return (
          <Label {...propsLabel}>
-            {toggleValidationMessage ?
-               <LabelText style={{ color: color.red[4] }}> {validationMessage} </LabelText> :
-               <LabelText> {label} </LabelText>
-            }
+            <LabelText {...propsLabelText} />
             <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
                <DomProps.Target>
