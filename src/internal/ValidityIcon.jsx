@@ -5,23 +5,37 @@ import PropTypes from 'prop-types';
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
 
-const { color } = constants;
+const { color, transition } = constants;
+
+const ValidityIconContainer = glamorous.div(
+   {
+      position: 'absolute',
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      cursor: 'pointer',
+      WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+      userSelect: 'none',
+      transition: `${transition.duration} ${transition.easing}`,
+      transitionProperty: 'transform',
+   },
+   ({ showValidity }) => !showValidity && {
+      transform: 'translateX(-100%)',
+      transitionProperty: 'transform, visibility',
+      visibility: 'hidden',
+   },
+   ({ valid }) => valid && {
+      pointerEvents: 'none',
+   },
+   ({ width }) => width && { width },
+);
 
 const ValidityIcon = props => (
-   <glamorous.Div
-      {...{
-         position: 'absolute',
-         height: '100%',
-         width: ValidityIcon.width,
-         display: 'flex',
-         justifyContent: 'center',
-         alignItems: 'center',
-         cursor: 'pointer',
-         WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-         userSelect: 'none',
-      }}
-      pointerEvents={props.valid ? 'none' : 'auto'}
-      visibility={props.showValidity ? 'visible' : 'hidden'}
+   <ValidityIconContainer
+      showValidity={props.showValidity}
+      valid={props.valid}
+      width={ValidityIcon.width}
       onClick={ev => {
          ev.preventDefault();
          props.onClick(ev);
@@ -32,7 +46,7 @@ const ValidityIcon = props => (
          color={props.valid ? color.green[4] : color.red[4]}
          size={24}
       />
-   </glamorous.Div>
+   </ValidityIconContainer>
 );
 
 ValidityIcon.width = '42px';

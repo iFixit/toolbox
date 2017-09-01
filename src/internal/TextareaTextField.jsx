@@ -5,7 +5,14 @@ import constants from '../constants';
 import DomProps from './DomProps';
 import ValidityIcon from './ValidityIcon';
 
-const { borderRadius, color, fontSize, lineHeight, spacing, transition } = constants;
+const {
+   borderRadius,
+   color,
+   fontSize,
+   lineHeight,
+   spacing,
+   transition,
+} = constants;
 
 const Label = glamorous.label({
    display: 'inline-block',
@@ -133,7 +140,7 @@ class TextareaTextField extends React.PureComponent {
       return (
          <Label {...propsLabel}>
             <LabelText {...propsLabelText} />
-            <glamorous.Div position="relative">
+            <glamorous.Div position="relative" overflow="hidden">
                <ValidityIcon {...propsValidityIcon} />
                <DomProps.Target>
                   <Component {...propsComponent} />
