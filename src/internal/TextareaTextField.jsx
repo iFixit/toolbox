@@ -61,6 +61,12 @@ const TextareaContainer = Input.withComponent('textarea');
 class TextareaTextField extends React.PureComponent {
    state = {};
 
+   componentDidUpdate() {
+      if (this.state.toggleValidationMessage && this.props.domProps.valid) {
+         this.setState({ toggleValidationMessage: false });
+      }
+   }
+
    render() {
       const {
          className,
