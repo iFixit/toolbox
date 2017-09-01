@@ -76,6 +76,8 @@ class TextareaTextField extends React.Component {
          ...passedThroughProps
       } = { ...this.state, ...this.props };
 
+      console.log(domProps.valid);
+
       const Component = component === 'TextField' ? Input : TextareaContainer;
 
       const propsLabel = {
@@ -100,7 +102,6 @@ class TextareaTextField extends React.Component {
          showValidity,
          onChange: ({ target: { value } }) => {
             onChange({ value });
-            console.log(domProps.valid);
          },
          onBlur: () => showValidity && domProps.valid && this.setState({
             showValidity: false,
