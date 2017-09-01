@@ -44,12 +44,12 @@ const ValidityIcon = props => (
       <Icon
          name={props.valid ? 'check-circle' : 'alert-circle'}
          color={props.valid ? color.green[4] : color.red[4]}
-         size={24}
+         size={20}
       />
    </ValidityIconContainer>
 );
 
-ValidityIcon.width = '42px';
+ValidityIcon.width = '40px';
 
 ValidityIcon.defaultProps = {
    showValidity: false,
