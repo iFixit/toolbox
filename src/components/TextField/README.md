@@ -30,6 +30,17 @@
 <TextField required label="Name" placeholder="Doc Brown" showValidity />
 ```
 
+#### Validated TextField
+```
+<TextField
+   required
+   label="Name"
+   placeholder="Doc Brown"
+   showValidity={true}
+   domProps={ {valid: true} }
+/>
+```
+
 #### Event callbacks
 
 ```
