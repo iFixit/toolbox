@@ -93,7 +93,7 @@ class TextareaTextField extends React.PureComponent {
          showValidity,
          valid: domProps.valid,
          onClick: () => this.setState({
-            validationMessage: domProps.validationMessage,
+            validationMessage: validationMessage ? '' : domProps.validationMessage,
          }),
       };
 
