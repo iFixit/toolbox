@@ -72,7 +72,6 @@ class TextareaTextField extends React.PureComponent {
          onMouseLeave,
          toggleValidationMessage,
          showValidity,
-         validationMessage,
          ...passedThroughProps
       } = { ...this.state, ...this.props };
 
@@ -87,6 +86,9 @@ class TextareaTextField extends React.PureComponent {
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
+         onClick: domProps.valid && this.setState({
+            toggleValidationMessage: !toggleValidationMessage,
+         }),
       };
 
       const propsComponent = {
@@ -99,6 +101,7 @@ class TextareaTextField extends React.PureComponent {
          },
          onBlur: () => domProps.valid && this.setState({
             showValidity: false,
+            toggleValidationMessage: false,
          }),
          onInvalid: ev => {
             ev.preventDefault();
@@ -110,11 +113,10 @@ class TextareaTextField extends React.PureComponent {
 
       return (
          <Label {...propsLabel}>
-            {/* toggleValidationMessage && !domProps.valid ?
-               <LabelText style={{ color: color.red[4] }}> {validationMessage} </LabelText> :
+            {toggleValidationMessage ?
+               <LabelText style={{ color: color.red[4] }}> {domProps.validationMessage} </LabelText> :
                <LabelText> {label} </LabelText>
-            */}
-            <LabelText> {label} </LabelText>
+            }
             <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
                <DomProps.Target>
