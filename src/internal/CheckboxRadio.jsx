@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
 
 import Icon from '../components/Icon/Icon';
@@ -147,28 +146,5 @@ class CheckboxRadio extends React.PureComponent {
       );
    }
 }
-
-CheckboxRadio.propTypes = {
-   type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
-   checked: PropTypes.bool,
-   className: PropTypes.string,
-   disabled: PropTypes.bool,
-   label: PropTypes.string,
-   value: PropTypes.string,
-   onChange: PropTypes.func,
-   onMouseEnter: PropTypes.func,
-   onMouseLeave: PropTypes.func,
-};
-
-CheckboxRadio.defaultProps = {
-   checked: false,
-   className: '',
-   disabled: false,
-   label: '',
-   value: 'on',
-   onChange: () => {},
-   onMouseEnter: () => {},
-   onMouseLeave: () => {},
-};
 
 export default DomProps(CheckboxRadio);
