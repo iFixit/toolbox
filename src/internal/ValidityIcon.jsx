@@ -18,13 +18,13 @@ const ValidityIconContainer = glamorous.div(
       WebkitTapHighlightColor: 'rgba(0,0,0,0)',
       userSelect: 'none',
       transition: `${transition.duration} ${transition.easing}`,
-      transitionProperty: 'transform',
    },
    ({ validityIconPosition, size }) => validityIconPosition === 'left' && {
       top: 0,
       width: size,
       height: '100%',
       justifyContent: 'center',
+      transform: 'translateX(-100%)',
    },
    ({ validityIconPosition, size }) => validityIconPosition === 'top' && {
       top: 0,
@@ -32,12 +32,15 @@ const ValidityIconContainer = glamorous.div(
       height: size,
       justifyContent: 'flex-start',
       padding: `0 ${spacing[3]}`,
+      transform: 'translateY(-100%)',
    },
-   ({ showValidity }) => !showValidity && {
-      transform: 'translateX(-100%)',
+   ({ showValidity }) => (showValidity ? {
+      transform: 'none',
+      transitionProperty: 'transform',
+   } : {
       transitionProperty: 'transform, visibility',
       visibility: 'hidden',
-   },
+   }),
    ({ valid }) => valid && {
       pointerEvents: 'none',
    },
