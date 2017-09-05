@@ -120,6 +120,7 @@ class TextareaTextField extends React.PureComponent {
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
+         validityIconPosition: Component.defaultProps.validityIconPosition,
          onClick: () => !domProps.valid && this.setState({
             toggleValidationMessage: !toggleValidationMessage,
             validationMessage: domProps.validationMessage,
