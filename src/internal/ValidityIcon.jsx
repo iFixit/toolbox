@@ -31,7 +31,7 @@ const ValidityIconContainer = glamorous.div(
       width: size,
       height: size,
       justifyContent: 'center',
-      transform: 'translateY(-100%)',
+      transform: 'translateX(-100%)',
    },
    ({ showValidity }) => (showValidity ? {
       transform: 'none',
