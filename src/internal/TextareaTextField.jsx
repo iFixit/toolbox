@@ -62,9 +62,6 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       color: color.grayAlpha[5],
       backgroundColor: color.grayAlpha[1],
    },
-   ({ rows }) => rows && {
-      height: `calc(${rows * lineHeight.copy}em + 2 * ${spacing[1]})`,
-   },
    ({ resize }) => resize && {
       resize,
    },
