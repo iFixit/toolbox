@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
 
-const { color, transition } = constants;
+const { color, transition, spacing } = constants;
 
 const ValidityIconContainer = glamorous.div(
    {
@@ -19,17 +19,10 @@ const ValidityIconContainer = glamorous.div(
       userSelect: 'none',
       transition: `${transition.duration} ${transition.easing}`,
    },
-   ({ validityIconPosition, size }) => validityIconPosition === 'left' && {
+   ({ validityIconPosition }) => validityIconPosition === 'left' && {
       top: 0,
-      width: size,
+      width: `calc(${spacing[3]} * 2)`,
       height: '100%',
-      justifyContent: 'center',
-      transform: 'scale(0)',
-   },
-   ({ validityIconPosition, size }) => validityIconPosition === 'top' && {
-      top: 0,
-      width: size,
-      height: size,
       justifyContent: 'center',
       transform: 'scale(0)',
    },
@@ -50,7 +43,6 @@ const ValidityIcon = props => (
       showValidity={props.showValidity}
       validityIconPosition={props.validityIconPosition}
       valid={props.valid}
-      size={ValidityIcon.size}
       onClick={ev => {
          ev.preventDefault();
          props.onClick(ev);
@@ -63,8 +55,6 @@ const ValidityIcon = props => (
       />
    </ValidityIconContainer>
 );
-
-ValidityIcon.size = '40px';
 
 ValidityIcon.defaultProps = {
    showValidity: false,

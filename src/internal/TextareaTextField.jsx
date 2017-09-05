@@ -53,9 +53,10 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
    ({ showValidity, validityIconPosition }) => showValidity && (
       validityIconPosition === 'left' ? {
-         paddingLeft: ValidityIcon.size,
+         paddingLeft: `calc(${spacing[3]} * 2)`,
+         paddingRight: 0,
       } : {
-         paddingTop: ValidityIcon.size,
+         paddingTop: 0,
       }
    ),
    ({ domProps: { focus } }) => focus && {
