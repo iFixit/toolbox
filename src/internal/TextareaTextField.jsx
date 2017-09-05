@@ -165,4 +165,8 @@ class TextareaTextField extends React.PureComponent {
    }
 }
 
+TextareaTextField.defaultProps = {
+   showValidity: false,
+};
+
 export default DomProps(TextareaTextField);

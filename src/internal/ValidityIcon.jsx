@@ -24,7 +24,6 @@ const ValidityIconContainer = glamorous.div(
       width: size,
       height: '100%',
       justifyContent: 'center',
-      // transform: 'translateX(-100%)',
       transform: 'scale(0)',
    },
    ({ validityIconPosition, size }) => validityIconPosition === 'top' && {
@@ -32,7 +31,6 @@ const ValidityIconContainer = glamorous.div(
       width: size,
       height: size,
       justifyContent: 'center',
-      // transform: 'translateX(-100%)',
       transform: 'scale(0)',
    },
    ({ showValidity }) => (showValidity ? {
