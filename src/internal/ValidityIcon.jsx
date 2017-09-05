@@ -17,6 +17,7 @@ const ValidityIconContainer = glamorous.div(
       top: spacing[1],
       left: 0,
       marginTop: 1,
+      marginLeft: 1,
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
