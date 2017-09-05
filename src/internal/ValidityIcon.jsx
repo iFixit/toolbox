@@ -63,17 +63,11 @@ const ValidityIcon = props => (
 
 ValidityIcon.size = '40px';
 
-ValidityIcon.defaultProps = {
-   showValidity: false,
-   valid: true,
-   onClick: () => {},
-};
-
 ValidityIcon.propTypes = {
+   showValidity: PropTypes.bool.isRequired,
+   valid: PropTypes.bool.isRequired,
    validityIconPosition: PropTypes.string.isRequired,
-   showValidity: PropTypes.bool,
-   valid: PropTypes.bool,
-   onClick: PropTypes.func,
+   onClick: PropTypes.func.isRequired,
 };
 
 export default ValidityIcon;
