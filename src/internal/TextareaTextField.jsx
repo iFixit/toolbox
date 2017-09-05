@@ -80,7 +80,7 @@ Input.defaultProps = {
 const TextareaContainer = Input.withComponent('textarea');
 
 TextareaContainer.defaultProps = {
-   validityIconPosition: 'top',
+   validityIconPosition: 'left',
 };
 
 class TextareaTextField extends React.PureComponent {
