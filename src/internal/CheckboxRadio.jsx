@@ -62,14 +62,16 @@ const InputIcon = glamorous(Icon)(
       borderColor: color.blue[4],
       boxShadow: `0 0 0 3px ${color.blue[2]}`,
    },
+   ({ showInvalid }) => showInvalid && {
+      borderColor: color.red[4],
+   },
+   ({ showInvalid, domProps: { focus } }) => showInvalid && !focus && {
+      boxShadow: `inset 0 0 0 1px ${color.red[4]}`,
+   },
    ({ checked }) => checked && {
       color: color.white,
       backgroundColor: color.blue[4],
       borderColor: color.blue[4],
-   },
-   ({ showInvalid }) => showInvalid && {
-      borderColor: color.red[4],
-      backgroundColor: color.red[1],
    },
    ({ disabled, checked }) => disabled && {
       backgroundColor: checked ? color.gray[4] : color.gray[1],
@@ -78,10 +80,7 @@ const InputIcon = glamorous(Icon)(
 );
 
 class CheckboxRadio extends React.PureComponent {
-   constructor(props) {
-      super(props);
-      this.state = { showInvalid: false };
-   }
+   state = {};
 
    componentDidUpdate() {
       if (this.state.showInvalid && this.props.domProps.valid) {
@@ -92,48 +91,58 @@ class CheckboxRadio extends React.PureComponent {
    render() {
       const {
          className,
+         checked,
+         disabled,
+         domProps,
          label,
          onMouseEnter,
          onMouseLeave,
          onChange,
          showInvalid,
-         ...props
+         type,
+         ...passedThroughProps
       } = { ...this.state, ...this.props };
 
+      const propsLabel = {
+         className,
+         disabled,
+         onMouseEnter,
+         onMouseLeave,
+      };
+
+      const propsInput = {
+         checked,
+         disabled,
+         domProps,
+         innerRef: domProps.setRef,
+         type,
+         onChange: ev => onChange({
+            checked: ev.target.checked,
+            value: ev.target.value,
+         }),
+         onInvalid: ev => {
+            ev.preventDefault();
+            this.setState({ showInvalid: true });
+         },
+         ...passedThroughProps,
+      };
+
+      const propsInputIcon = {
+         name: type === 'checkbox' ? 'check' : 'circle',
+         type,
+         checked,
+         disabled,
+         domProps,
+         showInvalid,
+      };
+
       return (
-         <Label
-            className={className}
-            disabled={props.disabled}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-         >
+         <Label {...propsLabel}>
             <DomProps.Target>
-               <Input
-                  {...props}
-                  innerRef={props.domProps.setRef}
-                  onInvalid={ev => {
-                     ev.preventDefault();
-                     this.setState({ showInvalid: true });
-                  }}
-                  onChange={({ target: { checked, value } }) =>
-                     onChange({ checked, value })
-                  }
-               />
+               <Input {...propsInput} />
             </DomProps.Target>
-            <InputIcon
-               name={props.type === 'checkbox' ? 'check' : 'circle'}
-               type={props.type}
-               checked={props.checked}
-               disabled={props.disabled}
-               domProps={props.domProps}
-               showInvalid={showInvalid}
-            />
-            {label !== '' &&
-               <LabelText> {label} </LabelText>
-            }
-            {showInvalid && props.domProps.focus &&
-               <LabelText> {props.domProps.validationMessage} </LabelText>
-            }
+            <InputIcon {...propsInputIcon} />
+            <LabelText> {label} </LabelText>
          </Label>
       );
    }
