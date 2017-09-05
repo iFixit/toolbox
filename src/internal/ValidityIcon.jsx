@@ -35,7 +35,7 @@ const ValidityIcon = props => (
    <ValidityIconContainer
       showValidity={props.showValidity}
       valid={props.valid}
-      width={ValidityIcon.width}
+      width={ValidityIcon.size}
       onClick={ev => {
          ev.preventDefault();
          props.onClick(ev);
@@ -49,7 +49,7 @@ const ValidityIcon = props => (
    </ValidityIconContainer>
 );
 
-ValidityIcon.width = '40px';
+ValidityIcon.size = '40px';
 
 ValidityIcon.defaultProps = {
    showValidity: false,

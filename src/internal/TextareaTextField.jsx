@@ -51,9 +51,13 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       backgroundColor: color.white,
       transition: `padding ${transition.duration} ${transition.easing}`,
    },
-   ({ showValidity }) => showValidity && {
-      paddingLeft: ValidityIcon.width,
-   },
+   ({ showValidity, validityIconPosition }) => showValidity && (
+      validityIconPosition === 'left' ? {
+         paddingLeft: ValidityIcon.size,
+      } : {
+         paddingBottom: ValidityIcon.size,
+      }
+   ),
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
    },
@@ -66,7 +70,15 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
 );
 
+Input.defaultProps = {
+   validityIconPosition: 'left',
+};
+
 const TextareaContainer = Input.withComponent('textarea');
+
+TextareaContainer.defaultProps = {
+   validityIconPosition: 'bottom',
+};
 
 class TextareaTextField extends React.PureComponent {
    state = {};

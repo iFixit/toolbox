@@ -27,7 +27,18 @@
 #### Invalid Textarea
 
 ```
-<Textarea required label="Label" placeholder="Placeholder text" showInvalid={true} />
+<Textarea required label="Label" placeholder="Placeholder text" showValidity={true} />
+```
+
+#### Validated TextArea
+```
+<Textarea
+   required
+   label="Name"
+   placeholder="Doc Brown"
+   showValidity={true}
+   domProps={ {valid: true} }
+/>
 ```
 
 #### Event callbacks
