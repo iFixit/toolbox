@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
 
-const { color, transition, spacing } = constants;
+const { color, transition } = constants;
 
 const ValidityIconContainer = glamorous.div(
    {
@@ -28,10 +28,9 @@ const ValidityIconContainer = glamorous.div(
    },
    ({ validityIconPosition, size }) => validityIconPosition === 'top' && {
       top: 0,
-      width: '100%',
+      width: size,
       height: size,
-      justifyContent: 'flex-start',
-      padding: `0 ${spacing[3]}`,
+      justifyContent: 'center',
       transform: 'translateY(-100%)',
    },
    ({ showValidity }) => (showValidity ? {
