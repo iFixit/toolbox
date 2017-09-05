@@ -94,9 +94,10 @@ class CheckboxRadio extends React.PureComponent {
          disabled,
          domProps,
          label,
+         onChange,
+         onInvalid,
          onMouseEnter,
          onMouseLeave,
-         onChange,
          showInvalid,
          type,
          ...passedThroughProps
@@ -120,6 +121,7 @@ class CheckboxRadio extends React.PureComponent {
             value: ev.target.value,
          }),
          onInvalid: ev => {
+            onInvalid(ev);
             ev.preventDefault();
             this.setState({ showInvalid: true });
          },

@@ -87,7 +87,9 @@ class TextareaTextField extends React.PureComponent {
          component,
          domProps,
          label,
+         onBlur,
          onChange,
+         onInvalid,
          onMouseEnter,
          onMouseLeave,
          toggleValidationMessage,
@@ -126,11 +128,17 @@ class TextareaTextField extends React.PureComponent {
          onChange: ({ target: { value } }) => {
             onChange({ value });
          },
-         onBlur: () => domProps.valid && this.setState({
-            showValidity: false,
-            toggleValidationMessage: false,
-         }),
+         onBlur: ev => {
+            onBlur(ev);
+            if (domProps.valid) {
+               this.setState({
+                  showValidity: false,
+                  toggleValidationMessage: false,
+               });
+            }
+         },
          onInvalid: ev => {
+            onInvalid(ev);
             ev.preventDefault();
             this.setState({
                showValidity: true,
