@@ -10,6 +10,7 @@ const { color, transition, spacing } = constants;
 const ValidityIconContainer = glamorous.div(
    {
       position: 'absolute',
+      boxSizing: 'border-box',
       left: 0,
       display: 'flex',
       alignItems: 'center',
@@ -25,8 +26,8 @@ const ValidityIconContainer = glamorous.div(
       height: '100%',
       justifyContent: 'center',
    },
-   ({ validityIconPosition, size }) => validityIconPosition === 'bottom' && {
-      bottom: 0,
+   ({ validityIconPosition, size }) => validityIconPosition === 'top' && {
+      top: 0,
       width: '100%',
       height: size,
       justifyContent: 'flex-start',
