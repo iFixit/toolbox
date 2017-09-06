@@ -2,8 +2,8 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import constants from '../constants';
-import DomProps from './DomProps';
 import ValidityIcon from './ValidityIcon';
+import DomProps from './DomProps';
 
 const {
    borderRadius,
