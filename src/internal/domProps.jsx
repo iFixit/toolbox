@@ -77,4 +77,4 @@ DomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
 };
 
-export default DomProps;
+export default { ...DomProps };
