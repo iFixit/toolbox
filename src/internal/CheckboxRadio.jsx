@@ -28,7 +28,7 @@ const Label = glamorous.label(
 );
 
 // hide native checkbox element
-const Input = glamorous('input', { forwardProps: 'onInvalid' })({
+const Input = glamorous.input({
    clip: 'rect(1px, 1px, 1px, 1px)',
    height: 1,
    width: 1,

@@ -33,7 +33,7 @@ const LabelText = glamorous.span(
    },
 );
 
-const Input = glamorous('input', { forwardProps: 'onInvalid' })(
+const Input = glamorous.input(
    {
       display: 'block',
       WebkitAppearance: 'none',
