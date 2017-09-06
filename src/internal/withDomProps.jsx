@@ -10,11 +10,11 @@ const eventStates = {
    },
 };
 
-const DomProps = {};
+const withDomProps = {};
 
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-DomProps.container = Component => class extends React.PureComponent {
+withDomProps.container = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -62,7 +62,7 @@ DomProps.container = Component => class extends React.PureComponent {
  * Wrapper component for the actual input element.
  * Reconciles any events that are applied to the input component.
  */
-DomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
+withDomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
          [
@@ -73,8 +73,8 @@ DomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    })),
 ));
 
-DomProps.Target.propTypes = {
+withDomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
 };
 
-export default { ...DomProps };
+export default { ...withDomProps };

@@ -3,7 +3,7 @@ import glamorous from 'glamorous';
 
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
-import DomProps from './DomProps';
+import withDomProps from './withDomProps';
 
 const {
    borderRadius,
@@ -139,9 +139,9 @@ class CheckboxRadio extends React.PureComponent {
 
       return (
          <Label {...propsLabel}>
-            <DomProps.Target>
+            <withDomProps.Target>
                <Input {...propsInput} />
-            </DomProps.Target>
+            </withDomProps.Target>
             <InputIcon {...propsInputIcon} />
             <LabelText> {label} </LabelText>
          </Label>
@@ -149,4 +149,4 @@ class CheckboxRadio extends React.PureComponent {
    }
 }
 
-export default DomProps.container(CheckboxRadio);
+export default withDomProps.container(CheckboxRadio);

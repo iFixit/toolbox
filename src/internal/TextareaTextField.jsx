@@ -2,7 +2,7 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import constants from '../constants';
-import DomProps from './DomProps';
+import withDomProps from './withDomProps';
 import ValidityIcon from './ValidityIcon';
 
 const {
@@ -151,13 +151,13 @@ class TextareaTextField extends React.PureComponent {
             <LabelText {...propsLabelText} />
             <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
-               <DomProps.Target>
+               <withDomProps.Target>
                   <Component {...propsComponent} />
-               </DomProps.Target>
+               </withDomProps.Target>
             </glamorous.Div>
          </Label>
       );
    }
 }
 
-export default DomProps.container(TextareaTextField);
+export default withDomProps.container(TextareaTextField);
