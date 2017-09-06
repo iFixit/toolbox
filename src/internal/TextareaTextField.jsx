@@ -50,6 +50,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
       color: color.grayAlpha[9],
       backgroundColor: color.white,
       transition: `padding ${transition.duration} ${transition.easing}`,
+      boxShadow: 'none',
    },
    ({ showValidity }) => showValidity && {
       paddingLeft: `calc(${spacing[3]} * 2)`,
