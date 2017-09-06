@@ -45,11 +45,9 @@ const withDomProps = Component => class extends React.PureComponent {
       <Component
          {...this.props}
          domProps={{
-            ...{
-               ...this.state,
-               events: this.events,
-               setRef: this.setRef,
-            },
+            events: this.events,
+            setRef: this.setRef,
+            ...this.state,
             ...this.props.domProps,
          }}
       />
