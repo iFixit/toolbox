@@ -10,9 +10,11 @@ const eventStates = {
    },
 };
 
+const DomProps = {};
+
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-const DomProps = Component => class extends React.PureComponent {
+DomProps.container = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -56,12 +58,9 @@ const DomProps = Component => class extends React.PureComponent {
    );
 };
 
-/* Wrapper component for the actual input element.
+/*
+ * Wrapper component for the actual input element.
  * Reconciles any events that are applied to the input component.
- * ex:
- * <domProps.Target>
- *    <input onFocus={() => console.log('This won't get overridden!')}>
- * </domProps.Target>
  */
 DomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({

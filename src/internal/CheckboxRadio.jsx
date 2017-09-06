@@ -149,4 +149,4 @@ class CheckboxRadio extends React.PureComponent {
    }
 }
 
-export default DomProps(CheckboxRadio);
+export default DomProps.container(CheckboxRadio);

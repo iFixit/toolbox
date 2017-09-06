@@ -2,8 +2,8 @@ import React from 'react';
 import glamorous from 'glamorous';
 
 import constants from '../constants';
-import ValidityIcon from './ValidityIcon';
 import DomProps from './DomProps';
+import ValidityIcon from './ValidityIcon';
 
 const {
    borderRadius,
@@ -160,4 +160,4 @@ class TextareaTextField extends React.PureComponent {
    }
 }
 
-export default DomProps(TextareaTextField);
+export default DomProps.container(TextareaTextField);
