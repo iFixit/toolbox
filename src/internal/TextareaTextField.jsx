@@ -28,7 +28,7 @@ const LabelText = glamorous.span(
       marginBottom: spacing[3],
       lineHeight: lineHeight.solid,
    },
-   ({ toggleValidationMessage }) => toggleValidationMessage && {
+   ({ showValidationMessage }) => showValidationMessage && {
       color: color.red[4],
    },
 );
@@ -75,8 +75,8 @@ class TextareaTextField extends React.PureComponent {
    state = {};
 
    componentDidUpdate() {
-      if (this.state.toggleValidationMessage && this.props.domProps.valid) {
-         this.setState({ toggleValidationMessage: false });
+      if (this.state.showValidationMessage && this.props.domProps.valid) {
+         this.setState({ showValidationMessage: false });
       }
    }
 
@@ -91,7 +91,7 @@ class TextareaTextField extends React.PureComponent {
          onInvalid,
          onMouseEnter,
          onMouseLeave,
-         toggleValidationMessage,
+         showValidationMessage,
          showValidity,
          validationMessage,
          ...passedThroughProps
@@ -106,15 +106,15 @@ class TextareaTextField extends React.PureComponent {
       };
 
       const propsLabelText = {
-         toggleValidationMessage,
-         children: toggleValidationMessage ? validationMessage : label,
+         showValidationMessage,
+         children: showValidationMessage ? validationMessage : label,
       };
 
       const propsValidityIcon = {
          showValidity,
          valid: domProps.valid,
          onClick: () => !domProps.valid && this.setState({
-            toggleValidationMessage: !toggleValidationMessage,
+            showValidationMessage: !showValidationMessage,
             validationMessage: domProps.validationMessage,
          }),
       };
@@ -132,7 +132,7 @@ class TextareaTextField extends React.PureComponent {
             if (domProps.valid) {
                this.setState({
                   showValidity: false,
-                  toggleValidationMessage: false,
+                  showValidationMessage: false,
                });
             }
          },
