@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
 
-const { color, transition, spacing, lineHeight } = constants;
+const { color, spacing, transition } = constants;
 
 const ValidityIconContainer = glamorous.div(
    {
@@ -13,12 +13,12 @@ const ValidityIconContainer = glamorous.div(
       display: 'flex',
       boxSizing: 'border-box',
       width: `calc(${spacing[3]} * 2)`,
-      height: `${lineHeight.copy}rem`,
-      top: spacing[1],
+      height: '100%',
+      paddingTop: spacing[1],
+      top: 0,
       left: 0,
-      marginTop: 1,
-      marginLeft: 1,
-      alignItems: 'center',
+      borderTop: '3px solid transparent',
+      borderLeft: '3px solid transparent',
       justifyContent: 'center',
       cursor: 'pointer',
       WebkitTapHighlightColor: 'rgba(0,0,0,0)',
