@@ -111,6 +111,7 @@ class CheckboxRadio extends React.PureComponent {
       };
 
       const propsInput = {
+         ...passedThroughProps,
          checked,
          disabled,
          domProps,
@@ -125,7 +126,6 @@ class CheckboxRadio extends React.PureComponent {
             ev.preventDefault();
             this.setState({ showInvalid: true });
          },
-         ...passedThroughProps,
       };
 
       const propsInputIcon = {

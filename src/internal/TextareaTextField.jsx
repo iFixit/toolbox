@@ -57,6 +57,7 @@ const Input = glamorous('input', { forwardProps: 'onInvalid' })(
    },
    ({ domProps: { focus } }) => focus && {
       borderColor: color.blue[4],
+      boxShadow: `0 0 0 1px ${color.blue[4]}`,
    },
    ({ disabled }) => disabled && {
       color: color.grayAlpha[5],
@@ -147,7 +148,7 @@ class TextareaTextField extends React.PureComponent {
       return (
          <Label {...propsLabel}>
             <LabelText {...propsLabelText} />
-            <glamorous.Div position="relative" overflow="hidden">
+            <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
                <DomProps.Target>
                   <Component {...propsComponent} />
