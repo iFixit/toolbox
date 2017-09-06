@@ -10,11 +10,9 @@ const eventStates = {
    },
 };
 
-const withDomProps = {};
-
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-withDomProps.container = Component => class extends React.PureComponent {
+const withDomProps = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -77,4 +75,4 @@ withDomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
 };
 
-export default { ...withDomProps };
+export default withDomProps;

@@ -160,4 +160,4 @@ class TextareaTextField extends React.PureComponent {
    }
 }
 
-export default withDomProps.container(TextareaTextField);
+export default withDomProps(TextareaTextField);
