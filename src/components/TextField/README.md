@@ -37,7 +37,7 @@
    label="Name"
    placeholder="Doc Brown"
    showValidity={true}
-   domProps={ {valid: true} }
+   domProps={{ valid: true }}
 />
 ```
 
