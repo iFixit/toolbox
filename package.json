@@ -18,7 +18,7 @@
    "dependencies": {
       "feather-icons": "github:iFixit/feather",
       "glamor": "^2.20.39",
-      "glamorous": "^4.1.0",
+      "glamorous": "^4.8.0",
       "prop-types": "^15.5.10"
    },
    "devDependencies": {

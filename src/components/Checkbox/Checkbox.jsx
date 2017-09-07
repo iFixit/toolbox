@@ -16,8 +16,14 @@ Checkbox.propTypes = {
    label: PropTypes.string,
    /** The value of the control. */
    value: PropTypes.string,
+   /** Callback when focus is removed. */
+   onBlur: PropTypes.func,
    /** Callback when the control is toggled. */
    onChange: PropTypes.func,
+   /** Callback when control is focused. */
+   onFocus: PropTypes.func,
+   /** Callback when the control is invalid. */
+   onInvalid: PropTypes.func,
    /** Callback when mouse enters component. */
    onMouseEnter: PropTypes.func,
    /** Callback when mouse leaves component. */
@@ -30,7 +36,10 @@ Checkbox.defaultProps = {
    disabled: false,
    label: '',
    value: 'on',
+   onBlur: () => {},
    onChange: () => {},
+   onFocus: () => {},
+   onInvalid: () => {},
    onMouseEnter: () => {},
    onMouseLeave: () => {},
 };

@@ -12,7 +12,7 @@ const eventStates = {
 
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-const domProps = Component => class extends React.PureComponent {
+const withDomProps = Component => class extends React.PureComponent {
    state = {
       validationMessage: '',
       valid: true,
@@ -45,32 +45,34 @@ const domProps = Component => class extends React.PureComponent {
       <Component
          {...this.props}
          domProps={{
-            ...this.state,
             events: this.events,
             setRef: this.setRef,
+            ...this.state,
+            ...this.props.domProps,
          }}
       />
    );
 };
 
-/** Wrapper component for the actual input element.
- *  Reconciles any events that are applied to the input component.
- *  ex:
- * <domProps.Target>
- *    <input onFocus={() => console.log('This won't get overridden!')}>
- * </domProps.Target>
- */
-domProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
+// Wrapper component for the actual input element.
+// Reconciles any events that are applied to the input component.
+// ex:
+// <withDomProps.Target>
+//    <input onFocus={() => console.log('This won't get overridden!')}>
+// </withDomProps.Target>
+withDomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
    {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
       [eventKey]: ev => {
-         (children.props[eventKey] || (() => {}))(ev);
-         children.props.domProps.events[eventKey](ev);
+         [
+            children.props[eventKey],
+            children.props.domProps.events[eventKey],
+         ].filter(fn => fn instanceof Function).forEach(fn => fn(ev));
       },
    })),
 ));
 
-domProps.Target.propTypes = {
+withDomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
 };
 
-export default domProps;
+export default withDomProps;

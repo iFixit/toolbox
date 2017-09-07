@@ -30,6 +30,8 @@ Textarea.propTypes = {
    onChange: PropTypes.func,
    /** Callback when control is focused. */
    onFocus: PropTypes.func,
+   /** Callback when the control is invalid. */
+   onInvalid: PropTypes.func,
    /** Callback when mouse enters component. */
    onMouseEnter: PropTypes.func,
    /** Callback when mouse leaves component. */
@@ -48,6 +50,7 @@ Textarea.defaultProps = {
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
+   onInvalid: () => {},
    onMouseEnter: () => {},
    onMouseLeave: () => {},
 };
