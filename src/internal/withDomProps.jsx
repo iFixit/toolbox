@@ -13,6 +13,14 @@ const eventStates = {
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
 const withDomProps = Component => class extends React.PureComponent {
+   static propTypes = {
+      customValidity: PropTypes.string,
+   };
+
+   static defaultProps = {
+      customValidity: '',
+   };
+
    state = {
       validationMessage: '',
       valid: true,
@@ -31,6 +39,9 @@ const withDomProps = Component => class extends React.PureComponent {
    };
 
    componentDidUpdate = () => {
+      this.ref.setCustomValidity(this.props.customValidity || '');
+      console.log(this.props.customValidity);
+
       const { validationMessage, validity: { valid } } = this.ref;
 
       if (
