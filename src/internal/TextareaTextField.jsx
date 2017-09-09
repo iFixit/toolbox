@@ -164,4 +164,14 @@ class TextareaTextField extends React.PureComponent {
    }
 }
 
-export default withDomProps(TextareaTextField);
+export default withDomProps(TextareaTextField, (ref, props) => {
+   // ref.setCustomValidity(props.customValidity || '');
+   console.log(ref);
+   console.log(ref.setCustomValidity);
+   console.log(props);
+
+   return {
+      valid: ref.validity.valid,
+      validationMessage: ref.validationMessage,
+   };
+});
