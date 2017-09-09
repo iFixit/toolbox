@@ -12,11 +12,13 @@ const eventStates = {
 
 // Higher order component to access an input component's dom node properties
 // from its parent's react component.
-const withDomProps = (Component, addedProps) => class extends React.PureComponent {
+const withDomProps = (
+   Component,
+   addedProps = () => ({}),
+) => class extends React.Component {
    state = {
-      validationMessage: '',
-      valid: true,
       focus: false,
+      ...addedProps(),
    };
 
    events = Object.assign({}, ...Object.keys(eventStates).map(eventKey => ({
@@ -31,20 +33,16 @@ const withDomProps = (Component, addedProps) => class extends React.PureComponen
    };
 
    componentDidUpdate = () => {
-      console.log(addedProps);
-      console.log(this.ref);
-      console.log(this.props);
-      // console.log(addedProps(this.ref, this.props));
-      // this.ref.setCustomValidity(this.props.customValidity || '');
-      // console.log(addedProps(this.ref, this.props));
+      const updatedProps = Object.assign({},
+         ...Object.entries(addedProps(this.ref, this.props))
+         .filter(([propKey, prop]) => this.state[propKey] !== prop)
+         .map(([propKey, prop]) => ({
+            [propKey]: prop,
+         })),
+      );
 
-      const { validationMessage, validity: { valid } } = this.ref;
-
-      if (
-         valid !== this.state.valid ||
-         validationMessage !== this.state.validationMessage
-      ) {
-         this.setState({ validationMessage, valid });
+      if (Object.keys(updatedProps).length) {
+         this.setState(updatedProps);
       }
    };
 
