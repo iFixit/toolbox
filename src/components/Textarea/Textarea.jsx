@@ -10,6 +10,8 @@ const Textarea = props => (
 Textarea.propTypes = {
    /** Set class name of containing element. */
    className: PropTypes.string,
+   /** Custom validity message */
+   customValidity: PropTypes.string,
    /** Indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
    /** Represents a caption for the form control. */
@@ -40,6 +42,7 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
    className: '',
+   customValidity: '',
    disabled: false,
    label: '',
    placeholder: '',

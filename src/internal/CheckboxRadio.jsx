@@ -149,4 +149,6 @@ class CheckboxRadio extends React.PureComponent {
    }
 }
 
-export default withDomProps(CheckboxRadio);
+export default withDomProps(CheckboxRadio, ref => ({
+   valid: ref ? ref.validity.valid : true,
+}));
