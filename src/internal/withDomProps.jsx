@@ -18,7 +18,7 @@ const withDomProps = (
 ) => class extends React.Component {
    state = {
       focus: false,
-      ...addedProps(),
+      ...addedProps(this.ref, this.props),
    };
 
    events = Object.assign({}, ...Object.keys(eventStates).map(eventKey => ({
