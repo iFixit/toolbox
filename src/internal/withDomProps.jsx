@@ -65,16 +65,19 @@ const withDomProps = (
 // <withDomProps.Target>
 //    <input onFocus={() => console.log('This won't get overridden!')}>
 // </withDomProps.Target>
-withDomProps.Target = ({ children }) => React.cloneElement(children, Object.assign(
-   {}, ...Object.keys(children.props.domProps.events).map(eventKey => ({
-      [eventKey]: ev => {
-         [
-            children.props[eventKey],
-            children.props.domProps.events[eventKey],
-         ].filter(fn => fn instanceof Function).forEach(fn => fn(ev));
-      },
-   })),
-));
+withDomProps.Target = ({ children: child }) => React.cloneElement(
+   child,
+   Object.assign(
+      {}, ...Object.keys(child.props.domProps.events).map(eventKey => ({
+         [eventKey]: ev => {
+            [
+               child.props[eventKey],
+               child.props.domProps.events[eventKey],
+            ].filter(fn => fn instanceof Function).forEach(fn => fn(ev));
+         },
+      })),
+   ),
+);
 
 withDomProps.Target.propTypes = {
    children: PropTypes.element.isRequired,
