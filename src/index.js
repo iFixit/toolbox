@@ -7,6 +7,7 @@ export { default as Icon } from './components/Icon/Icon';
 export { default as PageNavBar } from './components/PageNavBar/PageNavBar';
 export { default as Radio } from './components/Radio/Radio';
 export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
+export { default as Select } from './components/Select/Select';
 export { default as Textarea } from './components/Textarea/Textarea';
 export { default as TextField } from './components/TextField/TextField';
 
