@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Select = props => (
-   <select>
+   <select
+      value={props.value}
+   >
       {props.options.map(option => (
          <option
             label={option.label}
