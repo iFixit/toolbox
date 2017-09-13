@@ -1,31 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Option = ({ label, value }) => (
-   <option
-      {...{
-         label,
-         value,
-      }}
-   />
-);
-
-Option.defaultProps = {
-   label: '',
-   value: '',
-};
-
-Option.propTypes = {
-   label: PropTypes.string,
-   value: PropTypes.string,
-};
-
 const Select = props => (
    <select>
       {props.options.map(option => (
-         <Option
-            {...option}
+         <option
+            label={option.label}
+            value={option.value}
             key={option.value}
+            selected={option.value === props.value}
          />
       ))}
    </select>
@@ -33,6 +16,7 @@ const Select = props => (
 
 Select.defaultProps = {
    options: [],
+   value: '',
 };
 
 Select.propTypes = {
@@ -42,6 +26,7 @@ Select.propTypes = {
          value: PropTypes.string,
       }),
    ),
+   value: PropTypes.string,
 };
 
 export default Select;
