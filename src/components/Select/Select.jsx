@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Select = props => (
    <select
       value={props.value}
-      onChange={({ value }) => props.onChange(value)}
+      onChange={({ value }) => props.onChange({ value })}
    >
       {props.options.map(option => (
          <option
