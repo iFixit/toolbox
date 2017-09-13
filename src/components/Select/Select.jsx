@@ -8,7 +8,6 @@ const Select = props => (
             label={option.label}
             value={option.value}
             key={option.value}
-            selected={option.value === props.value}
          />
       ))}
    </select>
