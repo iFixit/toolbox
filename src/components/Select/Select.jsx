@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Select = props => (
    <select
       value={props.value}
+      onChange={({ value }) => props.onChange(value)}
    >
       {props.options.map(option => (
          <option
@@ -18,6 +19,7 @@ const Select = props => (
 Select.defaultProps = {
    options: [],
    value: '',
+   onChange: () => {},
 };
 
 Select.propTypes = {
@@ -28,6 +30,7 @@ Select.propTypes = {
       }),
    ),
    value: PropTypes.string,
+   onChange: PropTypes.func,
 };
 
 export default Select;
