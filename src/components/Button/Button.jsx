@@ -114,12 +114,8 @@ const sizes = {
 
 const ButtonContainer = glamorous.button(
    {
-      display: 'inline-flex',
-      justifyContent: 'center',
-      alignItems: 'center',
       boxSizing: 'border-box',
       fontFamily: 'inherit',
-      textAlign: 'center',
       textDecoration: 'none',
       border: '1px solid transparent',
       borderRadius,
@@ -128,29 +124,47 @@ const ButtonContainer = glamorous.button(
       cursor: 'pointer',
       userSelect: 'none',
       transition: `all ${transition.duration} ${transition.easing}`,
-
-      '> :not(:first-child)': {
-         marginLeft: spacing[1],
-      },
    },
    ({ design }) => designs[design],
    ({ size }) => sizes[size],
-   ({ fullWidth }) => fullWidth && {
-      display: 'flex',
-      width: '100%',
-   },
-   ({ disabled }) => disabled && {
-      opacity: 0.5,
-      pointerEvents: 'none',
-   },
+   ({ fullWidth }) =>
+      fullWidth && {
+         display: 'flex',
+         width: '100%',
+      },
+   ({ disabled }) =>
+      disabled && {
+         opacity: 0.5,
+         pointerEvents: 'none',
+      },
 );
 
 const LinkContainer = ButtonContainer.withComponent('a');
 
-const Button = props => {
+// Buttons cannot be flex containers in some browsers (i.e. Safari).
+// To get around this, we wrap the contents of the button in a flex container.
+const FlexContainer = glamorous.span({
+   width: '100%',
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   textAlign: 'center',
+
+   '> :not(:first-child)': {
+      marginLeft: spacing[1],
+   },
+});
+
+const Button = ({ children, ...props }) => {
    const Container = props.href === '' ? ButtonContainer : LinkContainer;
 
-   return <Container {...props} tabIndex={props.disabled ? -1 : 0} />;
+   return (
+      <Container {...props} tabIndex={props.disabled ? -1 : 0}>
+         <FlexContainer>
+            {children}
+         </FlexContainer>
+      </Container>
+   );
 };
 
 Button.propTypes = propTypes;
