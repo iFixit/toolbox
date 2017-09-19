@@ -155,13 +155,27 @@ const FlexContainer = glamorous.span({
    },
 });
 
+const TruncateContainer = glamorous.span({
+   textOverflow: 'ellipsis',
+   overflow: 'hidden',
+   whiteSpace: 'nowrap',
+});
+
 const Button = ({ children, ...props }) => {
    const Container = props.href === '' ? ButtonContainer : LinkContainer;
 
    return (
       <Container {...props} tabIndex={props.disabled ? -1 : 0}>
          <FlexContainer>
-            {children}
+            {React.Children.map(
+               children,
+               child =>
+                  (typeof child !== 'string'
+                     ? child
+                     : <TruncateContainer>
+                        {child}
+                     </TruncateContainer>),
+            )}
          </FlexContainer>
       </Container>
    );
