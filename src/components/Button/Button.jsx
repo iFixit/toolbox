@@ -114,6 +114,7 @@ const sizes = {
 
 const ButtonContainer = glamorous.button(
    {
+      display: 'inline-block',
       boxSizing: 'border-box',
       fontFamily: 'inherit',
       textDecoration: 'none',
