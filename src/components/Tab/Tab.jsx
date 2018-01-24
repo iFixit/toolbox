@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 
 import constants from '../../constants';
 
-const { spacing, lineHeight, color } = constants;
+const { spacing, fontSize, lineHeight, color } = constants;
 
 const TabContainer = glamorous.a(
    {
@@ -12,6 +12,7 @@ const TabContainer = glamorous.a(
       boxSizing: 'border-box',
       padding: `${spacing[3]} 0`,
       marginRight: spacing[4],
+      fontSize: fontSize[2],
       fontWeight: 700,
       lineHeight: lineHeight.title,
       textDecoration: 'none',
