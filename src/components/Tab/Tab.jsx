@@ -10,8 +10,8 @@ const TabContainer = glamorous.a(
    {
       display: 'inline-block',
       boxSizing: 'border-box',
-      padding: `${spacing[3]} 0`,
-      marginRight: spacing[4],
+      padding: `${spacing[3]} ${spacing[1]}`,
+      marginRight: spacing[3],
       fontSize: fontSize[2],
       fontWeight: 700,
       lineHeight: lineHeight.title,
