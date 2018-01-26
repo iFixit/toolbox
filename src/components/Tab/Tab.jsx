@@ -8,6 +8,7 @@ const { spacing, fontSize, lineHeight, color } = constants;
 
 const TabContainer = glamorous.a(
    {
+      flex: '0 0 auto',
       display: 'inline-block',
       boxSizing: 'border-box',
       padding: `${spacing[3]} ${spacing[1]}`,
@@ -17,6 +18,9 @@ const TabContainer = glamorous.a(
       lineHeight: lineHeight.title,
       textDecoration: 'none',
       color: color.grayAlpha[9],
+      borderBottomWidth: 3,
+      borderBottomStyle: 'solid',
+      borderBottomColor: 'transparent',
 
       '&:hover': {
          color: color.blue[4],
@@ -24,7 +28,7 @@ const TabContainer = glamorous.a(
    },
    ({ active }) => active && {
       color: color.blue[4],
-      borderBottom: `3px solid ${color.blue[4]}`,
+      borderBottomColor: color.blue[4],
    },
 );
 

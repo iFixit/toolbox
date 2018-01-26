@@ -7,6 +7,8 @@ const { color } = constants;
 
 const TabsContainer = glamorous.div({
    display: 'flex',
+   alignItems: 'center',
+   overflowX: 'auto',
    borderBottom: `1px solid ${color.grayAlpha[3]}`,
 });
 
