@@ -4,23 +4,23 @@ import glamorous from 'glamorous';
 
 import constants from '../../constants';
 
-const { spacing, fontSize, lineHeight, color } = constants;
+const { spacing, fontSize, lineHeight, color, transition } = constants;
 
 const TabContainer = glamorous.a(
    {
       flex: '0 0 auto',
       display: 'inline-block',
       boxSizing: 'border-box',
-      padding: `${spacing[3]} ${spacing[1]}`,
-      marginRight: spacing[3],
+      padding: spacing[2],
+      marginRight: spacing[2],
       fontSize: fontSize[2],
       fontWeight: 700,
       lineHeight: lineHeight.title,
       textDecoration: 'none',
       color: color.grayAlpha[9],
-      borderBottomWidth: 3,
-      borderBottomStyle: 'solid',
-      borderBottomColor: 'transparent',
+      borderTop: '3px solid transparent',
+      borderBottom: '3px solid transparent',
+      transition: `all ${transition.duration} ${transition.easing}`,
 
       '&:hover': {
          color: color.blue[4],
