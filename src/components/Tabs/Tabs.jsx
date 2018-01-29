@@ -19,7 +19,7 @@ const Container = glamorous.div({
       right: 0,
       width: spacing[2],
       background:
-         `linear-gradient(to left, ${color.white}, rgba(255, 0, 0, 0))`,
+         `linear-gradient(to left, ${color.white}, rgba(255, 255, 255, 0))`,
    },
 });
 
