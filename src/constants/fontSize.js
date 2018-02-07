@@ -4,6 +4,7 @@ export default [
    '1rem',
    '1.25rem',
    '1.5rem',
+   '2rem',
    '2.25rem',
    '3rem',
    '5rem',
