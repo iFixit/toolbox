@@ -152,7 +152,7 @@ class TextareaTextField extends React.PureComponent {
 
       return (
          <Label {...propsLabel}>
-            <LabelText {...propsLabelText} />
+            {propsLabelText.children && <LabelText {...propsLabelText} />}
             <glamorous.Div position="relative">
                <ValidityIcon {...propsValidityIcon} />
                <withDomProps.Target>
