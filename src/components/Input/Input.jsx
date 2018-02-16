@@ -39,15 +39,15 @@ const Input = props => (
 );
 
 Input.propTypes = {
-  /** Set class name of containing element. */
+   /** Set class name of containing element. */
    className: string,
-  /** Indicates that the form control is not available for interaction. */
+   /** Indicates that the form control is not available for interaction. */
    disabled: bool,
-  /** A hint to the user of what can be entered in the control. */
+   /** A hint to the user of what can be entered in the control. */
    placeholder: string,
-  /** This prop specifies that the user must fill in a value before submitting a form. */
+   /** This prop specifies that the user must fill in a value before submitting a form. */
    required: bool,
-  /** The supported input types */
+   /** The supported input types */
    type: oneOf([
       'text',
       'email',
@@ -62,19 +62,19 @@ Input.propTypes = {
       'week',
       'time',
    ]),
-  /** The value of the control. */
+   /** The value of the control. */
    value: string,
-  /** Callback when focus is removed. */
+   /** Callback when focus is removed. */
    onBlur: func,
-  /** Callback when value is changed. */
+   /** Callback when value is changed. */
    onChange: func,
-  /** Callback when input is focused. */
+   /** Callback when input is focused. */
    onFocus: func,
-  /** Callback when the control is invalid. */
+   /** Callback when the control is invalid. */
    onInvalid: func,
-  /** Callback when mouse enters component. */
+   /** Callback when mouse enters component. */
    onMouseEnter: func,
-  /** Callback when mouse leaves component. */
+   /** Callback when mouse leaves component. */
    onMouseLeave: func,
 };
 
