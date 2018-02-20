@@ -14,3 +14,4 @@ export { default as Textarea } from './components/Textarea/Textarea';
 export { default as TextField } from './components/TextField/TextField';
 
 export { default as constants } from './constants';
+export { default as glamorous } from 'glamorous';
