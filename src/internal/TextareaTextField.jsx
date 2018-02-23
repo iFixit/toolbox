@@ -28,9 +28,10 @@ const LabelText = glamorous.span(
       marginBottom: spacing[3],
       lineHeight: lineHeight.solid,
    },
-   ({ showValidationMessage }) => showValidationMessage && {
-      color: color.red[4],
-   },
+   ({ showValidationMessage }) =>
+      showValidationMessage && {
+         color: color.red[4],
+      },
 );
 
 const Input = glamorous.input(
@@ -52,21 +53,25 @@ const Input = glamorous.input(
       transition: `padding ${transition.duration} ${transition.easing}`,
       boxShadow: 'none',
    },
-   ({ showValidity }) => showValidity && {
-      paddingLeft: `calc(${spacing[3]} * 2)`,
-      paddingRight: 0,
-   },
-   ({ domProps: { focus } }) => focus && {
-      borderColor: color.blue[4],
-      boxShadow: `0 0 0 1px ${color.blue[4]}`,
-   },
-   ({ disabled }) => disabled && {
-      color: color.grayAlpha[5],
-      backgroundColor: color.grayAlpha[1],
-   },
-   ({ resize }) => resize && {
-      resize,
-   },
+   ({ showValidity }) =>
+      showValidity && {
+         paddingLeft: `calc(${spacing[3]} * 2)`,
+         paddingRight: 0,
+      },
+   ({ domProps: { focus } }) =>
+      focus && {
+         borderColor: color.blue[4],
+         boxShadow: `0 0 0 1px ${color.blue[4]}`,
+      },
+   ({ disabled }) =>
+      disabled && {
+         color: color.grayAlpha[5],
+         backgroundColor: color.grayAlpha[1],
+      },
+   ({ resize }) =>
+      resize && {
+         resize,
+      },
 );
 
 const TextareaContainer = Input.withComponent('textarea');

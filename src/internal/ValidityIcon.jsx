@@ -27,13 +27,15 @@ const ValidityIconColumn = glamorous.div(
       transition: `${transition.duration} ${transition.easing}`,
       fontSize: 0,
    },
-   ({ showValidity }) => !showValidity && {
-      transitionProperty: 'visibility',
-      visibility: 'hidden',
-   },
-   ({ valid }) => valid && {
-      pointerEvents: 'none',
-   },
+   ({ showValidity }) =>
+      !showValidity && {
+         transitionProperty: 'visibility',
+         visibility: 'hidden',
+      },
+   ({ valid }) =>
+      valid && {
+         pointerEvents: 'none',
+      },
 );
 
 const ValidityIconContainer = glamorous.span(
@@ -41,9 +43,10 @@ const ValidityIconContainer = glamorous.span(
       transition: `transform ${transition.duration} ${transition.easing}`,
       transformOrigin: 'left center',
    },
-   ({ showValidity }) => !showValidity && {
-      transform: 'scale(0)',
-   },
+   ({ showValidity }) =>
+      !showValidity && {
+         transform: 'scale(0)',
+      },
 );
 
 const ValidityIcon = props => (
