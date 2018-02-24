@@ -6,6 +6,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "test:update": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "npm run lint -- --fix",
     "precommit": "lint-staged && npm run build && git add dist/toolbox.js",
@@ -18,6 +19,11 @@
     "*.{js,jsx}": [
       "eslint --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}"
     ]
   },
   "peerDependencies": {
