@@ -24,6 +24,10 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "snapshotSerializers": [
+      "jest-glamor-react"
     ]
   },
   "peerDependencies": {
@@ -55,6 +59,7 @@
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.3",
     "jest": "^22.4.2",
+    "jest-glamor-react": "^3.3.0",
     "lint-staged": "^7.0.0",
     "prettier": "^1.10.2",
     "prettier-eslint-cli": "^4.1.1",
