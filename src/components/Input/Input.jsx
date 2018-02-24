@@ -28,15 +28,14 @@ const InputContainer = glamorous.input(
          boxShadow: `0 0 0 1px ${color.blue[4]}`,
       },
    },
-   ({ disabled }) => disabled && {
-      color: color.grayAlpha[5],
-      backgroundColor: color.grayAlpha[1],
-   },
+   ({ disabled }) =>
+      disabled && {
+         color: color.grayAlpha[5],
+         backgroundColor: color.grayAlpha[1],
+      },
 );
 
-const Input = props => (
-   <InputContainer {...props} />
-);
+const Input = props => <InputContainer {...props} />;
 
 Input.propTypes = {
    /** Set class name of containing element. */

@@ -18,8 +18,9 @@ const Container = glamorous.div({
       bottom: 0,
       right: 0,
       width: spacing[2],
-      background:
-         `linear-gradient(to left, ${color.white}, rgba(255, 255, 255, 0))`,
+      background: `linear-gradient(to left, ${
+         color.white
+      }, rgba(255, 255, 255, 0))`,
    },
 });
 
@@ -38,9 +39,7 @@ const TabsWrapper = glamorous.div({
 const Tabs = ({ children, ...rest }) => (
    <Container {...rest}>
       <ScrollContainer>
-         <TabsWrapper>
-            {children}
-         </TabsWrapper>
+         <TabsWrapper>{children}</TabsWrapper>
       </ScrollContainer>
    </Container>
 );
