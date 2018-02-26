@@ -19,20 +19,6 @@ const withDomProps = (Component, addedProps = () => ({})) =>
          ...addedProps(this.ref, this.props),
       };
 
-      events = Object.assign(
-         {},
-         ...Object.keys(eventStates).map(eventKey => ({
-            [eventKey]: () => this.setState(eventStates[eventKey]),
-         })),
-      );
-
-      setRef = ref => {
-         if (ref) {
-            this.ref = ref;
-            this.componentDidUpdate();
-         }
-      };
-
       componentDidUpdate = () => {
          const updatedProps = Object.assign(
             {},
@@ -47,6 +33,20 @@ const withDomProps = (Component, addedProps = () => ({})) =>
             this.setState(updatedProps);
          }
       };
+
+      setRef = ref => {
+         if (ref) {
+            this.ref = ref;
+            this.componentDidUpdate();
+         }
+      };
+
+      events = Object.assign(
+         {},
+         ...Object.keys(eventStates).map(eventKey => ({
+            [eventKey]: () => this.setState(eventStates[eventKey]),
+         })),
+      );
 
       render = () => (
          <Component
