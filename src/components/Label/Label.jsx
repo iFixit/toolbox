@@ -18,9 +18,7 @@ const LabelContainer = glamorous.span(props => ({
    boxShadow: `inset 0 0 0 1px ${color.grayAlpha[3]}`,
 }));
 
-const Label = props => (
-   <LabelContainer {...props} />
-);
+const Label = props => <LabelContainer {...props} />;
 
 Label.propTypes = {
    /** Set the label background color. */
