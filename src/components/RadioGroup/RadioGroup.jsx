@@ -35,26 +35,24 @@ const RadioGroup = ({
    onMouseLeave,
    onChange,
    radios,
-}) =>
+}) => (
    <FieldSet
       className={className}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
    >
-      {label !== '' &&
-         <Legend>
-            {label}
-         </Legend>}
-      {radios.map(({ ...radio }) =>
+      {label !== '' && <Legend>{label}</Legend>}
+      {radios.map(({ ...radio }) => (
          <RadioContainer
             key={radio.value}
             checked={radio.value === value}
             disabled={disabled}
             onChange={onChange}
             {...radio}
-         />,
-      )}
-   </FieldSet>;
+         />
+      ))}
+   </FieldSet>
+);
 
 RadioGroup.propTypes = {
    /** Array of radios. */

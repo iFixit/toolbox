@@ -22,9 +22,10 @@ const Label = glamorous.label(
       fontSize: fontSize[2],
       color: color.grayAlpha[9],
    },
-   ({ disabled }) => disabled && {
-      color: color.grayAlpha[5],
-   },
+   ({ disabled }) =>
+      disabled && {
+         color: color.grayAlpha[5],
+      },
 );
 
 // hide native checkbox element
@@ -57,25 +58,31 @@ const InputIcon = glamorous(Icon)(
    ({ type }) => ({
       borderRadius: type === 'checkbox' ? borderRadius : '50%',
    }),
-   ({ domProps: { focus } }) => focus && {
-      borderColor: color.blue[4],
-      boxShadow: `0 0 0 3px ${color.blue[2]}`,
-   },
-   ({ showInvalid }) => showInvalid && {
-      borderColor: color.red[4],
-   },
-   ({ showInvalid, domProps: { focus } }) => showInvalid && !focus && {
-      boxShadow: `inset 0 0 0 1px ${color.red[4]}`,
-   },
-   ({ checked }) => checked && {
-      color: color.white,
-      backgroundColor: color.blue[4],
-      borderColor: color.blue[4],
-   },
-   ({ disabled, checked }) => disabled && {
-      backgroundColor: checked ? color.gray[4] : color.gray[1],
-      borderColor: color.gray[4],
-   },
+   ({ domProps: { focus } }) =>
+      focus && {
+         borderColor: color.blue[4],
+         boxShadow: `0 0 0 3px ${color.blue[2]}`,
+      },
+   ({ showInvalid }) =>
+      showInvalid && {
+         borderColor: color.red[4],
+      },
+   ({ showInvalid, domProps: { focus } }) =>
+      showInvalid &&
+      !focus && {
+         boxShadow: `inset 0 0 0 1px ${color.red[4]}`,
+      },
+   ({ checked }) =>
+      checked && {
+         color: color.white,
+         backgroundColor: color.blue[4],
+         borderColor: color.blue[4],
+      },
+   ({ disabled, checked }) =>
+      disabled && {
+         backgroundColor: checked ? color.gray[4] : color.gray[1],
+         borderColor: color.gray[4],
+      },
 );
 
 class CheckboxRadio extends React.PureComponent {
@@ -117,10 +124,11 @@ class CheckboxRadio extends React.PureComponent {
          domProps,
          innerRef: domProps.setRef,
          type,
-         onChange: ev => onChange({
-            checked: ev.target.checked,
-            value: ev.target.value,
-         }),
+         onChange: ev =>
+            onChange({
+               checked: ev.target.checked,
+               value: ev.target.value,
+            }),
          onInvalid: ev => {
             onInvalid(ev);
             ev.preventDefault();
@@ -143,7 +151,7 @@ class CheckboxRadio extends React.PureComponent {
                <Input {...propsInput} />
             </withDomProps.Target>
             <InputIcon {...propsInputIcon} />
-            <LabelText> {label} </LabelText>
+            <LabelText>{label}</LabelText>
          </Label>
       );
    }

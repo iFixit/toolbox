@@ -15,7 +15,7 @@ const SvgContainer = glamorous.span(
    }),
 );
 
-const Icon = props =>
+const Icon = props => (
    <SvgContainer
       className={props.className}
       size={props.size}
@@ -28,7 +28,8 @@ const Icon = props =>
             'stroke-width': 'inherit',
          }),
       }}
-   />;
+   />
+);
 
 Icon.propTypes = {
    /** Icon name. See the complete list of icons at https://feathericons.com */

@@ -26,10 +26,11 @@ const TabContainer = glamorous.a(
          color: color.blue[4],
       },
    },
-   ({ active }) => active && {
-      color: color.blue[4],
-      borderBottomColor: color.blue[4],
-   },
+   ({ active }) =>
+      active && {
+         color: color.blue[4],
+         borderBottomColor: color.blue[4],
+      },
 );
 
 const Tab = ({ is, ...props }) => {

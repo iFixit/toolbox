@@ -1,6 +1,6 @@
 # Toolbox
 
-Toolbox is a library of reusable React components.
+Toolbox is a library of reusable React components for [iFixit](https://ifixit.com).
 
 **[toolbox.netlify.com](https://toolbox.netlify.com)**
 
@@ -24,7 +24,8 @@ npm run styleguide
 
 ## Code Style
 
-Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality are enforced by [ESLint](http://eslint.org/). You can automatically format your code with [Prettier](https://github.com/prettier/prettier) and [ESLint](http://eslint.org/) by running the `format` script:
+Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality are enforced by [ESLint](http://eslint.org/) and [Prettier](https://github.com/prettier/prettier). You can format your code with the `lint:fix` script:
+
 ```
-npm run format
+npm run lint:fix
 ```

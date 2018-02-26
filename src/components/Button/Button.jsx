@@ -171,11 +171,11 @@ const Button = ({ children, ...props }) => {
             {React.Children.map(
                children,
                child =>
-                  (typeof child !== 'string'
-                     ? child
-                     : <TruncateContainer>
-                        {child}
-                     </TruncateContainer>),
+                  typeof child !== 'string' ? (
+                     child
+                  ) : (
+                     <TruncateContainer>{child}</TruncateContainer>
+                  ),
             )}
          </FlexContainer>
       </Container>
