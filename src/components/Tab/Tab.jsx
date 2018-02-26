@@ -25,6 +25,11 @@ const TabContainer = glamorous.a(
       '&:hover': {
          color: color.blue[4],
       },
+
+      '&:focus': {
+         outline: 'none',
+         borderBottomColor: color.grayAlpha[4],
+      },
    },
    ({ active }) =>
       active && {
