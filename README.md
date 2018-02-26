@@ -1,10 +1,14 @@
 # Toolbox
 
+[![Build Status](https://img.shields.io/travis/iFixit/toolbox/master.svg?style=flat-square)](https://travis-ci.org/iFixit/toolbox)
+
+## What is Toolbox?
+
 Toolbox is a library of reusable React components for [iFixit](https://ifixit.com).
 
-**[toolbox.netlify.com](https://toolbox.netlify.com)**
+https://ifixit.design
 
-## Project setup
+## Project Setup
 
 1. Clone the repo.
 ```
