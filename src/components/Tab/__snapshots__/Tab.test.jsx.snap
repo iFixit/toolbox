@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders when active 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #0071CE;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 150ms ease-in-out;
+  outline: none;
+  border-bottom-color: #0071CE;
+  -webkit-flex: 0 0 auto;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-0:hover,
+[data-glamor-0]:hover {
+  color: #0071CE;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  border-bottom-color: rgba(0, 3, 6, 0.26);
+}
+
+<a
+  className="glamor-0"
+>
+  Test
+</a>
+`;
+
+exports[`renders without crashing 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: rgba(0, 3, 6, 0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 150ms ease-in-out;
+  outline: none;
+  -webkit-flex: 0 0 auto;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-0:hover,
+[data-glamor-0]:hover {
+  color: #0071CE;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  border-bottom-color: rgba(0, 3, 6, 0.26);
+}
+
+<a
+  className="glamor-0"
+>
+  Test
+</a>
+`;
