@@ -14,16 +14,21 @@ const {
 } = constants;
 
 const IconContainer = glamorous.div({
+   position: 'absolute',
+   top: 0,
+   bottom: 0,
+   left: 0,
    display: 'flex',
    alignItems: 'center',
-   boxSizing: 'border-box',
-   width: '100%',
-   height: '100%',
-   paddingLeft: spacing[3],
-   paddingRight: spacing[3],
 });
 
-const InputContainer = glamorous.input(
+const SearchIcon = glamorous(Icon, { withProps: { name: 'search' } })({
+   paddingLeft: spacing[3],
+   paddingRight: spacing[3],
+   color: color.gray[5],
+});
+
+const Input = glamorous.input(
    {
       WebkitAppearance: 'none',
       boxSizing: 'border-box',
@@ -34,11 +39,11 @@ const InputContainer = glamorous.input(
       fontFamily: 'inherit',
       fontSize: fontSize[2],
       lineHeight: lineHeight.copy,
+      color: color.grayAlpha[9],
+      backgroundColor: color.white,
       border: 'none',
       borderRadius,
       outline: 'none',
-      color: color.grayAlpha[9],
-      backgroundColor: color.white,
       boxShadow: `${shadows[0]}, ${shadows[1]}`,
 
       ':focus': {
@@ -57,14 +62,12 @@ const InputContainer = glamorous.input(
       },
 );
 
-const SearchBox = props => (
-   <Div position="relative">
-      <InputContainer type="search" {...props} />
-      <Div position="absolute" top={0} bottom={0} left={0}>
-         <IconContainer>
-            <Icon name="search" color={color.gray[4]} />
-         </IconContainer>
-      </Div>
+const SearchBox = ({ className, ...props }) => (
+   <Div className={className} position="relative">
+      <IconContainer>
+         <SearchIcon />
+      </IconContainer>
+      <Input type="search" {...props} />
    </Div>
 );
 
@@ -85,8 +88,6 @@ SearchBox.propTypes = {
    onChange: func,
    /** Callback when input is focused. */
    onFocus: func,
-   /** Callback when the control is invalid. */
-   onInvalid: func,
    /** Callback when mouse enters component. */
    onMouseEnter: func,
    /** Callback when mouse leaves component. */
@@ -102,7 +103,6 @@ SearchBox.defaultProps = {
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
-   onInvalid: () => {},
    onMouseEnter: () => {},
    onMouseLeave: () => {},
 };
