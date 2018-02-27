@@ -24,7 +24,7 @@
 /* Hint: Check the console */
 <SearchBox
   placeholder="Name"
-  onChange={event => console.log(event.target.value)}}
+  onChange={event => console.log(event.target.value)}
   onFocus={() => console.log('focused')}
   onBlur={() => console.log('blurred')}
 />
