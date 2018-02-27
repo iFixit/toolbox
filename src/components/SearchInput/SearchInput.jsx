@@ -26,6 +26,7 @@ const SearchIcon = glamorous(Icon, { withProps: { name: 'search' } })({
    paddingLeft: spacing[3],
    paddingRight: spacing[3],
    color: color.gray[5],
+   boxSizing: 'content-box',
 });
 
 const Input = glamorous.input(
