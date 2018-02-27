@@ -64,7 +64,7 @@ const Input = glamorous.input(
       },
 );
 
-const SearchBox = ({ className, ...props }) => (
+const SearchInput = ({ className, ...props }) => (
    <Div className={className} position="relative">
       <IconContainer>
          <SearchIcon />
@@ -73,7 +73,7 @@ const SearchBox = ({ className, ...props }) => (
    </Div>
 );
 
-SearchBox.propTypes = {
+SearchInput.propTypes = {
    /** Set class name of containing element. */
    className: string,
    /** Indicates that the form control is not available for interaction. */
@@ -92,7 +92,7 @@ SearchBox.propTypes = {
    onFocus: func,
 };
 
-SearchBox.defaultProps = {
+SearchInput.defaultProps = {
    className: '',
    disabled: false,
    placeholder: 'Search',
@@ -103,4 +103,4 @@ SearchBox.defaultProps = {
    onFocus: () => {},
 };
 
-export default SearchBox;
+export default SearchInput;

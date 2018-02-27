@@ -1,28 +1,28 @@
 ### Examples
 
-#### Standard SearchBox
+#### Standard SearchInput
 
 ```
-<SearchBox placeholder="Search" />
+<SearchInput placeholder="Search" />
 ```
 
-#### SearchBox with value
+#### SearchInput with value
 
 ```
-<SearchBox value="iphone 6" />
+<SearchInput value="iphone 6" />
 ```
 
-#### Disabled SearchBox
+#### Disabled SearchInput
 
 ```
-<SearchBox value="toolkit" disabled />
+<SearchInput value="toolkit" disabled />
 ```
 
 #### Event callbacks
 
 ```
 /* Hint: Check the console */
-<SearchBox
+<SearchInput
   placeholder="Name"
   onChange={event => console.log(event.target.value)}
   onFocus={() => console.log('focused')}
