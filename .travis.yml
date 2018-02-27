@@ -1,0 +1,17 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - "6"
+  - "7"
+install:
+  - npm install
+  - npm install -g codecov
+script:
+  - npm run lint
+  - npm run test:coverage
+after_success:
+  - codecov
