@@ -24,9 +24,7 @@
 /* Hint: Check the console */
 <SearchBox
   placeholder="Name"
-  onChange={event => console.log(event.target.value)}
-  onMouseEnter={() => console.log('mouse entered')}
-  onMouseLeave={() => console.log('mouse left')}
+  onChange={event => console.log(event.target.value)}}
   onFocus={() => console.log('focused')}
   onBlur={() => console.log('blurred')}
 />

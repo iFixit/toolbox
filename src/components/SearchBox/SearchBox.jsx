@@ -88,10 +88,6 @@ SearchBox.propTypes = {
    onChange: func,
    /** Callback when input is focused. */
    onFocus: func,
-   /** Callback when mouse enters component. */
-   onMouseEnter: func,
-   /** Callback when mouse leaves component. */
-   onMouseLeave: func,
 };
 
 SearchBox.defaultProps = {
@@ -103,8 +99,6 @@ SearchBox.defaultProps = {
    onBlur: () => {},
    onChange: () => {},
    onFocus: () => {},
-   onMouseEnter: () => {},
-   onMouseLeave: () => {},
 };
 
 export default SearchBox;
