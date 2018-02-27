@@ -21,13 +21,13 @@ const TabContainer = glamorous.a(
       borderTop: '3px solid transparent',
       borderBottom: '3px solid transparent',
       transition: `all ${transition.duration} ${transition.easing}`,
+      outline: 'none',
 
       '&:hover': {
          color: color.blue[4],
       },
 
       '&:focus': {
-         outline: 'none',
          borderBottomColor: color.grayAlpha[4],
       },
    },
