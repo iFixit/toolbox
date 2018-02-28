@@ -18,7 +18,9 @@
     "test:coverage": "npm run test -- --coverage",
     "build": "NODE_ENV=production webpack",
     "prepare": "npm run build",
-    "precommit": "lint-staged && npm run build && git add dist/toolbox.js"
+    "precommit": "lint-staged && npm run build && git add dist/toolbox.js",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -75,7 +77,8 @@
     "react-test-renderer": "^15.6.2",
     "semantic-release": "^12.4.1",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "travis-deploy-once": "^4.3.4"
   },
   "repository": {
     "type": "git",
