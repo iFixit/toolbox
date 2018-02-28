@@ -2,6 +2,9 @@
   "name": "toolbox",
   "version": "0.5.2",
   "main": "dist/toolbox.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
@@ -9,7 +12,7 @@
     "test:coverage": "npm run test -- --coverage",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "npm run lint -- --fix",
-    "precommit": "lint-staged && npm run build && git add dist/toolbox.js",
+    "precommit": "lint-staged",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "prepare": "npm run build",
