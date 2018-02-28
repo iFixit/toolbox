@@ -1,5 +1,5 @@
 {
-  "name": "toolbox",
+  "name": "@ifixit/toolbox",
   "version": "0.5.2",
   "main": "dist/toolbox.js",
   "files": [
