@@ -1,6 +1,7 @@
 {
   "name": "@ifixit/toolbox",
   "version": "0.5.2",
+  "description": "A library of reusable React components for iFixit",
   "main": "dist/toolbox.js",
   "files": [
     "dist"
@@ -16,8 +17,8 @@
     "test:update": "npm run test -- --updateSnapshot",
     "test:coverage": "npm run test -- --coverage",
     "build": "NODE_ENV=production webpack",
-    "precommit": "lint-staged",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx}": [
