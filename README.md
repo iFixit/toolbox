@@ -13,26 +13,26 @@ https://ifixit.design
 ## Project Setup
 
 1. Clone the repo.
-```
+```bash
 git clone https://github.com/iFixit/toolbox.git
 cd toolbox
 ```
 
 2. Install the dependencies.
-```
+```bash
 npm install
 ```
 
-3. Start styleguide dev server.
-```
-npm run styleguide
+3. Start styleguide development server.
+```bash
+npm start
 ```
 
 ## Code Style
 
 Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality are enforced by [ESLint](http://eslint.org/) and [Prettier](https://github.com/prettier/prettier). You can format your code with the `lint:fix` script:
 
-```
+```bash
 npm run lint:fix
 ```
 
