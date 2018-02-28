@@ -18,7 +18,7 @@
     "test:coverage": "npm run test -- --coverage",
     "build": "NODE_ENV=production webpack",
     "prepare": "npm run build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged && npm run build && git add dist/toolbox.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [
