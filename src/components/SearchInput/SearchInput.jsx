@@ -11,6 +11,7 @@ const {
    color,
    borderRadius,
    shadows,
+   transition,
 } = constants;
 
 const IconContainer = glamorous.div({
@@ -47,6 +48,7 @@ const Input = glamorous.input(
       borderRadius,
       outline: 'none',
       boxShadow: `${shadows[0]}, ${shadows[1]}`,
+      transition: `box-shadow ${transition.duration} ${transition.easing}`,
 
       ':focus': {
          boxShadow: `${shadows[0]}, ${shadows[2]}`,
