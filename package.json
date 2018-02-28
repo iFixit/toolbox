@@ -6,6 +6,7 @@
     "dist"
   ],
   "scripts": {
+    "start": "npm run styleguide",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "test:update": "npm run test -- --updateSnapshot",
