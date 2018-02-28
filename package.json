@@ -1,6 +1,6 @@
 {
   "name": "@ifixit/toolbox",
-  "version": "0.5.2",
+  "version": "0.0.0-development",
   "description": "A library of reusable React components for iFixit",
   "main": "dist/toolbox.js",
   "files": [
@@ -73,6 +73,7 @@
     "react-dom": "^15.6.1",
     "react-styleguidist": "^6.2.5",
     "react-test-renderer": "^15.6.2",
+    "semantic-release": "^12.4.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1"
   },
