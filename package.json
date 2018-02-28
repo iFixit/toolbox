@@ -17,8 +17,9 @@
     "test:update": "npm run test -- --updateSnapshot",
     "test:coverage": "npm run test -- --coverage",
     "build": "NODE_ENV=production webpack",
-    "prepare": "npm run build",
-    "precommit": "lint-staged && npm run build && git add dist/toolbox.js",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint --edit",
+    "cm": "git-cz",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
@@ -27,6 +28,11 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "jest": {
     "collectCoverageFrom": [
@@ -48,6 +54,8 @@
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.2",
+    "@commitlint/config-angular": "^6.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
@@ -55,6 +63,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react-app": "^3.0.1",
     "css-loader": "^0.28.4",
+    "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^2.9.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -77,8 +86,8 @@
     "react-test-renderer": "^15.6.2",
     "semantic-release": "^12.4.1",
     "style-loader": "^0.18.2",
-    "webpack": "^3.4.1",
-    "travis-deploy-once": "^4.3.4"
+    "travis-deploy-once": "^4.3.4",
+    "webpack": "^3.4.1"
   },
   "repository": {
     "type": "git",
