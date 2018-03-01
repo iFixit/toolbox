@@ -1,38 +1,30 @@
 # Toolbox
 
+A library of reusable React components for [iFixit](https://ifixit.com).
 
 [![npm](https://img.shields.io/npm/v/@ifixit/toolbox.svg?style=flat-square)](https://www.npmjs.com/package/@ifixit/toolbox)
 [![Build Status](https://img.shields.io/travis/iFixit/toolbox/master.svg?style=flat-square)](https://travis-ci.org/iFixit/toolbox)
 [![Code Coverage](https://img.shields.io/codecov/c/github/iFixit/toolbox/master.svg?style=flat-square)](https://codecov.io/gh/iFixit/toolbox)
 
-
-## What is Toolbox?
-
-Toolbox is a library of reusable React components for [iFixit](https://ifixit.com).
-
 https://ifixit.design
 
 ## Installation
 
-```bash
+```shell
 npm install @ifixit/toolbox
 ```
 
 ## Development Setup
 
-1. Clone the repo.
-```bash
+```shell
+# 1. Clone the repo.
 git clone https://github.com/iFixit/toolbox.git
 cd toolbox
-```
 
-2. Install the dependencies.
-```bash
+# 2. Install the dependencies.
 npm install
-```
 
-3. Start styleguide development server.
-```bash
+# 3. Start the styleguide development server.
 npm start
 ```
 
@@ -40,7 +32,7 @@ npm start
 
 Toolbox adheres to the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). Code style and quality are enforced by [ESLint](http://eslint.org/) and [Prettier](https://github.com/prettier/prettier). You can format your code with the `lint:fix` script:
 
-```bash
+```shell
 npm run lint:fix
 ```
 
@@ -126,7 +118,7 @@ Toolbox uses [Jest](https://facebook.github.io/jest/) for testing. Learn more ab
 
 To run the test suite, use one of the following npm scripts:
 
-```bash
+```shell
 # Run the test suite
 npm test
 
