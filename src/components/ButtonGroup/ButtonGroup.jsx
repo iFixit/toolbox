@@ -40,9 +40,7 @@ const ButtonGroup = ({
          if (child.type !== Button) {
             return child;
          }
-         return (
-            <GroupedButton disabled={disabled} {...child.props} />
-         );
+         return <GroupedButton disabled={disabled} {...child.props} />;
       })}
    </ButtonGroupContainer>
 );
