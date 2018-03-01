@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 import TextareaTextField from '../../internal/TextareaTextField';
 
-const Textarea = props => (
-   <TextareaTextField component="Textarea" {...props} />
-);
+const Textarea = props => <TextareaTextField component="Textarea" {...props} />;
 
 Textarea.propTypes = {
    /** Set class name of containing element. */

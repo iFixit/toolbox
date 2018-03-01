@@ -4,25 +4,48 @@
       "ecmaVersion": 6,
       "sourceType": "module",
       "ecmaFeatures": {
-           "jsx": true,
-           "modules": true,
-           "experimentalObjectRestSpread": true
+         "jsx": true,
+         "modules": true,
+         "experimentalObjectRestSpread": true
       }
    },
-   "extends": "airbnb",
+   "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react",
+      "plugin:jest/recommended"
+   ],
+   "plugins": [
+      "prettier",
+      "jest"
+   ],
    "rules": {
-      "arrow-parens": ["error", "as-needed"],
-      "max-len": "off",
-      "indent": ["error", 3],
-      "react/jsx-indent": ["error", 3],
-      "react/jsx-indent-props": ["error", 3],
-      "react/jsx-wrap-multilines": [
-         "error",
-         { "declaration": false, "assignment": false, "arrow": false }
+      "jest/consistent-test-it": [
+         "error"
       ],
+      "no-use-before-define": [
+         "error",
+         {
+            "functions": false
+         }
+      ],
+      "prettier/prettier": [
+         "error",
+         {
+            "tabWidth": 3,
+            "singleQuote": true,
+            "trailingComma": "all"
+         }
+      ],
+      "react/no-did-update-set-state": "off",
       "react/no-unused-prop-types": "warn",
-      "react/prop-types": ["error",
-         { "ignore": ["domProps"] }
+      "react/prop-types": [
+         "error",
+         {
+            "ignore": [
+               "domProps"
+            ]
+         }
       ],
       "react/sort-prop-types": [
          "error",
@@ -31,7 +54,6 @@
             "ignoreCase": true,
             "requiredFirst": true
          }
-      ],
-      "react/no-did-update-set-state": "off"
+      ]
    }
 }

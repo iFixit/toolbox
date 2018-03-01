@@ -21,15 +21,21 @@ const TabContainer = glamorous.a(
       borderTop: '3px solid transparent',
       borderBottom: '3px solid transparent',
       transition: `all ${transition.duration} ${transition.easing}`,
+      outline: 'none',
 
       '&:hover': {
          color: color.blue[4],
       },
+
+      '&:focus': {
+         borderBottomColor: color.grayAlpha[4],
+      },
    },
-   ({ active }) => active && {
-      color: color.blue[4],
-      borderBottomColor: color.blue[4],
-   },
+   ({ active }) =>
+      active && {
+         color: color.blue[4],
+         borderBottomColor: color.blue[4],
+      },
 );
 
 const Tab = ({ is, ...props }) => {

@@ -1,15 +1,47 @@
 {
-  "name": "toolbox",
-  "version": "0.3.2",
+  "name": "@ifixit/toolbox",
+  "version": "0.0.0-development",
+  "description": "A library of reusable React components for iFixit",
   "main": "dist/toolbox.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "lint": "eslint --ext .js,.jsx .",
-    "format": "prettier-eslint --write '**/*.{js,jsx,json}'",
-    "precommit": "npm run lint && npm run build && git add dist/toolbox.js",
-    "styleguide": "styleguidist server",
+    "start": "npm run styleguide:server",
+    "styleguide:server": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "prepare": "npm run build",
-    "build": "NODE_ENV=production webpack"
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:update": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage",
+    "build": "NODE_ENV=production webpack",
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint --edit",
+    "cm": "git-cz",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "snapshotSerializers": [
+      "jest-glamor-react"
+    ]
   },
   "peerDependencies": {
     "react": "^15.6.1",
@@ -22,24 +54,43 @@
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.2",
+    "@commitlint/config-angular": "^6.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
+    "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react-app": "^3.0.1",
     "css-loader": "^0.28.4",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "prettier": "^1.5.3",
+    "jest": "^22.4.2",
+    "jest-glamor-react": "^3.3.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2",
     "prettier-eslint-cli": "^4.1.1",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
+    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^15.6.1",
-    "react-styleguidist": "^6.2.0",
+    "react-styleguidist": "^6.2.5",
+    "react-test-renderer": "^15.6.2",
+    "semantic-release": "^12.4.1",
     "style-loader": "^0.18.2",
+    "travis-deploy-once": "^4.3.4",
     "webpack": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iFixit/toolbox.git"
   }
 }
