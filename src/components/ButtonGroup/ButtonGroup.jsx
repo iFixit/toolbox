@@ -41,10 +41,7 @@ const ButtonGroup = ({
             return child;
          }
          return (
-            <GroupedButton
-               disabled={disabled}
-               {...child.props}
-            />
+            <GroupedButton disabled={disabled} {...child.props} />
          );
       })}
    </ButtonGroupContainer>
