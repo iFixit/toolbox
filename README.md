@@ -17,14 +17,14 @@ npm install @ifixit/toolbox
 ## Development Setup
 
 ```shell
-# 1. Clone the repo.
+# Clone the repo
 git clone https://github.com/iFixit/toolbox.git
 cd toolbox
 
-# 2. Install the dependencies.
+# Install the dependencies
 npm install
 
-# 3. Start the styleguide development server.
+# Start the styleguide development server.
 npm start
 ```
 
