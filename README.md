@@ -12,7 +12,13 @@ Toolbox is a library of reusable React components for [iFixit](https://ifixit.co
 
 https://ifixit.design
 
-## Project Setup
+## Installation
+
+```bash
+npm install @ifixit/toolbox
+```
+
+## Development Setup
 
 1. Clone the repo.
 ```bash
