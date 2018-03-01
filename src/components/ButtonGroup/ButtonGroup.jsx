@@ -25,11 +25,11 @@ const GroupedButton = glamorous(Button)({
 });
 
 const ButtonGroup = ({
+   children,
    className,
    disabled,
    onMouseEnter,
    onMouseLeave,
-   children,
 }) => (
    <ButtonGroupContainer
       className={className}
@@ -51,6 +51,8 @@ const ButtonGroup = ({
 );
 
 ButtonGroup.propTypes = {
+   /** Buttons to be grouped together. */
+   children: PropTypes.arrayOf(PropTypes.node),
    /** Set class name of containing element. */
    className: PropTypes.string,
    /** Indicates that the control is not available for interaction */
@@ -62,6 +64,7 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
+   children: [],
    className: '',
    disabled: false,
    onMouseEnter: () => {},
