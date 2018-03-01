@@ -24,7 +24,7 @@ cd toolbox
 # Install the dependencies
 npm install
 
-# Start the styleguide development server.
+# Start the styleguide dev server
 npm start
 ```
 
