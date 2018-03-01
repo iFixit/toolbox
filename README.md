@@ -108,7 +108,7 @@ Here are examples of the release types that will be generated based on a commit 
 
 ### Why?
 
-[`semantic-release`](https://github.com/semantic-release/semantic-release) uses commit messages to determine the type of changes in the codebase since the last release. Using these formalized conventions for commit messages allows [`semantic-release`](https://github.com/semantic-release/semantic-release) to automatically determine the next semantic version number, generate a changelog and publish a release automatically.
+[semantic-release](https://github.com/semantic-release/semantic-release) uses commit messages to determine the type of changes in the codebase since the last release. Using these formalized conventions for commit messages allows [semantic-release](https://github.com/semantic-release/semantic-release) to automatically determine the next semantic version number, generate a changelog and publish to npm automatically.
 
 ## Testing
 
