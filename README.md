@@ -1,5 +1,7 @@
 # Toolbox
 
+
+[![npm](https://img.shields.io/npm/v/@ifixit/toolbox.svg?style=flat-square)](https://www.npmjs.com/package/@ifixit/toolbox)
 [![Build Status](https://img.shields.io/travis/iFixit/toolbox/master.svg?style=flat-square)](https://travis-ci.org/iFixit/toolbox)
 [![Code Coverage](https://img.shields.io/codecov/c/github/iFixit/toolbox/master.svg?style=flat-square)](https://codecov.io/gh/iFixit/toolbox)
 
