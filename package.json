@@ -24,10 +24,7 @@
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.{js,jsx}": "eslint"
   },
   "config": {
     "commitizen": {
@@ -55,7 +52,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.2",
-    "@commitlint/config-angular": "^6.1.2",
+    "@commitlint/config-conventional": "^6.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.1",
