@@ -21,6 +21,7 @@ const IconContainer = glamorous.div({
    left: 0,
    display: 'flex',
    alignItems: 'center',
+   pointerEvents: 'none',
 });
 
 const SearchIcon = glamorous(Icon, { withProps: { name: 'search' } })({
@@ -37,7 +38,7 @@ const Input = glamorous.input(
       display: 'block',
       width: '100%',
       margin: 0,
-      // 56px is used instead of a spacing constat to exactly match the SearchIcon width
+      // 56px is used instead of a spacing constant to exactly match the SearchIcon width
       padding: `${spacing[2]} ${spacing[3]} ${spacing[2]} 56px`,
       fontFamily: 'inherit',
       fontSize: fontSize[2],
@@ -50,11 +51,11 @@ const Input = glamorous.input(
       boxShadow: `${shadows[0]}, ${shadows[1]}`,
       transition: `box-shadow ${transition.duration} ${transition.easing}`,
 
-      ':focus': {
+      '&:hover, &:focus': {
          boxShadow: `${shadows[0]}, ${shadows[2]}`,
       },
 
-      // this removes the extra left padding added to search inputs on Safari
+      // removes the extra left padding added to search inputs on Safari
       '::-webkit-search-decoration': {
          display: 'none',
       },
@@ -64,6 +65,7 @@ const Input = glamorous.input(
          color: color.grayAlpha[5],
          backgroundColor: color.grayAlpha[1],
          boxShadow: `inset ${shadows[0]}`,
+         pointerEvents: 'none',
       },
 );
 
