@@ -56,8 +56,10 @@ exports[`renders when disabled 1`] = `
   -moz-transition: box-shadow 150ms ease-in-out;
 }
 
-.glamor-2:focus,
-[data-glamor-2]:focus {
+.glamor-2:hover,
+[data-glamor-2]:hover,
+.glamor-2 :focus,
+[data-glamor-2] :focus {
   box-shadow: 0 0 0 1px rgba(0, 3, 6, 0.12), 0 4px 8px 0 rgba(0, 3, 6, 0.12), 0 2px 4px 0 rgba(0, 3, 6, 0.07);
 }
 
@@ -151,8 +153,10 @@ exports[`renders without crashing 1`] = `
   -moz-transition: box-shadow 150ms ease-in-out;
 }
 
-.glamor-2:focus,
-[data-glamor-2]:focus {
+.glamor-2:hover,
+[data-glamor-2]:hover,
+.glamor-2 :focus,
+[data-glamor-2] :focus {
   box-shadow: 0 0 0 1px rgba(0, 3, 6, 0.12), 0 4px 8px 0 rgba(0, 3, 6, 0.12), 0 2px 4px 0 rgba(0, 3, 6, 0.07);
 }
 
