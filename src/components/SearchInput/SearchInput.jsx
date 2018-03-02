@@ -50,7 +50,7 @@ const Input = glamorous.input(
       boxShadow: `${shadows[0]}, ${shadows[1]}`,
       transition: `box-shadow ${transition.duration} ${transition.easing}`,
 
-      ':focus': {
+      ':hover, :focus': {
          boxShadow: `${shadows[0]}, ${shadows[2]}`,
       },
 
