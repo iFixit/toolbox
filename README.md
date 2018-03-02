@@ -73,18 +73,17 @@ Must be one of the following:
 The scope could be anything specifying place of the commit change. For example `Icon`,
 `Tab`, `SearchInput`, etc...
 
-You can use `*` when the change affects more than a single scope.
-
+Remember that **scope** is entirely optional. Only include a scope if the commit message doesn't stand on it's own outside the context of a pull request.
 
 ### Subject
 The subject contains succinct description of the change:
 
-* Use the imperative, present tense: "change" not "changed" nor "changes"
-* Use sentence case
-* No dot (.) at the end
+* Use the imperative, present tense: "Change" not "Changed" nor "Changes"
+* Use sentence case: "Some message" not "some message" nor "Some Message"
+* Do not include a dot (.) at the end
 
 ### Body
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
+Just as in the **subject**, use the imperative, present tense: "Change" not "Changed" nor "Changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
 ### Footer
