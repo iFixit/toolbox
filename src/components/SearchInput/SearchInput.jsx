@@ -38,7 +38,7 @@ const Input = glamorous.input(
       display: 'block',
       width: '100%',
       margin: 0,
-      // 56px is used instead of a spacing constat to exactly match the SearchIcon width
+      // 56px is used instead of a spacing constant to exactly match the SearchIcon width
       padding: `${spacing[2]} ${spacing[3]} ${spacing[2]} 56px`,
       fontFamily: 'inherit',
       fontSize: fontSize[2],
@@ -55,7 +55,7 @@ const Input = glamorous.input(
          boxShadow: `${shadows[0]}, ${shadows[2]}`,
       },
 
-      // this removes the extra left padding added to search inputs on Safari
+      // removes the extra left padding added to search inputs on Safari
       '::-webkit-search-decoration': {
          display: 'none',
       },
