@@ -24,10 +24,7 @@
     "semantic-release": "semantic-release"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.{js,jsx}": "eslint"
   },
   "config": {
     "commitizen": {
