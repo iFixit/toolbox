@@ -21,6 +21,7 @@ const IconContainer = glamorous.div({
    left: 0,
    display: 'flex',
    alignItems: 'center',
+   pointerEvents: 'none',
 });
 
 const SearchIcon = glamorous(Icon, { withProps: { name: 'search' } })({
@@ -64,6 +65,7 @@ const Input = glamorous.input(
          color: color.grayAlpha[5],
          backgroundColor: color.grayAlpha[1],
          boxShadow: `inset ${shadows[0]}`,
+         pointerEvents: 'none',
       },
 );
 
