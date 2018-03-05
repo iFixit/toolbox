@@ -6,6 +6,7 @@ import './plugins';
  * */
 export { default as glamorous } from 'glamorous';
 
+export { default as Avatar } from './components/Avatar/Avatar';
 export { default as Button } from './components/Button/Button';
 export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as Grid } from './components/Grid/Grid';
