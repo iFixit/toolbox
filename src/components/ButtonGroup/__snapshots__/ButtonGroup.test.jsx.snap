@@ -56,6 +56,7 @@ exports[`renders when disabled 1`] = `
   line-height: 1.5;
   opacity: 0.5;
   pointer-events: none;
+  border-right-width: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -83,6 +84,7 @@ exports[`renders when disabled 1`] = `
 [data-glamor-2]:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  border-right-width: 1px;
 }
 
 <div
@@ -148,6 +150,7 @@ exports[`renders without crashing 1`] = `
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   line-height: 1.5;
+  border-right-width: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -175,6 +178,7 @@ exports[`renders without crashing 1`] = `
 [data-glamor-2]:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  border-right-width: 1px;
 }
 
 .glamor-1,

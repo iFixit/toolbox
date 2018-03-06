@@ -10,6 +10,7 @@ const { Div } = glamorous;
 
 const ButtonGroupItem = glamorous(Button)({
    borderRadius: 0,
+   borderRightWidth: 0,
 
    '&:first-of-type': {
       borderTopLeftRadius: borderRadius,
@@ -18,6 +19,7 @@ const ButtonGroupItem = glamorous(Button)({
    '&:last-of-type': {
       borderTopRightRadius: borderRadius,
       borderBottomRightRadius: borderRadius,
+      borderRightWidth: 1,
    },
 });
 
