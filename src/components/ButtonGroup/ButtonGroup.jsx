@@ -1,12 +1,11 @@
 import React from 'react';
 import { arrayOf, bool, node } from 'prop-types';
-import glamorous from 'glamorous';
+import glamorous, { Div } from 'glamorous';
 
 import Button from '../Button/Button';
 import constants from '../../constants';
 
 const { borderRadius } = constants;
-const { Div } = glamorous;
 
 const ButtonGroupItem = glamorous(Button)({
    borderRadius: 0,
