@@ -29,7 +29,12 @@ const ButtonGroup = ({ children, disabled, ...props }) => (
          if (child.type !== Button) {
             return child;
          }
-         return <ButtonGroupItem {...child.props} disabled={disabled} />;
+         return (
+            <ButtonGroupItem
+               {...child.props}
+               disabled={disabled || child.props.disabled}
+            />
+         );
       })}
    </Div>
 );
