@@ -125,6 +125,132 @@ exports[`renders when disabled 1`] = `
 </div>
 `;
 
+exports[`renders with non-button children 1`] = `
+.glamor-6,
+[data-glamor-6] {
+  display: inline-block;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-right-width: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+.glamor-2:first-of-type,
+[data-glamor-2]:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.glamor-2:last-of-type,
+[data-glamor-2]:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right-width: 1px;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<div
+  className="glamor-6"
+>
+  <button
+    className="glamor-2"
+    disabled={false}
+    onClick={[Function]}
+    tabIndex={0}
+  >
+    <span
+      className="glamor-1"
+    >
+      <span
+        className="glamor-0"
+      >
+        Button 1
+      </span>
+    </span>
+  </button>
+  <button
+    className="glamor-2"
+    disabled={false}
+    onClick={[Function]}
+    tabIndex={0}
+  >
+    <span
+      className="glamor-1"
+    >
+      <span
+        className="glamor-0"
+      >
+        Button 2
+      </span>
+    </span>
+  </button>
+  <span>
+    Span
+  </span>
+</div>
+`;
+
 exports[`renders without crashing 1`] = `
 .glamor-6,
 [data-glamor-6] {

@@ -26,3 +26,17 @@ test('renders when disabled', () => {
       .toJSON();
    expect(tree).toMatchSnapshot();
 });
+
+test('renders with non-button children', () => {
+   const tree = renderer
+      .create(
+         <ButtonGroup>
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <span>Span</span>
+         </ButtonGroup>,
+      )
+      .toJSON();
+
+   expect(tree).toMatchSnapshot();
+});
