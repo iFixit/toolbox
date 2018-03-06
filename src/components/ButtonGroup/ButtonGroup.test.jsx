@@ -4,7 +4,14 @@ import ButtonGroup from './ButtonGroup';
 import Button from '../Button/Button';
 
 test('renders without crashing', () => {
-   const tree = renderer.create(<ButtonGroup />).toJSON();
+   const tree = renderer
+      .create(
+         <ButtonGroup>
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+         </ButtonGroup>,
+      )
+      .toJSON();
    expect(tree).toMatchSnapshot();
 });
 

@@ -1,17 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, bool, node } from 'prop-types';
 import glamorous from 'glamorous';
 
 import Button from '../Button/Button';
 import constants from '../../constants';
 
 const { borderRadius } = constants;
+const { Div } = glamorous;
 
-const ButtonGroupContainer = glamorous.div({
-   display: 'inline-block',
-});
-
-const GroupedButton = glamorous(Button)({
+const ButtonGroupItem = glamorous(Button)({
    borderRadius: 0,
 
    '&:first-of-type': {
@@ -24,46 +21,26 @@ const GroupedButton = glamorous(Button)({
    },
 });
 
-const ButtonGroup = ({
-   children,
-   className,
-   disabled,
-   onMouseEnter,
-   onMouseLeave,
-}) => (
-   <ButtonGroupContainer
-      className={className}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-   >
+const ButtonGroup = ({ children, disabled, ...props }) => (
+   <Div display="inline-block" {...props}>
       {React.Children.map(children, child => {
          if (child.type !== Button) {
             return child;
          }
-         return <GroupedButton disabled={disabled} {...child.props} />;
+         return <ButtonGroupItem {...child.props} disabled={disabled} />;
       })}
-   </ButtonGroupContainer>
+   </Div>
 );
 
 ButtonGroup.propTypes = {
    /** Buttons to be grouped together. */
-   children: PropTypes.arrayOf(PropTypes.node),
-   /** Set class name of containing element. */
-   className: PropTypes.string,
+   children: arrayOf(node).isRequired,
    /** Indicates that the control is not available for interaction */
-   disabled: PropTypes.bool,
-   /** Callback when mouse enters component. */
-   onMouseEnter: PropTypes.func,
-   /** Callback when mouse leaves component. */
-   onMouseLeave: PropTypes.func,
+   disabled: bool,
 };
 
 ButtonGroup.defaultProps = {
-   children: [],
-   className: '',
    disabled: false,
-   onMouseEnter: () => {},
-   onMouseLeave: () => {},
 };
 
 export default ButtonGroup;
