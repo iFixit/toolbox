@@ -14,7 +14,7 @@ module.exports = {
    showUsage: true,
    getComponentPathLine(componentPath) {
       const name = path.basename(componentPath, '.jsx');
-      return `import { ${name} } from 'toolbox'`;
+      return `import { ${name} } from '@ifixit/toolbox'`;
    },
    require: [path.join(__dirname, './global.css')],
    webpackConfig: {
