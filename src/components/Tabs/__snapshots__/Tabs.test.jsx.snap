@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+.glamor-8,
+[data-glamor-8] {
+  border-bottom: 1px solid rgba(0, 3, 6, 0.12);
+}
+
+.glamor-7,
+[data-glamor-7] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  mask-image: -webkit-linear-gradient(to left, transparent, #000000 0.75rem);
+  mask-image: -moz-linear-gradient(to left, transparent, #000000 0.75rem);
+  mask-image: linear-gradient(to left, transparent, #000000 0.75rem);
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-mask-image: -webkit-linear-gradient(to left, transparent, #000000 0.75rem);
+  -webkit-mask-image: -moz-linear-gradient(to left, transparent, #000000 0.75rem);
+  -webkit-mask-image: linear-gradient(to left, transparent, #000000 0.75rem);
+}
+
+.glamor-6,
+[data-glamor-6] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #0071CE;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 150ms ease-in-out;
+  outline: none;
+  border-bottom-color: #0071CE;
+  -webkit-flex: 0 0 auto;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-0:hover,
+[data-glamor-0]:hover {
+  color: #0071CE;
+}
+
+.glamor-0:focus,
+[data-glamor-0]:focus {
+  border-bottom-color: rgba(0, 3, 6, 0.26);
+}
+
+.glamor-1,
+[data-glamor-1] {
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  color: rgba(0, 3, 6, 0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 150ms ease-in-out;
+  outline: none;
+  -webkit-flex: 0 0 auto;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-1:hover,
+[data-glamor-1]:hover {
+  color: #0071CE;
+}
+
+.glamor-1:focus,
+[data-glamor-1]:focus {
+  border-bottom-color: rgba(0, 3, 6, 0.26);
+}
+
+<div
+  className="glamor-8"
+>
+  <div
+    className="glamor-7"
+  >
+    <div
+      className="glamor-6"
+    >
+      <a
+        className="glamor-0"
+      >
+        All
+      </a>
+      <a
+        className="glamor-1"
+      >
+        Store
+      </a>
+      <a
+        className="glamor-1"
+      >
+        Guides
+      </a>
+      <a
+        className="glamor-1"
+      >
+        Wikis
+      </a>
+      <a
+        className="glamor-1"
+      >
+        Devices
+      </a>
+      <a
+        className="glamor-1"
+      >
+        Answers
+      </a>
+    </div>
+  </div>
+</div>
+`;
