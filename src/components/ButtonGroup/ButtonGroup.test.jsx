@@ -51,3 +51,15 @@ test('renders with non-button children', () => {
       .toJSON();
    expect(tree).toMatchSnapshot();
 });
+
+test('renders as column', () => {
+   const tree = renderer
+      .create(
+         <ButtonGroup direction="column">
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+         </ButtonGroup>,
+      )
+      .toJSON();
+   expect(tree).toMatchSnapshot();
+});
