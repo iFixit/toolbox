@@ -21,7 +21,13 @@ const propTypes = {
       PropTypes.arrayOf(PropTypes.node),
    ]).isRequired,
    /** Choose a button design. */
-   design: PropTypes.oneOf(['default', 'primary', 'outline', 'plain']),
+   design: PropTypes.oneOf([
+      'default',
+      'primary',
+      'secondary',
+      'outline',
+      'plain',
+   ]),
    /** Disable button. */
    disabled: PropTypes.bool,
    /** Set width of the button to 100%. */
@@ -66,6 +72,16 @@ const designs = {
       },
       ':focus': {
          boxShadow: `0 0 0 3px ${color.blueAlpha[2]}`,
+      },
+   },
+   secondary: {
+      color: color.grayAlpha[9],
+      backgroundColor: color.grayAlpha[3],
+      ':hover': {
+         backgroundColor: color.grayAlpha[4],
+      },
+      ':focus': {
+         boxShadow: `0 0 0 3px ${color.grayAlpha[4]}`,
       },
    },
    outline: {
