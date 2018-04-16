@@ -1,0 +1,936 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders at fullWidth 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Full Width Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders when disabled 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.5;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+<button
+  className="glamor-2"
+  disabled={true}
+  onClick={[Function]}
+  tabIndex={-1}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Disabled Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with a when href is present 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<a
+  className="glamor-2"
+  href="https://ifixit.com"
+  onClick={[Function]}
+  tabIndex={0}
+  target="_blank"
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Go to iFixit.com
+    </span>
+  </span>
+</a>
+`;
+
+exports[`renders with default design 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Default Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with large size 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Large Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with outline design 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: #0071CE;
+  background-color: transparent;
+  border-color: #0071CE;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  color: #FFFFFF;
+  background-color: #0071CE;
+  border-color: #0071CE;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 113, 206, 0.32);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Outline Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with plain design 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  color: #0071CE;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Plain Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with primary design 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: #FFFFFF;
+  background-color: #0071CE;
+  border-color: #0071CE;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  color: #FFFFFF;
+  background-color: #005091;
+  border-color: #005091;
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 113, 206, 0.32);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Primary Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with secondary design 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.26);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.26);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Secondary Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders with small size 1`] = `
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Small Button
+    </span>
+  </span>
+</button>
+`;
+
+exports[`renders without crashing 1`] = `
+.glamor-2,
+[data-glamor-2] {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms ease-in-out;
+  color: rgba(0, 3, 6, 0.87);
+  background-color: transparent;
+  border-color: rgba(0, 3, 6, 0.12);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+}
+
+.glamor-2:hover,
+[data-glamor-2]:hover {
+  background-color: rgba(0, 3, 6, 0.04);
+}
+
+.glamor-2:focus,
+[data-glamor-2]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 3, 6, 0.12);
+}
+
+.glamor-1,
+[data-glamor-1] {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-1> :not(:first-child),
+[data-glamor-1]> :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+<button
+  className="glamor-2"
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+>
+  <span
+    className="glamor-1"
+  >
+    <span
+      className="glamor-0"
+    >
+      Test Button
+    </span>
+  </span>
+</button>
+`;
