@@ -17,6 +17,10 @@
 ```
 
 ```
+<Button design="secondary">Secondary</Button>
+```
+
+```
 <Button design="outline">Outline</Button>
 ```
 
