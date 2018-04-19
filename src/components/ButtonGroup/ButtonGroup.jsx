@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, bool, node } from 'prop-types';
+import { arrayOf, bool, node, string } from 'prop-types';
 import glamorous, { Div } from 'glamorous';
 
 import Button from '../Button/Button';
@@ -7,7 +7,7 @@ import constants from '../../constants';
 
 const { borderRadius } = constants;
 
-const ButtonGroupItem = glamorous(Button)({
+const ButtonGroupRowItem = glamorous(Button)({
    borderRadius: 0,
    borderRightWidth: 0,
 
@@ -22,14 +22,34 @@ const ButtonGroupItem = glamorous(Button)({
    },
 });
 
-const ButtonGroup = ({ children, disabled, ...props }) => (
-   <Div display="inline-block" {...props}>
+const ButtonGroupColumnItem = glamorous(Button)({
+   borderRadius: 0,
+   borderBottomWidth: 0,
+
+   '&:first-of-type': {
+      borderTopLeftRadius: borderRadius,
+      borderTopRightRadius: borderRadius,
+   },
+   '&:last-of-type': {
+      borderBottomLeftRadius: borderRadius,
+      borderBottomRightRadius: borderRadius,
+      borderBottomWidth: 1,
+   },
+});
+
+const ButtonGroup = ({ children, disabled, direction, ...props }) => (
+   <Div display="flex" flexDirection={direction} {...props}>
       {React.Children.map(children, child => {
          if (child.type !== Button) {
             return child;
          }
-         return (
-            <ButtonGroupItem
+         return direction === 'row' ? (
+            <ButtonGroupRowItem
+               {...child.props}
+               disabled={disabled || child.props.disabled}
+            />
+         ) : (
+            <ButtonGroupColumnItem
                {...child.props}
                disabled={disabled || child.props.disabled}
             />
@@ -41,12 +61,16 @@ const ButtonGroup = ({ children, disabled, ...props }) => (
 ButtonGroup.propTypes = {
    /** Buttons to be grouped together. */
    children: arrayOf(node).isRequired,
+   /** Indicated whether button group should display in as a row or
+    * stacked in a column */
+   direction: string,
    /** Indicates that the control is not available for interaction */
    disabled: bool,
 };
 
 ButtonGroup.defaultProps = {
    disabled: false,
+   direction: 'row',
 };
 
 export default ButtonGroup;
