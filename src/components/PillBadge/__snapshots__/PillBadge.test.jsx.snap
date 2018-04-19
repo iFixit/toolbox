@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with custom text color and background color 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #C27E00;
+  background-color: #FEF5D9;
+  border-radius: 9999px;
+}
+
+<span
+  className="glamor-0"
+>
+  Test
+</span>
+`;
+
+exports[`renders without crashing 1`] = `
+.glamor-0,
+[data-glamor-0] {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(0, 3, 6, 0.54);
+  background-color: rgba(0, 3, 6, 0.04);
+  border-radius: 9999px;
+}
+
+<span
+  className="glamor-0"
+>
+  Test
+</span>
+`;

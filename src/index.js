@@ -14,6 +14,7 @@ export { default as Grid } from './components/Grid/Grid';
 export { default as Icon } from './components/Icon/Icon';
 export { default as Label } from './components/Label/Label';
 export { default as PageNavBar } from './components/PageNavBar/PageNavBar';
+export { default as PillBadge } from './components/PillBadge/PillBadge';
 export { default as Radio } from './components/Radio/Radio';
 export { default as RadioGroup } from './components/RadioGroup/RadioGroup';
 export { default as SearchInput } from './components/SearchInput/SearchInput';
