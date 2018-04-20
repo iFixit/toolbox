@@ -27,7 +27,7 @@ PillBadge.propTypes = {
 };
 
 PillBadge.defaultProps = {
-   background: color.grayAlpha[1],
+   background: color.grayAlpha[2],
    color: color.grayAlpha[6],
 };
 
