@@ -10,7 +10,7 @@ const PillBadgeContainer = glamorous.span(props => ({
    padding: `0 ${spacing[1]}`,
    fontSize: fontSize[0],
    fontWeight: 700,
-   lineHeight: lineHeight.none,
+   lineHeight: lineHeight.copy,
    textTransform: 'uppercase',
    color: props.color,
    backgroundColor: props.background,
