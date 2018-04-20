@@ -7,7 +7,7 @@ const { spacing, fontSize, lineHeight, color } = constants;
 
 const PillBadgeContainer = glamorous.span(props => ({
    display: 'inline-block',
-   padding: `${spacing[0]} ${spacing[1]}`,
+   padding: `0 ${spacing[1]}`,
    fontSize: fontSize[0],
    fontWeight: 700,
    lineHeight: lineHeight.none,
