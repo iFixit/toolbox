@@ -45,6 +45,7 @@
     "react-dom": "^16.4.1"
   },
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
     "feather-icons": "github:iFixit/feather",
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
