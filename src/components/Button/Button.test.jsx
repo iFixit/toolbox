@@ -1,7 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Button from './Button';
+
+configure({ adapter: new Adapter() });
 
 test('renders without crashing', () => {
    const tree = renderer.create(<Button>Test Button</Button>).toJSON();
