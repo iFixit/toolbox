@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import glamorous from 'glamorous';
-import { toSvg } from 'feather-icons';
+import feather from 'feather-icons';
 
 const SvgContainer = glamorous.span(
    {
@@ -22,7 +22,7 @@ const Icon = props => (
       color={props.color}
       strokeWidth={props.strokeWidth}
       dangerouslySetInnerHTML={{
-         __html: toSvg(props.name, {
+         __html: feather.icons[props.name].toSvg({
             width: '100%',
             height: '100%',
             'stroke-width': 'inherit',
