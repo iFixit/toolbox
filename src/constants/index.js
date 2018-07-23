@@ -6,6 +6,7 @@ import lineHeight from './lineHeight';
 import shadows from './shadows';
 import spacing from './spacing';
 import transition from './transition';
+import animation from './animation';
 
 export default {
    borderRadius,
@@ -16,4 +17,5 @@ export default {
    shadows,
    spacing,
    transition,
+   animation,
 };
