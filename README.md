@@ -143,3 +143,8 @@ src/
     ...
 ```
 
+### Deploying
+
+We use npm to publish Toolbox with semantic versioning. An npm publish happens
+automatically each time a commit is pushed to Master (does not work on an
+amended commit)
