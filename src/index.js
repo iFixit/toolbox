@@ -22,5 +22,6 @@ export { default as Tab } from './components/Tab/Tab';
 export { default as Tabs } from './components/Tabs/Tabs';
 export { default as Textarea } from './components/Textarea/Textarea';
 export { default as TextField } from './components/TextField/TextField';
+export { default as Stars } from './components/Stars/Stars';
 
 export { default as constants } from './constants';
