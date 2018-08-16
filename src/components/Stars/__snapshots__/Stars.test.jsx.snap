@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="star-ratings"
+  style={
+    Object {
+      "boxSizing": "border-box",
+      "display": "inline-block",
+      "position": "relative",
+    }
+  }
+  title="3.5 Stars"
+>
+  <svg
+    className="star-grad"
+    style={
+      Object {
+        "height": "0",
+        "position": "absolute",
+        "visibility": "hidden",
+        "width": "0",
+        "zIndex": "0",
+      }
+    }
+  >
+    <defs>
+      <linearGradient
+        id={null}
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        <stop
+          className="stop-color-first"
+          offset="0%"
+          style={
+            Object {
+              "stopColor": "#F9C310",
+              "stopOpacity": "1",
+            }
+          }
+        />
+        <stop
+          className="stop-color-first"
+          offset="50%"
+          style={
+            Object {
+              "stopColor": "#F9C310",
+              "stopOpacity": "1",
+            }
+          }
+        />
+        <stop
+          className="stop-color-final"
+          offset="50%"
+          style={
+            Object {
+              "stopColor": "#E1E1E2",
+              "stopOpacity": "1",
+            }
+          }
+        />
+        <stop
+          className="stop-color-final"
+          offset="100%"
+          style={
+            Object {
+              "stopColor": "#E1E1E2",
+              "stopOpacity": "1",
+            }
+          }
+        />
+      </linearGradient>
+    </defs>
+  </svg>
+  <div
+    className="star-container"
+    onClick={null}
+    onMouseEnter={null}
+    onMouseLeave={null}
+    style={
+      Object {
+        "cursor": undefined,
+        "display": "inline-block",
+        "paddingLeft": undefined,
+        "paddingRight": "0px",
+        "position": "relative",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <svg
+      className="widget-svg"
+      style={
+        Object {
+          "height": "40px",
+          "transform": undefined,
+          "transition": "transform .2s ease-in-out",
+          "width": "40px",
+        }
+      }
+      viewBox="0 0 51 48"
+    >
+      <path
+        className="star"
+        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        style={
+          Object {
+            "fill": "#F9C310",
+            "transition": "fill .2s ease-in-out",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="star-container"
+    onClick={null}
+    onMouseEnter={null}
+    onMouseLeave={null}
+    style={
+      Object {
+        "cursor": undefined,
+        "display": "inline-block",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "relative",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <svg
+      className="widget-svg"
+      style={
+        Object {
+          "height": "40px",
+          "transform": undefined,
+          "transition": "transform .2s ease-in-out",
+          "width": "40px",
+        }
+      }
+      viewBox="0 0 51 48"
+    >
+      <path
+        className="star"
+        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        style={
+          Object {
+            "fill": "#F9C310",
+            "transition": "fill .2s ease-in-out",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="star-container"
+    onClick={null}
+    onMouseEnter={null}
+    onMouseLeave={null}
+    style={
+      Object {
+        "cursor": undefined,
+        "display": "inline-block",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "relative",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <svg
+      className="widget-svg"
+      style={
+        Object {
+          "height": "40px",
+          "transform": undefined,
+          "transition": "transform .2s ease-in-out",
+          "width": "40px",
+        }
+      }
+      viewBox="0 0 51 48"
+    >
+      <path
+        className="star"
+        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        style={
+          Object {
+            "fill": "#F9C310",
+            "transition": "fill .2s ease-in-out",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="star-container"
+    onClick={null}
+    onMouseEnter={null}
+    onMouseLeave={null}
+    style={
+      Object {
+        "cursor": undefined,
+        "display": "inline-block",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "relative",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <svg
+      className="widget-svg multi-widget-selected"
+      style={
+        Object {
+          "height": "40px",
+          "transform": undefined,
+          "transition": "transform .2s ease-in-out",
+          "width": "40px",
+        }
+      }
+      viewBox="0 0 51 48"
+    >
+      <path
+        className="star"
+        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        style={
+          Object {
+            "fill": null,
+            "transition": "fill .2s ease-in-out",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="star-container"
+    onClick={null}
+    onMouseEnter={null}
+    onMouseLeave={null}
+    style={
+      Object {
+        "cursor": undefined,
+        "display": "inline-block",
+        "paddingLeft": "0px",
+        "paddingRight": undefined,
+        "position": "relative",
+        "verticalAlign": "middle",
+      }
+    }
+  >
+    <svg
+      className="widget-svg"
+      style={
+        Object {
+          "height": "40px",
+          "transform": undefined,
+          "transition": "transform .2s ease-in-out",
+          "width": "40px",
+        }
+      }
+      viewBox="0 0 51 48"
+    >
+      <path
+        className="star"
+        d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+        style={
+          Object {
+            "fill": "#E1E1E2",
+            "transition": "fill .2s ease-in-out",
+          }
+        }
+      />
+    </svg>
+  </div>
+</div>
+`;
