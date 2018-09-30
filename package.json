@@ -7,7 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "start": "npm run styleguide:server",
+    "start": "npm run docz:dev",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
     "styleguide:server": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "lint": "eslint --ext .js,.jsx .",
@@ -68,6 +70,7 @@
     "commitizen": "^2.10.1",
     "css-loader": "^0.28.11",
     "cz-conventional-changelog": "^2.1.0",
+    "docz": "^0.12.5",
     "enzyme": "^3.3.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
