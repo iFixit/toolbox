@@ -1,0 +1,39 @@
+---
+name: ButtonGroup
+route: /components/button-group
+menu: Components
+---
+
+import ButtonGroup from './ButtonGroup'
+import Button from '../Button/Button'
+import { Playground, PropsTable } from 'docz'
+
+# ButtonGroup
+
+## Examples
+
+### Row
+
+<Playground>
+  <ButtonGroup>
+    <Button>File</Button>
+    <Button>Edit</Button>
+    <Button>View</Button>
+    <Button>History</Button>
+  </ButtonGroup>
+</Playground>
+
+### Column
+
+<Playground>
+  <ButtonGroup direction="column">
+    <Button>File</Button>
+    <Button>Edit</Button>
+    <Button>View</Button>
+    <Button>History</Button>
+  </ButtonGroup>
+</Playground>
+
+## Props
+
+<PropsTable of={ButtonGroup} />

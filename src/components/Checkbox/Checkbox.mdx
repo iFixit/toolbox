@@ -1,0 +1,57 @@
+---
+name: Checkbox
+route: /components/checkbox
+menu: Components
+---
+
+import Checkbox from './Checkbox'
+import { Playground, PropsTable } from 'docz'
+
+# Checkbox
+
+## Examples
+
+### Checked
+
+<Playground>
+  <Checkbox label="Checkbox label" checked />
+</Playground>
+
+### Unchecked
+
+<Playground>
+  <Checkbox label="Checkbox label" />
+</Playground>
+
+### Disabled checked
+
+<Playground>
+  <Checkbox label="Checkbox disabled" checked disabled />
+</Playground>
+
+### Disabled unchecked
+
+<Playground>
+  <Checkbox label="Checkbox disabled" disabled />
+</Playground>
+
+### Invalid unchecked
+
+<Playground>
+  <Checkbox required label="Checkbox invalid" showInvalid={true} />
+</Playground>
+
+### Event callbacks
+
+<Playground>
+  <Checkbox
+    label="Checkbox label"
+    onChange={({ checked, value }) => console.log(checked, value)}
+    onMouseEnter={() => console.log('mouse entered')}
+    onMouseLeave={() => console.log('mouse left')}
+  />
+</Playground>
+
+## Props
+
+<PropsTable of={Checkbox} />

@@ -1,0 +1,69 @@
+---
+name: TextField
+route: /components/text-field
+menu: Components
+---
+
+import TextField from './TextField'
+import { Playground, PropsTable } from 'docz'
+
+# TextField
+
+## Examples
+
+### Standard TextField
+
+<Playground>
+<TextField label="Name" placeholder="Doc Brown" />
+</Playground>
+
+#### TextField with value
+
+<Playground>
+<TextField label="Name" value="Kyle Wiens" />
+</Playground>
+
+#### TextField without label
+
+<Playground>
+<TextField value="Bill Nye" />
+</Playground>
+
+#### Disabled TextField
+
+<Playground>
+<TextField label="Name" value="Bill Nye" disabled />
+</Playground>
+
+#### Invalid TextField
+
+<Playground>
+<TextField required label="Name" placeholder="Doc Brown" showValidity />
+</Playground>
+
+#### Validated TextField
+<Playground>
+<TextField
+   required
+   label="Name"
+   placeholder="Doc Brown"
+   showValidity={true}
+   domProps={{ valid: true }}
+/>
+</Playground>
+
+#### Event callbacks
+
+<Playground>
+<TextField
+  onChange={({ value }) => console.log(value)}
+  onMouseEnter={() => console.log('mouse entered')}
+  onMouseLeave={() => console.log('mouse left')}
+  onFocus={() => console.log('focused')}
+  onBlur={() => console.log('blurred')}
+/>
+</Playground>
+
+## Props
+
+<PropsTable of={TextField} />

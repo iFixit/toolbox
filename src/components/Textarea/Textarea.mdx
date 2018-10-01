@@ -1,0 +1,69 @@
+---
+name: Textarea
+route: /components/textarea
+menu: Components
+---
+
+import Textarea from './Textarea'
+import { Playground, PropsTable } from 'docz'
+
+# Textarea
+
+## Examples
+
+### Standard Textarea
+
+<Playground>
+  <Textarea label="Label" placeholder="Placeholder text" />
+</Playground>
+
+### Textarea with value
+
+<Playground>
+  <Textarea label="Label" value="Hello world" />
+</Playground>
+
+### Empty Textarea
+
+<Playground>
+  <Textarea />
+</Playground>
+
+### Disabled Textarea
+
+<Playground>
+  <Textarea label="Label" value="Hello world" disabled />
+</Playground>
+
+### Invalid Textarea
+
+<Playground>
+  <Textarea required label="Label" placeholder="Placeholder text" showValidity={true} />
+</Playground>
+
+### Validated TextArea
+<Playground>
+  <Textarea
+    required
+    label="Name"
+    placeholder="Doc Brown"
+    showValidity={true}
+    domProps={{ valid: true }}
+  />
+</Playground>
+
+### Event callbacks
+
+<Playground>
+  <Textarea
+    onChange={({ value }) => console.log(value)}
+    onMouseEnter={() => console.log('mouse entered')}
+    onMouseLeave={() => console.log('mouse left')}
+    onFocus={() => console.log('focused')}
+    onBlur={() => console.log('blurred')}
+  />
+</Playground>
+
+## Props
+
+<PropsTable of={Textarea} />

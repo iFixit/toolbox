@@ -1,0 +1,38 @@
+---
+name: Avatar
+route: /components/avatar
+menu: Components
+---
+
+import Avatar from './Avatar'
+import { Playground, PropsTable } from 'docz'
+
+# Avatar
+
+## Examples
+
+### Default
+
+<Playground>
+  <Avatar src="https://d3nevzfk7ii3be.cloudfront.net/igi/MrphvTGGRcKHXRV2.standard" />
+</Playground>
+
+### Custom sizes
+
+<Playground>
+  <Avatar
+    src="https://d3nevzfk7ii3be.cloudfront.net/igi/kYipBhTkDKX4aXIY.standard"
+    size={32}
+  />
+</Playground>
+
+<Playground>
+  <Avatar
+    src="https://d3nevzfk7ii3be.cloudfront.net/igi/kYipBhTkDKX4aXIY.standard"
+    size="4em"
+  />
+</Playground>
+
+## Props
+
+<PropsTable of={Avatar} />

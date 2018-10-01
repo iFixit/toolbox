@@ -1,0 +1,57 @@
+---
+name: Radio
+route: /components/radio
+menu: Components
+---
+
+import Radio from './Radio'
+import { Playground, PropsTable } from 'docz'
+
+# Radio
+
+## Examples
+
+### Checked
+
+<Playground>
+  <Radio label="Radio label" checked />
+</Playground>
+
+### Unchecked
+
+<Playground>
+  <Radio label="Radio label" />
+</Playground>
+
+### Disabled checked
+
+<Playground>
+  <Radio label="Radio disabled" checked disabled />
+</Playground>
+
+### Disabled unchecked
+
+<Playground>
+  <Radio label="Radio disabled" disabled />
+</Playground>
+
+### Invalid unchecked
+
+<Playground>
+  <Radio required label="Radio invalid" showInvalid={true} />
+</Playground>
+
+### Event callbacks
+
+<Playground>
+  <Radio
+    label="Radio label"
+    onChange={({ checked, value }) => console.log(checked, value)}
+    onMouseEnter={() => console.log('mouse entered')}
+    onMouseLeave={() => console.log('mouse left')}
+  />
+</Playground>
+
+## Props
+
+<PropsTable of={Radio} />

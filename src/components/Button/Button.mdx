@@ -1,0 +1,99 @@
+---
+name: Button
+route: /components/button
+menu: Components
+---
+
+import Button from './Button'
+import Icon from '../Icon/Icon'
+import { Playground, PropsTable } from 'docz'
+
+# Button
+
+## Examples
+
+### Default
+
+<Playground>
+  <Button>Button</Button>
+</Playground>
+
+### Button designs
+
+<Playground>
+  <Button design="default">Default</Button>
+</Playground>
+
+<Playground>
+  <Button design="primary">Primary</Button>
+</Playground>
+
+<Playground>
+  <Button design="secondary">Secondary</Button>
+</Playground>
+
+<Playground>
+  <Button design="outline">Outline</Button>
+</Playground>
+
+<Playground>
+  <Button design="plain">Plain</Button>
+</Playground>
+
+### Icon buttons
+
+<Playground>
+  <Button>
+    <Icon name="heart" size={16} />
+    <span>Icon left</span>
+  </Button>
+</Playground>
+
+<Playground>
+  <Button>
+    <span>Icon right</span>
+    <Icon name="search" size={16} />
+  </Button>
+</Playground>
+
+### Button sizes
+
+<Playground>
+  <Button size="small">Small</Button>
+</Playground>
+
+<Playground>
+  <Button size="medium">Medium</Button>
+</Playground>
+
+<Playground>
+  <Button size="large">Large</Button>
+</Playground>
+
+### Full-width Button
+
+<Playground>
+  <Button fullWidth>Full-width</Button>
+</Playground>
+
+### Disabled Button
+
+<Playground>
+  <Button disabled>Disabled</Button>
+</Playground>
+
+### onClick callback
+
+<Playground>
+  <Button onClick={() => console.log('clicked')}>Click me</Button>
+</Playground>
+
+### Link
+
+<Playground>
+  <Button href="https://ifixit.com" target="_blank">Go to iFixit.com</Button>
+</Playground>
+
+## Props
+
+<PropsTable of={Button} />

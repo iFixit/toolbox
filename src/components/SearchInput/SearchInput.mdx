@@ -1,0 +1,47 @@
+---
+name: SearchInput
+route: /components/search-input
+menu: Components
+---
+
+import SearchInput from './SearchInput'
+import { Playground, PropsTable } from 'docz'
+
+# SearchInput
+
+## Examples
+
+### Default
+
+<Playground>
+  <SearchInput placeholder="Search" />
+</Playground>
+
+### SearchInput with value
+
+<Playground>
+  <SearchInput value="iphone 6" />
+</Playground>
+
+### Disabled SearchInput
+
+<Playground>
+  <SearchInput value="toolkit" disabled />
+</Playground>
+
+### Event callbacks
+
+<Playground>
+  {/* Hint: Check the console */}
+  <SearchInput
+    placeholder="Search"
+    onChange={event => console.log(event.target.value)}
+    onFocus={() => console.log('focused')}
+    onBlur={() => console.log('blurred')}
+  />
+</Playground>
+
+
+## Props
+
+<PropsTable of={SearchInput} />
