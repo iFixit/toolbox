@@ -1,11 +1,24 @@
 export default {
+   htmlContext: {
+      head: {
+         links: [
+            {
+               rel: 'stylesheet',
+               href: 'https://fonts.googleapis.com/css?family=Lato:400,700',
+            },
+         ],
+      },
+   },
    themeConfig: {
       styles: {
+         body: {
+            fontFamily: 'Lato',
+         },
          h1: {
-            fontWeight: 600,
+            fontWeight: 700,
          },
          table: {
-            fontFamily: '"Source Sans Pro"',
+            fontFamily: 'Lato',
             fontSize: 16,
          },
       },
