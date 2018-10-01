@@ -1,0 +1,31 @@
+---
+name: PillBadge
+route: /components/pill-badge
+menu: Components
+---
+
+import PillBadge from './PillBadge'
+import { Playground, PropsTable } from 'docz'
+
+# PillBadge
+
+## Examples
+
+### Default PillBadge
+
+<Playground>
+  <PillBadge>42</PillBadge>
+</Playground>
+
+#### Alternate colors
+
+Remember to use the colors defined in the `constants` object instead of hard-coding HEX or RGBA values.
+
+<Playground>
+  {/* NOTE: These colors are hard-coded for demo purposes only. Don't hard-code HEX values in production code.a */}
+  <PillBadge color="#C27E00" background="#FEF5D9">12K</PillBadge>
+</Playground>
+
+## Props
+
+<PropsTable of={PillBadge} />

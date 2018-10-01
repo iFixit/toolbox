@@ -1,0 +1,28 @@
+---
+name: Stars
+route: /components/stars
+menu: Components
+---
+
+import Stars from './Stars'
+import { Playground, PropsTable } from 'docz'
+
+# Stars
+
+## Examples
+
+### Default
+
+<Playground>
+  <Stars rating={2} onChange={value => alert(value)}/>
+</Playground>
+
+### More Than 5 Stars
+
+<Playground>
+  <Stars rating={7.5} count={10} onChange={value => alert(value)}/>
+</Playground>
+
+## Props
+
+<PropsTable of={Stars} />

@@ -1,0 +1,34 @@
+---
+name: Tab
+route: /components/tab
+menu: Components
+---
+
+import Tab from './Tab'
+import { Playground, PropsTable } from 'docz'
+
+# Tab
+
+## Examples
+
+### Default Tab
+<Playground>
+  <Tab>All</Tab>
+</Playground>
+
+### Active Tab
+<Playground>
+  <Tab active>All</Tab>
+</Playground>
+
+### Element prop
+
+The `Tab` component accepts an `is` prop to change the underlying HTML element on a per-instance basis. This is useful for ensuring semantic markup, while keeping styles decoupled.
+
+<Playground>
+  <Tab is="span">All</Tab>
+</Playground>
+
+## Props
+
+<PropsTable of={Tab} />
