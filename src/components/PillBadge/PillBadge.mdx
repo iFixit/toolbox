@@ -5,6 +5,7 @@ menu: Components
 ---
 
 import PillBadge from './PillBadge'
+import color from '../../constants/color'
 import { Playground, PropsTable } from 'docz'
 
 # PillBadge
@@ -17,13 +18,12 @@ import { Playground, PropsTable } from 'docz'
   <PillBadge>42</PillBadge>
 </Playground>
 
-#### Alternate colors
+### Alternate colors
 
 Remember to use the colors defined in the `constants` object instead of hard-coding HEX or RGBA values.
 
 <Playground>
-  {/* NOTE: These colors are hard-coded for demo purposes only. Don't hard-code HEX values in production code.a */}
-  <PillBadge color="#C27E00" background="#FEF5D9">12K</PillBadge>
+  <PillBadge color={color.yellow[5]} background={color.yellow[1]}>12K</PillBadge>
 </Playground>
 
 ## Props
