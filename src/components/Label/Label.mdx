@@ -5,6 +5,7 @@ menu: Components
 ---
 
 import Label from './Label'
+import color from '../../constants/color'
 import { Playground, PropsTable } from 'docz'
 
 # Label
@@ -22,8 +23,7 @@ import { Playground, PropsTable } from 'docz'
 Remember to use the colors defined in the `constants` object instead of hard-coding HEX or RGBA values.
 
 <Playground>
-  {/* NOTE: These colors are hard-coded for demo purposes only. Don't hard-code HEX values in production code. */}
-  <Label color="#C27E00" background="#FEF5D9">Pending</Label>
+  <Label color={color.yellow[5]} background={color.yellow[1]}>Pending</Label>
 </Playground>
 
 ## Props
