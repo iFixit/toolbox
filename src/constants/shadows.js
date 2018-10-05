@@ -1,4 +1,4 @@
-import color from './color';
+import color from './color/color';
 
 export default [
    `0 0 0 1px ${color.grayAlpha[3]}`,

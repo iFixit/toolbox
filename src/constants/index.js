@@ -1,6 +1,6 @@
 import borderRadius from './borderRadius';
 import breakpoint from './breakpoint';
-import color from './color';
+import color from './color/color';
 import fontSize from './fontSize';
 import lineHeight from './lineHeight';
 import shadows from './shadows';
