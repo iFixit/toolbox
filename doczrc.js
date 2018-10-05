@@ -1,4 +1,5 @@
 export default {
+   menu: ['Introduction', 'Constants', 'Components'],
    htmlContext: {
       head: {
          links: [
