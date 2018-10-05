@@ -3,9 +3,9 @@ import { withMDXComponents } from '@mdx-js/tag/dist/mdx-provider';
 import Color from 'color';
 import { array, object, oneOfType, string } from 'prop-types';
 import React, { Component } from 'react';
-import borderRadius from '../../src/constants/borderRadius';
+import borderRadius from '../../src/constants/borderRadius/borderRadius';
 import color from '../../src/constants/color/color';
-import spacing from '../../src/constants/spacing';
+import spacing from '../../src/constants/spacing/spacing';
 
 class KeyValueTable extends Component {
    static propTypes = {
@@ -97,6 +97,10 @@ function isPrimitive(value) {
 }
 
 function isColor(value) {
+   if (typeof value !== 'string' && !(value instanceof String)) {
+      return false;
+   }
+
    try {
       // This call will throw an error if the value is not a valid color
       Color(value);

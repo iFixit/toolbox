@@ -1,12 +1,12 @@
-import borderRadius from './borderRadius';
-import breakpoint from './breakpoint';
+import borderRadius from './borderRadius/borderRadius';
+import breakpoint from './breakpoint/breakpoint';
 import color from './color/color';
-import fontSize from './fontSize';
-import lineHeight from './lineHeight';
-import shadows from './shadows';
-import spacing from './spacing';
-import transition from './transition';
-import animation from './animation';
+import fontSize from './fontSize/fontSize';
+import lineHeight from './lineHeight/lineHeight';
+import shadows from './shadows/shadows';
+import spacing from './spacing/spacing';
+import transition from './transition/transition';
+import animation from './animation/animation';
 
 export default {
    borderRadius,
