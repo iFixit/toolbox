@@ -42,8 +42,7 @@
   },
   "peerDependencies": {
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "styled-components": "^4.0.0"
+    "react-dom": "^16.4.1"
   },
   "dependencies": {
     "feather-icons": "github:iFixit/feather",
