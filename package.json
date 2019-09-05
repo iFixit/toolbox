@@ -2,7 +2,7 @@
   "name": "@ifixit/toolbox",
   "version": "0.0.0-development",
   "description": "A library of reusable React components for iFixit",
-  "main": "dist/toolbox.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -16,7 +16,7 @@
     "test:watch": "npm run test -- --watch",
     "test:update": "npm run test -- --updateSnapshot",
     "test:coverage": "npm run test -- --coverage",
-    "build": "NODE_ENV=production webpack --mode production",
+    "build": "babel src --out-dir dist --extensions \".js,.jsx\"",
     "precommit": "lint-staged",
     "commitmsg": "commitlint --edit",
     "cm": "git-cz",
@@ -46,7 +46,6 @@
     "styled-components": "^3.3.3"
   },
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.1.1",
     "feather-icons": "github:iFixit/feather",
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
@@ -71,6 +70,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "docz": "^0.12.5",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -91,12 +91,22 @@
     "react-test-renderer": "^16.4.1",
     "semantic-release": "^12.4.1",
     "styled-components": "^3.3.3",
-    "travis-deploy-once": "^4.4.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "travis-deploy-once": "^4.4.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/iFixit/toolbox.git"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
