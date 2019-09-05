@@ -49,7 +49,8 @@
     "glamor": "^2.20.40",
     "glamorous": "^4.13.1",
     "prop-types": "^15.6.1",
-    "react-star-ratings": "^2.3.0"
+    "react-star-ratings": "^2.3.0",
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -89,7 +90,6 @@
     "react-dom": "^16.4.1",
     "react-test-renderer": "^16.4.1",
     "semantic-release": "^12.4.1",
-    "styled-components": "^4.0.0",
     "travis-deploy-once": "^4.4.1"
   },
   "repository": {
