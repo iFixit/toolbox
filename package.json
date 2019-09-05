@@ -43,7 +43,7 @@
   "peerDependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "styled-components": "^3.3.3"
+    "styled-components": "^4.0.0"
   },
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
@@ -90,7 +90,7 @@
     "react-dom": "^16.4.1",
     "react-test-renderer": "^16.4.1",
     "semantic-release": "^12.4.1",
-    "styled-components": "^3.3.3",
+    "styled-components": "^4.0.0",
     "travis-deploy-once": "^4.4.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
