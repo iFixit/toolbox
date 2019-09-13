@@ -6,9 +6,9 @@ exports[`renders when active 1`] = `
   flex: 0 0 auto;
   display: inline-block;
   box-sizing: border-box;
-  padding: 0.75rem;
-  margin-right: 0.75rem;
-  font-size: 1rem;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
   text-decoration: none;
@@ -46,9 +46,9 @@ exports[`renders without crashing 1`] = `
   flex: 0 0 auto;
   display: inline-block;
   box-sizing: border-box;
-  padding: 0.75rem;
-  margin-right: 0.75rem;
-  font-size: 1rem;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
   text-decoration: none;

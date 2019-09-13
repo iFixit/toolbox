@@ -20,7 +20,7 @@ exports[`renders as column 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -59,8 +59,8 @@ exports[`renders as column 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-bottom-width: 0;
   -webkit-user-select: none;
@@ -164,7 +164,7 @@ exports[`renders when disabled 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -190,8 +190,8 @@ exports[`renders when disabled 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   opacity: 0.5;
   pointer-events: none;
@@ -294,8 +294,8 @@ exports[`renders with disabled children 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-right-width: 0;
   -webkit-user-select: none;
@@ -347,7 +347,7 @@ exports[`renders with disabled children 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -373,8 +373,8 @@ exports[`renders with disabled children 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   opacity: 0.5;
   pointer-events: none;
@@ -477,8 +477,8 @@ exports[`renders with non-button children 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-right-width: 0;
   -webkit-user-select: none;
@@ -530,7 +530,7 @@ exports[`renders with non-button children 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -611,8 +611,8 @@ exports[`renders without crashing 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-right-width: 0;
   -webkit-user-select: none;
@@ -664,7 +664,7 @@ exports[`renders without crashing 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,

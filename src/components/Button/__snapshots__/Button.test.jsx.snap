@@ -20,7 +20,7 @@ exports[`renders at fullWidth 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -50,8 +50,8 @@ exports[`renders at fullWidth 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   width: 100%;
   -webkit-user-select: none;
@@ -109,7 +109,7 @@ exports[`renders when disabled 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -135,8 +135,8 @@ exports[`renders when disabled 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   opacity: 0.5;
   pointer-events: none;
@@ -192,8 +192,8 @@ exports[`renders with a when href is present 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -231,7 +231,7 @@ exports[`renders with a when href is present 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -277,8 +277,8 @@ exports[`renders with default design 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -316,7 +316,7 @@ exports[`renders with default design 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -364,7 +364,7 @@ exports[`renders with large size 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -390,8 +390,8 @@ exports[`renders with large size 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
+  padding: 16px 24px;
+  font-size: 16px;
   line-height: 1.25;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -448,7 +448,7 @@ exports[`renders with outline design 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -474,8 +474,8 @@ exports[`renders with outline design 1`] = `
   color: #0071CE;
   background-color: transparent;
   border-color: #0071CE;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -534,7 +534,7 @@ exports[`renders with plain design 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -560,8 +560,8 @@ exports[`renders with plain design 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: transparent;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -618,7 +618,7 @@ exports[`renders with primary design 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -644,8 +644,8 @@ exports[`renders with primary design 1`] = `
   color: #FFFFFF;
   background-color: #0071CE;
   border-color: #0071CE;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -704,7 +704,7 @@ exports[`renders with secondary design 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -729,8 +729,8 @@ exports[`renders with secondary design 1`] = `
   transition: all 150ms ease-in-out;
   color: rgba(0, 3, 6, 0.87);
   background-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -787,7 +787,7 @@ exports[`renders with small size 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
@@ -813,8 +813,8 @@ exports[`renders with small size 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem;
+  padding: 4px 12px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -868,8 +868,8 @@ exports[`renders without crashing 1`] = `
   color: rgba(0, 3, 6, 0.87);
   background-color: transparent;
   border-color: rgba(0, 3, 6, 0.12);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  padding: 8px 16px;
+  font-size: 14px;
   line-height: 1.5;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -907,7 +907,7 @@ exports[`renders without crashing 1`] = `
 
 .glamor-1> :not(:first-child),
 [data-glamor-1]> :not(:first-child) {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }
 
 .glamor-0,
