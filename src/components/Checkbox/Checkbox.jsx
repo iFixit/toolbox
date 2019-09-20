@@ -3,17 +3,29 @@ import PropTypes from 'prop-types';
 
 import CheckboxRadio from '../../internal/CheckboxRadio';
 
-const Checkbox = props => <CheckboxRadio type="checkbox" {...props} />;
+const Checkbox = ({ children, ...props }) => (
+   <CheckboxRadio type="checkbox" {...props}>
+      {children}
+   </CheckboxRadio>
+);
 
 Checkbox.propTypes = {
    /** Checkbox is selected. */
    checked: PropTypes.bool,
+   /** Children will supercede the label if provided. */
+   children: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node),
+   ]),
    /** Set class name of containing element. */
    className: PropTypes.string,
    /** Indicates that the form control is not available for interaction. */
    disabled: PropTypes.bool,
    /** Represents a caption for the form control. */
    label: PropTypes.string,
+   /** Override default label margin */
+   labelMargin: PropTypes.string,
    /** The value of the control. */
    value: PropTypes.string,
    /** Callback when focus is removed. */
@@ -32,9 +44,11 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
    checked: false,
+   children: null,
    className: '',
    disabled: false,
    label: '',
+   labelMargin: null,
    value: 'on',
    onBlur: () => {},
    onChange: () => {},

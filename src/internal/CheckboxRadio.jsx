@@ -38,11 +38,11 @@ const Input = glamorous.input({
    whiteSpace: 'nowrap',
 });
 
-const LabelText = glamorous.span({
-   marginLeft: spacing[3],
+const LabelText = glamorous.span(({ labelMargin }) => ({
+   marginLeft: labelMargin || spacing[3],
    lineHeight: lineHeight.title,
    userSelect: 'none',
-});
+}));
 
 const InputIcon = glamorous(Icon)(
    {
@@ -50,6 +50,7 @@ const InputIcon = glamorous(Icon)(
       width: 16,
       height: 16,
       lineHeight: 0,
+      flexShrink: 0,
       transition: `all ${transition.duration} ${transition.easing}`,
       color: 'transparent',
       backgroundColor: color.white,
@@ -96,11 +97,13 @@ class CheckboxRadio extends React.PureComponent {
 
    render() {
       const {
+         children,
          className,
          checked,
          disabled,
          domProps,
          label,
+         labelMargin,
          onChange,
          onInvalid,
          onMouseEnter,
@@ -151,7 +154,7 @@ class CheckboxRadio extends React.PureComponent {
                <Input {...propsInput} />
             </withDomProps.Target>
             <InputIcon {...propsInputIcon} />
-            <LabelText>{label}</LabelText>
+            <LabelText labelMargin={labelMargin}>{children || label}</LabelText>
          </Label>
       );
    }
