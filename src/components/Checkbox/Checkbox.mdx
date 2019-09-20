@@ -52,6 +52,20 @@ import { Playground, PropsTable } from 'docz'
   />
 </Playground>
 
+### With children
+<Playground>
+  <Checkbox label="Ignored in the presence of children">
+     Normal Text <em>Em Text</em> <strong>Strong Text</strong>
+  </Checkbox>
+</Playground>
+
+### Custom label margin
+
+<Playground>
+  <Checkbox labelMargin="100px" label="Mind the gap" />
+</Playground>
+
+
 ## Props
 
 <PropsTable of={Checkbox} />
