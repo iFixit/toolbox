@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with custom size (number) 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.c0 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
 
 <img
-  className="glamor-0"
+  className="c0"
+  size={32}
   src="http://via.placeholder.com/100x100"
 />
 `;
 
 exports[`renders with custom size (string) 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.c0 {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
 }
 
 <img
-  className="glamor-0"
+  className="c0"
+  size="4rem"
   src="http://via.placeholder.com/100x100"
 />
 `;
 
 exports[`renders without crashing 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.c0 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
 
 <img
-  className="glamor-0"
+  className="c0"
+  size={48}
   src="http://via.placeholder.com/100x100"
 />
 `;

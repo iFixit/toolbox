@@ -1,8 +1,8 @@
 import React from 'react';
 import { oneOfType, string, number } from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
-const AvatarContainer = glamorous.img(props => ({
+const AvatarContainer = styled.img(props => ({
    width: props.size,
    height: props.size,
    borderRadius: '50%',
