@@ -1,43 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders without crashing 1`] = `
-.glamor-8,
-[data-glamor-8] {
-  border-bottom: 1px solid rgba(0, 3, 6, 0.12);
+.c0 {
+  border-bottom: 1px solid rgba(0,3,6,0.12);
 }
 
-.glamor-7,
-[data-glamor-7] {
+.c1 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  mask-image: -webkit-linear-gradient(to left, transparent, #000000 12px);
-  mask-image: -moz-linear-gradient(to left, transparent, #000000 12px);
-  mask-image: linear-gradient(to left, transparent, #000000 12px);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-mask-image: -webkit-linear-gradient(to left, transparent, #000000 12px);
-  -webkit-mask-image: -moz-linear-gradient(to left, transparent, #000000 12px);
-  -webkit-mask-image: linear-gradient(to left, transparent, #000000 12px);
+  -webkit-mask-image: linear-gradient(to left,transparent,#000000 12px);
+  mask-image: linear-gradient(to left,transparent,#000000 12px);
 }
 
-.glamor-6,
-[data-glamor-6] {
+.c2 {
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.glamor-0,
-[data-glamor-0] {
+.c3 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   display: inline-block;
   box-sizing: border-box;
@@ -46,30 +39,29 @@ exports[`renders without crashing 1`] = `
   font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
+  -webkit-text-decoration: none;
   text-decoration: none;
-  color: #0071CE;
+  color: rgba(0,3,6,0.87);
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   outline: none;
+  color: #0071CE;
   border-bottom-color: #0071CE;
-  -webkit-flex: 0 0 auto;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
 }
 
-.glamor-0:hover,
-[data-glamor-0]:hover {
+.c3:hover {
   color: #0071CE;
 }
 
-.glamor-0:focus,
-[data-glamor-0]:focus {
-  border-bottom-color: rgba(0, 3, 6, 0.26);
+.c3:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
 }
 
-.glamor-1,
-[data-glamor-1] {
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   display: inline-block;
   box-sizing: border-box;
@@ -78,63 +70,176 @@ exports[`renders without crashing 1`] = `
   font-size: 16px;
   font-weight: 700;
   line-height: 1.25;
+  -webkit-text-decoration: none;
   text-decoration: none;
-  color: rgba(0, 3, 6, 0.87);
+  color: rgba(0,3,6,0.87);
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   outline: none;
-  -webkit-flex: 0 0 auto;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
 }
 
-.glamor-1:hover,
-[data-glamor-1]:hover {
+.c4:hover {
   color: #0071CE;
 }
 
-.glamor-1:focus,
-[data-glamor-1]:focus {
-  border-bottom-color: rgba(0, 3, 6, 0.26);
+.c4:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
+}
+
+.c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(0,3,6,0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  outline: none;
+}
+
+.c5:hover {
+  color: #0071CE;
+}
+
+.c5:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
+}
+
+.c6 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(0,3,6,0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  outline: none;
+}
+
+.c6:hover {
+  color: #0071CE;
+}
+
+.c6:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
+}
+
+.c7 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(0,3,6,0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  outline: none;
+}
+
+.c7:hover {
+  color: #0071CE;
+}
+
+.c7:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
+}
+
+.c8 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(0,3,6,0.87);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  outline: none;
+}
+
+.c8:hover {
+  color: #0071CE;
+}
+
+.c8:focus {
+  border-bottom-color: rgba(0,3,6,0.26);
 }
 
 <div
-  className="glamor-8"
+  className="c0"
 >
   <div
-    className="glamor-7"
+    className="c1"
   >
     <div
-      className="glamor-6"
+      className="c2"
     >
       <a
-        className="glamor-0"
+        className="c3"
       >
         All
       </a>
       <a
-        className="glamor-1"
+        className="c4"
       >
         Store
       </a>
       <a
-        className="glamor-1"
+        className="c5"
       >
         Guides
       </a>
       <a
-        className="glamor-1"
+        className="c6"
       >
         Wikis
       </a>
       <a
-        className="glamor-1"
+        className="c7"
       >
         Devices
       </a>
       <a
-        className="glamor-1"
+        className="c8"
       >
         Answers
       </a>

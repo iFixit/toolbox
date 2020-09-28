@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import Icon from '../Icon/Icon';
 import constants from '../../constants';
 
 const { color, spacing, fontSize, borderRadius, lineHeight } = constants;
 
-const TagContainer = glamorous.span({
+const TagContainer = styled.span({
    display: 'inline-flex',
    alignItems: 'stretch',
    padding: 0,
@@ -21,11 +21,11 @@ const TagContainer = glamorous.span({
    overflow: 'hidden',
 });
 
-const TagText = glamorous.span({
+const TagText = styled.span({
    padding: `${spacing[0]} ${spacing[0]} ${spacing[0]} ${spacing[1]}`,
 });
 
-const TagRemove = glamorous.button({
+const TagRemove = styled.button({
    padding: spacing[0],
    lineHeight: 0,
    color: color.white,

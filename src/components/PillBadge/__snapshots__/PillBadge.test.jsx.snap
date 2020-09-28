@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with custom text color and background color 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.c0 {
   display: inline-block;
   padding: 0 8px;
   font-size: 12px;
@@ -15,28 +14,29 @@ exports[`renders with custom text color and background color 1`] = `
 }
 
 <span
-  className="glamor-0"
+  className="c0"
+  color="#C27E00"
 >
   Test
 </span>
 `;
 
 exports[`renders without crashing 1`] = `
-.glamor-0,
-[data-glamor-0] {
+.c0 {
   display: inline-block;
   padding: 0 8px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
-  color: rgba(0, 3, 6, 0.54);
-  background-color: rgba(0, 3, 6, 0.07);
+  color: rgba(0,3,6,0.54);
+  background-color: rgba(0,3,6,0.07);
   border-radius: 9999px;
 }
 
 <span
-  className="glamor-0"
+  className="c0"
+  color="rgba(0, 3, 6, 0.54)"
 >
   Test
 </span>
