@@ -1,5 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import Icon from '../components/Icon/Icon';
 import constants from '../constants';
@@ -14,7 +14,7 @@ const {
    transition,
 } = constants;
 
-const Label = glamorous.label(
+const Label = styled.label(
    {
       display: 'inline-flex',
       alignItems: 'center',
@@ -29,7 +29,7 @@ const Label = glamorous.label(
 );
 
 // hide native checkbox element
-const Input = glamorous.input({
+const Input = styled.input({
    clip: 'rect(1px, 1px, 1px, 1px)',
    height: 1,
    width: 1,
@@ -38,13 +38,13 @@ const Input = glamorous.input({
    whiteSpace: 'nowrap',
 });
 
-const LabelText = glamorous.span(({ labelMargin }) => ({
+const LabelText = styled.span(({ labelMargin }) => ({
    marginLeft: labelMargin || spacing[3],
    lineHeight: lineHeight.title,
    userSelect: 'none',
 }));
 
-const InputIcon = glamorous(Icon)(
+const InputIcon = styled(Icon)(
    {
       boxSizing: 'content-box',
       width: 16,
@@ -125,7 +125,7 @@ class CheckboxRadio extends React.PureComponent {
          checked,
          disabled,
          domProps,
-         innerRef: domProps.setRef,
+         ref: domProps.setRef,
          type,
          onChange: ev =>
             onChange({
