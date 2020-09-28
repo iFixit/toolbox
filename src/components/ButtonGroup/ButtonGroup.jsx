@@ -1,13 +1,13 @@
 import React from 'react';
 import { arrayOf, bool, node, string } from 'prop-types';
-import glamorous, { Div } from 'glamorous';
+import styled from 'styled-components';
 
 import Button from '../Button/Button';
 import constants from '../../constants';
 
 const { borderRadius } = constants;
 
-const ButtonGroupRowItem = glamorous(Button)({
+const ButtonGroupRowItem = styled(Button)({
    borderRadius: 0,
    borderRightWidth: 0,
 
@@ -22,7 +22,7 @@ const ButtonGroupRowItem = glamorous(Button)({
    },
 });
 
-const ButtonGroupColumnItem = glamorous(Button)({
+const ButtonGroupColumnItem = styled(Button)({
    borderRadius: 0,
    borderBottomWidth: 0,
 
@@ -37,8 +37,13 @@ const ButtonGroupColumnItem = glamorous(Button)({
    },
 });
 
+const ButtonGroupFlex = styled.div(props => ({
+   display: 'flex',
+   flexDirection: props.flexDirection,
+}));
+
 const ButtonGroup = ({ children, disabled, direction, ...props }) => (
-   <Div display="flex" flexDirection={direction} {...props}>
+   <ButtonGroupFlex flexDirection={direction} {...props}>
       {React.Children.map(children, child => {
          if (child.type !== Button) {
             return child;
@@ -55,7 +60,7 @@ const ButtonGroup = ({ children, disabled, direction, ...props }) => (
             />
          );
       })}
-   </Div>
+   </ButtonGroupFlex>
 );
 
 ButtonGroup.propTypes = {

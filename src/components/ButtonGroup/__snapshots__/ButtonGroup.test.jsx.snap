@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders as column 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -26,15 +26,15 @@ exports[`renders as column 1`] = `
   line-height: 1.5;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c0:focus {
+.c2:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c1 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,53 +51,47 @@ exports[`renders as column 1`] = `
   text-align: center;
 }
 
-.c1 > :not(:first-child) {
+.c3 > :not(:first-child) {
   margin-left: 8px;
 }
 
-.c2 {
+.c4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.c1 {
   border-radius: 0;
   border-bottom-width: 0;
 }
 
-.glamor-0:first-of-type,
-[data-glamor-0]:first-of-type {
+.c1:first-of-type {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
-.glamor-0:last-of-type,
-[data-glamor-0]:last-of-type {
+.c1:last-of-type {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border-bottom-width: 1px;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 <div
-  className="glamor-2"
+  className="c0"
 >
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -105,17 +99,17 @@ exports[`renders as column 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 1
       </span>
     </span>
   </button>
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -123,10 +117,10 @@ exports[`renders as column 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 2
       </span>
@@ -136,7 +130,7 @@ exports[`renders as column 1`] = `
 `;
 
 exports[`renders when disabled 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -163,15 +157,15 @@ exports[`renders when disabled 1`] = `
   pointer-events: none;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c0:focus {
+.c2:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c1 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -188,53 +182,47 @@ exports[`renders when disabled 1`] = `
   text-align: center;
 }
 
-.c1 > :not(:first-child) {
+.c3 > :not(:first-child) {
   margin-left: 8px;
 }
 
-.c2 {
+.c4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.c1 {
   border-radius: 0;
   border-right-width: 0;
 }
 
-.glamor-0:first-of-type,
-[data-glamor-0]:first-of-type {
+.c1:first-of-type {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.glamor-0:last-of-type,
-[data-glamor-0]:last-of-type {
+.c1:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 <div
-  className="glamor-2"
+  className="c0"
 >
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={true}
     href=""
     onClick={[Function]}
@@ -242,17 +230,17 @@ exports[`renders when disabled 1`] = `
     tabIndex={-1}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 1
       </span>
     </span>
   </button>
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={true}
     href=""
     onClick={[Function]}
@@ -260,10 +248,10 @@ exports[`renders when disabled 1`] = `
     tabIndex={-1}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 2
       </span>
@@ -273,7 +261,7 @@ exports[`renders when disabled 1`] = `
 `;
 
 exports[`renders with disabled children 1`] = `
-.c3 {
+.c5 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -298,15 +286,15 @@ exports[`renders with disabled children 1`] = `
   line-height: 1.5;
 }
 
-.c3:hover {
+.c5:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c3:focus {
+.c5:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c0 {
+.c2 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -333,15 +321,15 @@ exports[`renders with disabled children 1`] = `
   pointer-events: none;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c0:focus {
+.c2:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c1 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,53 +346,47 @@ exports[`renders with disabled children 1`] = `
   text-align: center;
 }
 
-.c1 > :not(:first-child) {
+.c3 > :not(:first-child) {
   margin-left: 8px;
 }
 
-.c2 {
+.c4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.c1 {
   border-radius: 0;
   border-right-width: 0;
 }
 
-.glamor-0:first-of-type,
-[data-glamor-0]:first-of-type {
+.c1:first-of-type {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.glamor-0:last-of-type,
-[data-glamor-0]:last-of-type {
+.c1:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 <div
-  className="glamor-2"
+  className="c0"
 >
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={true}
     href=""
     onClick={[Function]}
@@ -412,17 +394,17 @@ exports[`renders with disabled children 1`] = `
     tabIndex={-1}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 1
       </span>
     </span>
   </button>
   <button
-    className="glamor-0 c3"
+    className="c1 c5"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -430,10 +412,10 @@ exports[`renders with disabled children 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 2
       </span>
@@ -443,7 +425,7 @@ exports[`renders with disabled children 1`] = `
 `;
 
 exports[`renders with non-button children 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -468,15 +450,15 @@ exports[`renders with non-button children 1`] = `
   line-height: 1.5;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c0:focus {
+.c2:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c1 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -493,53 +475,47 @@ exports[`renders with non-button children 1`] = `
   text-align: center;
 }
 
-.c1 > :not(:first-child) {
+.c3 > :not(:first-child) {
   margin-left: 8px;
 }
 
-.c2 {
+.c4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.c1 {
   border-radius: 0;
   border-right-width: 0;
 }
 
-.glamor-0:first-of-type,
-[data-glamor-0]:first-of-type {
+.c1:first-of-type {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.glamor-0:last-of-type,
-[data-glamor-0]:last-of-type {
+.c1:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 <div
-  className="glamor-2"
+  className="c0"
 >
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -547,17 +523,17 @@ exports[`renders with non-button children 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 1
       </span>
     </span>
   </button>
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -565,10 +541,10 @@ exports[`renders with non-button children 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 2
       </span>
@@ -581,7 +557,7 @@ exports[`renders with non-button children 1`] = `
 `;
 
 exports[`renders without crashing 1`] = `
-.c0 {
+.c2 {
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -606,15 +582,15 @@ exports[`renders without crashing 1`] = `
   line-height: 1.5;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: rgba(0,3,6,0.04);
 }
 
-.c0:focus {
+.c2:focus {
   box-shadow: 0 0 0 3px rgba(0,3,6,0.12);
 }
 
-.c1 {
+.c3 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -631,53 +607,47 @@ exports[`renders without crashing 1`] = `
   text-align: center;
 }
 
-.c1 > :not(:first-child) {
+.c3 > :not(:first-child) {
   margin-left: 8px;
 }
 
-.c2 {
+.c4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.glamor-2,
-[data-glamor-2] {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-}
-
-.glamor-0,
-[data-glamor-0] {
+.c1 {
   border-radius: 0;
   border-right-width: 0;
 }
 
-.glamor-0:first-of-type,
-[data-glamor-0]:first-of-type {
+.c1:first-of-type {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-.glamor-0:last-of-type,
-[data-glamor-0]:last-of-type {
+.c1:last-of-type {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border-right-width: 1px;
 }
 
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 <div
-  className="glamor-2"
+  className="c0"
 >
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -685,17 +655,17 @@ exports[`renders without crashing 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 1
       </span>
     </span>
   </button>
   <button
-    className="glamor-0 c0"
+    className="c1 c2"
     disabled={false}
     href=""
     onClick={[Function]}
@@ -703,10 +673,10 @@ exports[`renders without crashing 1`] = `
     tabIndex={0}
   >
     <span
-      className="c1"
+      className="c3"
     >
       <span
-        className="c2"
+        className="c4"
       >
         Button 2
       </span>
