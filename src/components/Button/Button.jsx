@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../../constants';
 
@@ -128,7 +128,7 @@ const sizes = {
    },
 };
 
-const ButtonContainer = glamorous.button(
+const ButtonContainer = styled.button(
    {
       display: 'inline-block',
       boxSizing: 'border-box',
@@ -160,7 +160,7 @@ const LinkContainer = ButtonContainer.withComponent('a');
 
 // Buttons cannot be flex containers in some browsers (i.e. Safari).
 // To get around this, we wrap the contents of the button in a flex container.
-const FlexContainer = glamorous.span({
+const FlexContainer = styled.span({
    width: '100%',
    display: 'flex',
    justifyContent: 'center',
@@ -172,7 +172,7 @@ const FlexContainer = glamorous.span({
    },
 });
 
-const TruncateContainer = glamorous.span({
+const TruncateContainer = styled.span({
    textOverflow: 'ellipsis',
    overflow: 'hidden',
    whiteSpace: 'nowrap',
