@@ -1,11 +1,11 @@
 import React from 'react';
 import { string } from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 import constants from '../../constants';
 
 const { spacing, fontSize, lineHeight, color } = constants;
 
-const PillBadgeContainer = glamorous.span(props => ({
+const PillBadgeContainer = styled.span(props => ({
    display: 'inline-block',
    padding: `0 ${spacing[1]}`,
    fontSize: fontSize[0],

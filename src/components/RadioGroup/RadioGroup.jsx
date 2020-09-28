@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import Radio from '../Radio/Radio';
 import constants from '../../constants';
 
 const { color, fontSize, spacing } = constants;
 
-const FieldSet = glamorous.fieldset({
+const FieldSet = styled.fieldset({
    margin: 0,
    padding: 0,
    fontSize: fontSize[2],
@@ -15,12 +15,12 @@ const FieldSet = glamorous.fieldset({
    border: 'none',
 });
 
-const Legend = glamorous.legend({
+const Legend = styled.legend({
    padding: 0,
    marginBottom: spacing[3],
 });
 
-const RadioContainer = glamorous(Radio)({
+const RadioContainer = styled(Radio)({
    '&:not(:last-of-type)': {
       marginBottom: spacing[1],
    },

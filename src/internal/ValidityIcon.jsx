@@ -1,5 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Icon from '../components/Icon/Icon';
@@ -7,7 +7,7 @@ import constants from '../constants';
 
 const { color, spacing, transition } = constants;
 
-const ValidityIconColumn = glamorous.div(
+const ValidityIconColumn = styled.div(
    {
       position: 'absolute',
       display: 'flex',
@@ -38,7 +38,7 @@ const ValidityIconColumn = glamorous.div(
       },
 );
 
-const ValidityIconContainer = glamorous.span(
+const ValidityIconContainer = styled.span(
    {
       transition: `transform ${transition.duration} ${transition.easing}`,
       transformOrigin: 'left center',
