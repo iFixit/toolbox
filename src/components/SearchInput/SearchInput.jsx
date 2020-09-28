@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, bool, func } from 'prop-types';
-import glamorous, { Div } from 'glamorous';
+import styled from 'styled-components';
 import Icon from '../Icon/Icon';
 import constants from '../../constants';
 
@@ -14,7 +14,7 @@ const {
    transition,
 } = constants;
 
-const IconContainer = glamorous.div({
+const IconContainer = styled.div({
    position: 'absolute',
    top: 0,
    bottom: 0,
@@ -24,14 +24,14 @@ const IconContainer = glamorous.div({
    pointerEvents: 'none',
 });
 
-const SearchIcon = glamorous(Icon, { withProps: { name: 'search' } })({
+const SearchIcon = styled(Icon).attrs({ name: 'search' })({
    paddingLeft: spacing[3],
    paddingRight: spacing[3],
    color: color.gray[5],
    boxSizing: 'content-box',
 });
 
-const Input = glamorous.input(
+const Input = styled.input(
    {
       WebkitAppearance: 'none',
       boxSizing: 'border-box',
@@ -69,13 +69,17 @@ const Input = glamorous.input(
       },
 );
 
+const RelativeDiv = styled.div`
+   position: relative;
+`;
+
 const SearchInput = ({ className, ...props }) => (
-   <Div className={className} position="relative">
+   <RelativeDiv className={className} position="relative">
       <IconContainer>
          <SearchIcon />
       </IconContainer>
       <Input type="search" {...props} />
-   </Div>
+   </RelativeDiv>
 );
 
 SearchInput.propTypes = {
