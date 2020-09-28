@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with children 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
 .glamor-3,
 [data-glamor-3] {
   display: -webkit-inline-box;
@@ -28,15 +36,13 @@ exports[`renders with children 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  display: inline-block;
+  box-sizing: content-box;
   width: 16px;
   height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
   line-height: 0;
   flex-shrink: 0;
   transition: all 150ms ease-in-out;
+  color: transparent;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 3, 6, 0.26);
   border-radius: 4px;
@@ -72,12 +78,15 @@ exports[`renders with children 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="glamor-1 c0"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
     className="glamor-2"
@@ -91,6 +100,14 @@ exports[`renders with children 1`] = `
 `;
 
 exports[`renders with custom margin 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
 .glamor-3,
 [data-glamor-3] {
   display: -webkit-inline-box;
@@ -118,15 +135,13 @@ exports[`renders with custom margin 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  display: inline-block;
+  box-sizing: content-box;
   width: 16px;
   height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
   line-height: 0;
   flex-shrink: 0;
   transition: all 150ms ease-in-out;
+  color: transparent;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 3, 6, 0.26);
   border-radius: 4px;
@@ -162,12 +177,15 @@ exports[`renders with custom margin 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="glamor-1 c0"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
     className="glamor-2"
@@ -178,6 +196,14 @@ exports[`renders with custom margin 1`] = `
 `;
 
 exports[`renders with label 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
 .glamor-3,
 [data-glamor-3] {
   display: -webkit-inline-box;
@@ -205,15 +231,13 @@ exports[`renders with label 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  display: inline-block;
+  box-sizing: content-box;
   width: 16px;
   height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
   line-height: 0;
   flex-shrink: 0;
   transition: all 150ms ease-in-out;
+  color: transparent;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 3, 6, 0.26);
   border-radius: 4px;
@@ -249,12 +273,15 @@ exports[`renders with label 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="glamor-1 c0"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
     className="glamor-2"
@@ -265,6 +292,14 @@ exports[`renders with label 1`] = `
 `;
 
 exports[`renders without crashing 1`] = `
+.c0 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
 .glamor-3,
 [data-glamor-3] {
   display: -webkit-inline-box;
@@ -292,15 +327,13 @@ exports[`renders without crashing 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  display: inline-block;
+  box-sizing: content-box;
   width: 16px;
   height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
   line-height: 0;
   flex-shrink: 0;
   transition: all 150ms ease-in-out;
+  color: transparent;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 3, 6, 0.26);
   border-radius: 4px;
@@ -336,12 +369,15 @@ exports[`renders without crashing 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="glamor-1 c0"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
     className="glamor-2"
