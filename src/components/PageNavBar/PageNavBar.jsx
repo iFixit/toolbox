@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../../constants';
 
@@ -14,7 +14,7 @@ const propTypes = {
    ]).isRequired,
 };
 
-const Container = glamorous.div({
+const Container = styled.div({
    display: 'flex',
    padding: spacing[1],
    backgroundColor: color.grayAlpha[1],
@@ -24,8 +24,8 @@ const Container = glamorous.div({
 
 const PageNavBar = props => <Container {...props} />;
 
-PageNavBar.Left = glamorous.div({ marginRight: 'auto' });
-PageNavBar.Right = glamorous.div({ marginLeft: 'auto' });
+PageNavBar.Left = styled.div({ marginRight: 'auto' });
+PageNavBar.Right = styled.div({ marginLeft: 'auto' });
 
 PageNavBar.propTypes = propTypes;
 

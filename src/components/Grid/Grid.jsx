@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../../constants';
 
 const { breakpoint } = constants;
 
 const gridContainerFactory = ({ gutter }) =>
-   glamorous.div(
+   styled.div(
       {
          display: 'flex',
          flexDirection: 'column',
@@ -25,7 +25,7 @@ const gridContainerFactory = ({ gutter }) =>
    );
 
 const gridRowFactory = ({ gutter }) =>
-   glamorous.div(
+   styled.div(
       {
          display: 'flex',
          flexDirection: 'column',
@@ -49,7 +49,7 @@ const gridRowFactory = ({ gutter }) =>
    );
 
 const gridCellFactory = ({ gutter }) =>
-   glamorous.div(
+   styled.div(
       {
          margin: `${gutter / 2}px 0`,
       },

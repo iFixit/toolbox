@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 import feather from 'feather-icons';
 
-const SvgContainer = glamorous.span(
+const SvgContainer = styled.span(
    {
       display: 'inline-block',
    },

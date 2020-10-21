@@ -1,12 +1,12 @@
 import React from 'react';
 import { bool, element, func, string, oneOfType } from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../../constants';
 
 const { spacing, fontSize, lineHeight, color, transition } = constants;
 
-const TabContainer = glamorous.a(
+const TabContainer = styled.a(
    {
       flex: '0 0 auto',
       display: 'inline-block',

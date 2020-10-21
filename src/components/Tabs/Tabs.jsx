@@ -1,16 +1,16 @@
 import React from 'react';
 import { arrayOf, node } from 'prop-types';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../../constants';
 
 const { color, spacing } = constants;
 
-const Container = glamorous.div({
+const Container = styled.div({
    borderBottom: `1px solid ${color.grayAlpha[3]}`,
 });
 
-const ScrollContainer = glamorous.div({
+const ScrollContainer = styled.div({
    display: 'flex',
    alignItems: 'center',
    overflowX: 'auto',
@@ -21,7 +21,7 @@ const ScrollContainer = glamorous.div({
    })`,
 });
 
-const TabsWrapper = glamorous.div({
+const TabsWrapper = styled.div({
    display: 'flex',
 });
 

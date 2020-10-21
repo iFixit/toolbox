@@ -1,5 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 
 import constants from '../constants';
 import withDomProps from './withDomProps';
@@ -14,7 +14,7 @@ const {
    transition,
 } = constants;
 
-const Label = glamorous.label({
+const Label = styled.label({
    display: 'inline-block',
    boxSizing: 'border-box',
    width: '100%',
@@ -22,7 +22,7 @@ const Label = glamorous.label({
    color: color.grayAlpha[9],
 });
 
-const LabelText = glamorous.span(
+const LabelText = styled.span(
    {
       display: 'inline-block',
       marginBottom: spacing[3],
@@ -34,7 +34,7 @@ const LabelText = glamorous.span(
       },
 );
 
-const Input = glamorous.input(
+const Input = styled.input(
    {
       display: 'block',
       WebkitAppearance: 'none',
@@ -75,6 +75,10 @@ const Input = glamorous.input(
 );
 
 const TextareaContainer = Input.withComponent('textarea');
+
+const RelativeDiv = styled.div`
+   position: relative;
+`;
 
 class TextareaTextField extends React.PureComponent {
    state = {};
@@ -131,7 +135,7 @@ class TextareaTextField extends React.PureComponent {
       const propsComponent = {
          ...passedThroughProps,
          domProps,
-         innerRef: domProps.setRef,
+         ref: domProps.setRef,
          showValidity,
          onChange: ({ target: { value } }) => {
             onChange({ value });
@@ -158,12 +162,12 @@ class TextareaTextField extends React.PureComponent {
       return (
          <Label {...propsLabel}>
             {propsLabelText.children && <LabelText {...propsLabelText} />}
-            <glamorous.Div position="relative">
+            <RelativeDiv>
                <ValidityIcon {...propsValidityIcon} />
                <withDomProps.Target>
                   <Component {...propsComponent} />
                </withDomProps.Target>
-            </glamorous.Div>
+            </RelativeDiv>
          </Label>
       );
    }

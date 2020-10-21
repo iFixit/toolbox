@@ -1,42 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders when disabled 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  position: relative;
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.c1 {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   pointer-events: none;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  color: #9E9FA0;
-  stroke-width: 2;
+.c2 {
   padding-left: 16px;
   padding-right: 16px;
+  color: #9E9FA0;
   box-sizing: content-box;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   -webkit-appearance: none;
   box-sizing: border-box;
   display: block;
@@ -46,47 +42,53 @@ exports[`renders when disabled 1`] = `
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
-  color: rgba(0, 3, 6, 0.38);
-  background-color: rgba(0, 3, 6, 0.04);
+  color: rgba(0,3,6,0.87);
+  background-color: #FFFFFF;
   border: none;
   border-radius: 4px;
   outline: none;
-  box-shadow: inset 0 0 0 1px rgba(0, 3, 6, 0.12);
-  transition: box-shadow 150ms ease-in-out;
-  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(0,3,6,0.12),0 2px 4px 0 rgba(0,3,6,0.07);
   -webkit-transition: box-shadow 150ms ease-in-out;
-  -moz-transition: box-shadow 150ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out;
+  color: rgba(0,3,6,0.38);
+  background-color: rgba(0,3,6,0.04);
+  box-shadow: inset 0 0 0 1px rgba(0,3,6,0.12);
+  pointer-events: none;
 }
 
-.glamor-2:hover,
-[data-glamor-2]:hover,
-.glamor-2:focus,
-[data-glamor-2]:focus {
-  box-shadow: 0 0 0 1px rgba(0, 3, 6, 0.12), 0 4px 8px 0 rgba(0, 3, 6, 0.12), 0 2px 4px 0 rgba(0, 3, 6, 0.07);
+.c4:hover,
+.c4:focus {
+  box-shadow: 0 0 0 1px rgba(0,3,6,0.12),0 4px 8px 0 rgba(0,3,6,0.12),0 2px 4px 0 rgba(0,3,6,0.07);
 }
 
-.glamor-2::-webkit-search-decoration,
-[data-glamor-2]::-webkit-search-decoration {
+.c4::-webkit-search-decoration {
   display: none;
 }
 
+.c0 {
+  position: relative;
+}
+
 <div
-  className="glamor-3"
+  className="c0"
 >
   <div
-    className="glamor-1"
+    className="c1"
   >
     <span
-      className="glamor-0"
+      className="c2 c3"
+      color="currentColor"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-search\\"><circle cx=\\"11\\" cy=\\"11\\" r=\\"8\\"></circle><line x1=\\"21\\" y1=\\"21\\" x2=\\"16.65\\" y2=\\"16.65\\"></line></svg>",
         }
       }
+      size={24}
+      strokeWidth={2}
     />
   </div>
   <input
-    className="glamor-2"
+    className="c4"
     disabled={true}
     onBlur={[Function]}
     onChange={[Function]}
@@ -100,42 +102,38 @@ exports[`renders when disabled 1`] = `
 `;
 
 exports[`renders without crashing 1`] = `
-.glamor-3,
-[data-glamor-3] {
-  position: relative;
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
 }
 
-.glamor-1,
-[data-glamor-1] {
+.c1 {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   pointer-events: none;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
 }
 
-.glamor-0,
-[data-glamor-0] {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  color: #9E9FA0;
-  stroke-width: 2;
+.c2 {
   padding-left: 16px;
   padding-right: 16px;
+  color: #9E9FA0;
   box-sizing: content-box;
 }
 
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   -webkit-appearance: none;
   box-sizing: border-box;
   display: block;
@@ -145,46 +143,49 @@ exports[`renders without crashing 1`] = `
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
-  color: rgba(0, 3, 6, 0.87);
+  color: rgba(0,3,6,0.87);
   background-color: #FFFFFF;
   border: none;
   border-radius: 4px;
   outline: none;
-  box-shadow: 0 0 0 1px rgba(0, 3, 6, 0.12), 0 2px 4px 0 rgba(0, 3, 6, 0.07);
-  transition: box-shadow 150ms ease-in-out;
+  box-shadow: 0 0 0 1px rgba(0,3,6,0.12),0 2px 4px 0 rgba(0,3,6,0.07);
   -webkit-transition: box-shadow 150ms ease-in-out;
-  -moz-transition: box-shadow 150ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out;
 }
 
-.glamor-2:hover,
-[data-glamor-2]:hover,
-.glamor-2:focus,
-[data-glamor-2]:focus {
-  box-shadow: 0 0 0 1px rgba(0, 3, 6, 0.12), 0 4px 8px 0 rgba(0, 3, 6, 0.12), 0 2px 4px 0 rgba(0, 3, 6, 0.07);
+.c4:hover,
+.c4:focus {
+  box-shadow: 0 0 0 1px rgba(0,3,6,0.12),0 4px 8px 0 rgba(0,3,6,0.12),0 2px 4px 0 rgba(0,3,6,0.07);
 }
 
-.glamor-2::-webkit-search-decoration,
-[data-glamor-2]::-webkit-search-decoration {
+.c4::-webkit-search-decoration {
   display: none;
 }
 
+.c0 {
+  position: relative;
+}
+
 <div
-  className="glamor-3"
+  className="c0"
 >
   <div
-    className="glamor-1"
+    className="c1"
   >
     <span
-      className="glamor-0"
+      className="c2 c3"
+      color="currentColor"
       dangerouslySetInnerHTML={
         Object {
           "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-search\\"><circle cx=\\"11\\" cy=\\"11\\" r=\\"8\\"></circle><line x1=\\"21\\" y1=\\"21\\" x2=\\"16.65\\" y2=\\"16.65\\"></line></svg>",
         }
       }
+      size={24}
+      strokeWidth={2}
     />
   </div>
   <input
-    className="glamor-2"
+    className="c4"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}

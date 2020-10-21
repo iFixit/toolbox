@@ -1,24 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders with children 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
+.c0 {
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   font-size: 16px;
-  color: rgba(0, 3, 6, 0.87);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  color: rgba(0,3,6,0.87);
 }
 
-.glamor-0,
-[data-glamor-0] {
-  clip: rect(1px, 1px, 1px, 1px);
+.c1 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -26,43 +33,40 @@ exports[`renders with children 1`] = `
   white-space: nowrap;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
-  line-height: 0;
-  flex-shrink: 0;
-  transition: all 150ms ease-in-out;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 3, 6, 0.26);
-  border-radius: 4px;
-  -webkit-flex-shrink: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   margin-left: 16px;
   line-height: 1.25;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  color: transparent;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,3,6,0.26);
+  border-radius: 4px;
 }
 
 <label
-  className="glamor-3"
+  className="c0"
+  disabled={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <input
     checked={false}
-    className="glamor-0"
+    className="c1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -72,15 +76,18 @@ exports[`renders with children 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="c2 c3"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
-    className="glamor-2"
+    className="c4"
   >
     Normal Text
     <strong>
@@ -91,24 +98,31 @@ exports[`renders with children 1`] = `
 `;
 
 exports[`renders with custom margin 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
+.c0 {
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   font-size: 16px;
-  color: rgba(0, 3, 6, 0.87);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  color: rgba(0,3,6,0.87);
 }
 
-.glamor-0,
-[data-glamor-0] {
-  clip: rect(1px, 1px, 1px, 1px);
+.c1 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -116,43 +130,40 @@ exports[`renders with custom margin 1`] = `
   white-space: nowrap;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
-  line-height: 0;
-  flex-shrink: 0;
-  transition: all 150ms ease-in-out;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 3, 6, 0.26);
-  border-radius: 4px;
-  -webkit-flex-shrink: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   margin-left: 100px;
   line-height: 1.25;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  color: transparent;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,3,6,0.26);
+  border-radius: 4px;
 }
 
 <label
-  className="glamor-3"
+  className="c0"
+  disabled={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <input
     checked={false}
-    className="glamor-0"
+    className="c1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -162,15 +173,18 @@ exports[`renders with custom margin 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="c2 c3"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
-    className="glamor-2"
+    className="c4"
   >
     Test Label
   </span>
@@ -178,24 +192,31 @@ exports[`renders with custom margin 1`] = `
 `;
 
 exports[`renders with label 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
+.c0 {
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   font-size: 16px;
-  color: rgba(0, 3, 6, 0.87);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  color: rgba(0,3,6,0.87);
 }
 
-.glamor-0,
-[data-glamor-0] {
-  clip: rect(1px, 1px, 1px, 1px);
+.c1 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -203,43 +224,40 @@ exports[`renders with label 1`] = `
   white-space: nowrap;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
-  line-height: 0;
-  flex-shrink: 0;
-  transition: all 150ms ease-in-out;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 3, 6, 0.26);
-  border-radius: 4px;
-  -webkit-flex-shrink: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   margin-left: 16px;
   line-height: 1.25;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  color: transparent;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,3,6,0.26);
+  border-radius: 4px;
 }
 
 <label
-  className="glamor-3"
+  className="c0"
+  disabled={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <input
     checked={false}
-    className="glamor-0"
+    className="c1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -249,15 +267,18 @@ exports[`renders with label 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="c2 c3"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
-    className="glamor-2"
+    className="c4"
   >
     Test Label
   </span>
@@ -265,24 +286,31 @@ exports[`renders with label 1`] = `
 `;
 
 exports[`renders without crashing 1`] = `
-.glamor-3,
-[data-glamor-3] {
+.c3 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: currentColor;
+  stroke-width: 2;
+}
+
+.c0 {
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   font-size: 16px;
-  color: rgba(0, 3, 6, 0.87);
-  -webkit-box-align: center;
-  -webkit-align-items: center;
+  color: rgba(0,3,6,0.87);
 }
 
-.glamor-0,
-[data-glamor-0] {
-  clip: rect(1px, 1px, 1px, 1px);
+.c1 {
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -290,43 +318,40 @@ exports[`renders without crashing 1`] = `
   white-space: nowrap;
 }
 
-.glamor-1,
-[data-glamor-1] {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  color: transparent;
-  stroke-width: 2;
-  box-sizing: content-box;
-  line-height: 0;
-  flex-shrink: 0;
-  transition: all 150ms ease-in-out;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 3, 6, 0.26);
-  border-radius: 4px;
-  -webkit-flex-shrink: 0;
-  -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-}
-
-.glamor-2,
-[data-glamor-2] {
+.c4 {
   margin-left: 16px;
   line-height: 1.25;
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  line-height: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  color: transparent;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,3,6,0.26);
+  border-radius: 4px;
 }
 
 <label
-  className="glamor-3"
+  className="c0"
+  disabled={false}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
   <input
     checked={false}
-    className="glamor-0"
+    className="c1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -336,15 +361,18 @@ exports[`renders without crashing 1`] = `
     value="on"
   />
   <span
-    className="glamor-1"
+    className="c2 c3"
+    color="currentColor"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
       }
     }
+    size={24}
+    strokeWidth={2}
   />
   <span
-    className="glamor-2"
+    className="c4"
   >
     
   </span>

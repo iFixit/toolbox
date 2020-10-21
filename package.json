@@ -32,13 +32,11 @@
     }
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-test-env.js",
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}"
     ],
-    "testEnvironment": "jsdom",
-    "snapshotSerializers": [
-      "jest-glamor-react"
-    ]
+    "testEnvironment": "jsdom"
   },
   "peerDependencies": {
     "react": "^16.4.1",
@@ -46,8 +44,6 @@
   },
   "dependencies": {
     "feather-icons": "github:iFixit/feather",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.13.1",
     "prop-types": "^15.6.1",
     "react-star-ratings": "^2.3.0",
     "styled-components": "^4.0.0"
@@ -69,8 +65,8 @@
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "docz": "^0.12.5",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -81,7 +77,7 @@
     "eslint-plugin-react": "^7.9.1",
     "husky": "^0.14.3",
     "jest": "^22.4.4",
-    "jest-glamor-react": "^3.3.0",
+    "jest-styled-components": "^6.3.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.5",
     "prettier-eslint-cli": "^4.7.1",
