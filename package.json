@@ -85,7 +85,7 @@
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.4.1",
     "react-test-renderer": "^16.4.1",
-    "semantic-release": "^12.4.1",
+    "semantic-release": "^17.2.3",
     "travis-deploy-once": "^4.4.1"
   },
   "repository": {
