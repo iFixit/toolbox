@@ -43,7 +43,7 @@
     "react-dom": "^16.4.1"
   },
   "dependencies": {
-    "feather-icons": "github:iFixit/feather",
+    "feather-icons": "^4.28.0",
     "prop-types": "^15.6.1",
     "react-star-ratings": "^2.3.0",
     "styled-components": "^4.0.0"
