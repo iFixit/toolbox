@@ -73,14 +73,14 @@ const RelativeDiv = styled.div`
    position: relative;
 `;
 
-const SearchInput = ({ className, ...props }) => (
+const SearchInput = React.forwardRef(({ className, ...props }, ref) => (
    <RelativeDiv className={className} position="relative">
       <IconContainer>
          <SearchIcon />
       </IconContainer>
-      <Input type="search" {...props} />
+      <Input type="search" ref={ref} {...props} />
    </RelativeDiv>
-);
+));
 
 SearchInput.propTypes = {
    /** Set class name of containing element. */
